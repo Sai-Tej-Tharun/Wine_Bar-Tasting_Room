@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO ── -->
+  <meta name="description" content="Contact Heart & Wine — Find us at Hyderabad, Telangana, India, Hyderabad, Telangana, India CA. Send us a message, book a private event, or just come say hi at the taproom." />
+  <meta name="keywords" content="contact Mash and Ale, brewery contact, taproom directions, book event, craft beer Hyderabad, Telangana, India CA" />
+  <meta name="author" content="Mash & Ale Craft Brewery" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:title" content="Contact Heart & Wine — Get in Touch" />
+  <meta property="og:description" content="Visit our taproom, send us a message, or book a private event at Heart & Wine Craft Brewery, Hyderabad, Telangana, India CA." />
+  <meta property="og:type" content="website" />
+ <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ── Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Heart & Wine",
+    "url": "https://www.hyderabad.com/contact",
+    "mainEntity": {
+      "@type": "Brewery",
+      "name": "Mash & Ale",
+      "telephone": "+1-559-555-0142",
+      "email": "hello@hyderabad.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hyderabad, Telangana, India",
+        "addressLocality": "",
+        "addressRegion": "CA",
+        "postalCode": "93703"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "15:00", "closes": "23:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "12:00", "closes": "01:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "12:00", "closes": "21:00" }
+      ]
+    }
+  }
+  </script>
+
+  <title>Contact Us — Heart &amp; Wine Craft Brewery</title>
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <!-- ── Icons ── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ── Styles ── -->
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+<!-- ===== GRAIN OVERLAY ===== -->
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ===== FOAM CURSOR ===== -->
+<div id="foamCursor" aria-hidden="true"></div>
+
+<!-- =====================================================================
+     NAVBAR
+===================================================================== -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link ">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link active">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<!-- =====================================================================
+     MAIN
+===================================================================== -->
+<main id="main-content">
+
+  <!-- ===================================================================
+       PAGE HERO — Compact split banner
+       Left: headline + breadcrumb   Right: taproom photo with overlay text
+  =================================================================== -->
+  <section class="contact-hero" aria-labelledby="contactHeroHeading">
+
+    <!-- Left panel -->
+    <div class="ch-left">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../home-1/home.html">Home</a>
+        <span aria-hidden="true">·</span>
+        <span aria-current="page">Contact</span>
+      </nav>
+
+      <p class="ch-eyebrow reveal">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        Hyderabad, Telangana, India
+      </p>
+
+      <h1 class="ch-title reveal" id="contactHeroHeading">
+        <span class="cht-line">COME</span>
+        <span class="cht-line cht-gold">FIND</span>
+        <span class="cht-line">US</span>
+      </h1>
+
+      <p class="ch-sub reveal">
+        A cold pint is always better in person. Find us on hyderabad,
+        drop us a message, or book your next unforgettable event.
+      </p>
+
+      <!-- Quick contact pills -->
+      <div class="ch-quick reveal" role="list" aria-label="Quick contact options">
+        <a href="tel:+15595550142" class="cq-pill" role="listitem" aria-label="Call us">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <span>+1 (559) 555-0142</span>
+        </a>
+        <a href="mailto:hello@hyderabad.com" class="cq-pill" role="listitem" aria-label="Email us">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>hello@hyderabad.com</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right panel: image -->
+    <div class="ch-right" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=900&q=80"
+           alt="" loading="eager" />
+      <div class="ch-img-overlay"></div>
+      <!-- Open now indicator on image -->
+      <div class="ch-open-badge" id="openBadge" role="status" aria-live="polite">
+        <span class="open-dot" aria-hidden="true"></span>
+        <span id="openText">Checking…</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================================================================
+       CONTACT INFO CARDS — 4 cards: Location, Hours, Phone/Email, Socials
+  =================================================================== -->
+  <section class="info-cards-section" aria-label="Contact information">
+    <div class="container">
+      <div class="info-cards" role="list">
+
+        <!-- Location -->
+        <article class="info-card reveal" role="listitem" tabindex="0">
+          <div class="ic-icon" aria-hidden="true">
+            <i class="fa fa-map-marker-alt"></i>
+          </div>
+          <h2>Find Us</h2>
+          <p>Hyderabad<br />Telangana, India</p>
+          <a href="https://maps.google.com/?q=42+Hops+Lane+Brewton+CA"
+             target="_blank" rel="noopener noreferrer"
+             class="ic-link" aria-label="Open in Google Maps">
+            Get Directions <i class="fa fa-external-link-alt" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <!-- Hours -->
+        <article class="info-card ic-featured reveal" role="listitem" tabindex="0">
+          <div class="ic-icon" aria-hidden="true">
+            <i class="fa fa-clock"></i>
+          </div>
+          <h2>Opening Hours</h2>
+          <ul class="hours-list" role="list">
+            <li role="listitem"><span>Mon – Thu</span><span>3pm – 11pm</span></li>
+            <li role="listitem"><span>Fri – Sat</span><span>12pm – 1am</span></li>
+            <li role="listitem"><span>Sunday</span><span>12pm – 9pm</span></li>
+          </ul>
+          <div class="ic-open-now" id="icOpenNow" role="status" aria-live="polite">
+            <span class="open-dot" aria-hidden="true"></span>
+            <span id="icOpenText">Checking…</span>
+          </div>
+        </article>
+
+        <!-- Phone & Email -->
+        <article class="info-card reveal" role="listitem" tabindex="0">
+          <div class="ic-icon" aria-hidden="true">
+            <i class="fa fa-headset"></i>
+          </div>
+          <h2>Get in Touch</h2>
+          <a href="tel:+15595550142" class="ic-contact-row" aria-label="Phone number">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            +1 (559) 555-0142
+          </a>
+          <a href="mailto:hello@hyderabad.com" class="ic-contact-row" aria-label="Email address">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            hello@hyderabad.com
+          </a>
+          <a href="mailto:events@hyderabad.com" class="ic-contact-row" aria-label="Events email">
+            <i class="fa fa-calendar-star" aria-hidden="true"></i>
+            events@hyderabad.com
+          </a>
+        </article>
+
+        <!-- Social -->
+        <article class="info-card reveal" role="listitem" tabindex="0">
+          <div class="ic-icon" aria-hidden="true">
+            <i class="fa fa-share-alt"></i>
+          </div>
+          <h2>Follow Along</h2>
+          <p class="ic-social-desc">Stay updated on new releases, events, and taproom stories.</p>
+          <div class="ic-socials" role="list" aria-label="Social media links">
+            <a href="#" class="ics-btn" role="listitem" aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="#" class="ics-btn" role="listitem" aria-label="Facebook">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+            </a>
+            <a href="#" class="ics-btn" role="listitem" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+              <span>Twitter</span>
+            </a>
+            <a href="#" class="ics-btn" role="listitem" aria-label="YouTube">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       MAIN CONTACT FORM + MAP — Two column
+       Left: tabbed form (General / Private Event / Membership)
+       Right: embedded map + address card
+  =================================================================== -->
+  <section class="section contact-main" id="contact-form" aria-labelledby="contactFormHeading">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- ── FORM PANEL ── -->
+        <div class="form-panel reveal">
+
+          <div class="fp-header">
+            <span class="section-tag">Send a Message</span>
+            <h2 id="contactFormHeading">We'd Love to <em>Hear from You</em></h2>
+            <p>Whether it's a simple question or a big event, our team responds within 24 hours.</p>
+          </div>
+
+          <!-- Tab switcher -->
+          <div class="form-tabs" role="tablist" aria-label="Message type">
+            <button class="ftab active" id="tab-general"
+                    role="tab" aria-selected="true" aria-controls="panel-general">
+              <i class="fa fa-comment" aria-hidden="true"></i> General
+            </button>
+            <button class="ftab" id="tab-event"
+                    role="tab" aria-selected="false" aria-controls="panel-event">
+              <i class="fa fa-glass-cheers" aria-hidden="true"></i> Private Event
+            </button>
+            <button class="ftab" id="tab-member"
+                    role="tab" aria-selected="false" aria-controls="panel-member">
+              <i class="fa fa-star" aria-hidden="true"></i> Membership
+            </button>
+          </div>
+
+          <!-- ── TAB 1: General enquiry ── -->
+          <div class="form-panel-body" id="panel-general" role="tabpanel"
+               aria-labelledby="tab-general">
+            <form class="contact-form" id="generalForm" novalidate aria-label="General enquiry form">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="gName">Full Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="gName" name="name"
+                         placeholder="Hari Kiran"
+                         required autocomplete="name"
+                         aria-required="true" aria-describedby="gNameErr" />
+                  <span class="form-error" id="gNameErr" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="gEmail">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="gEmail" name="email"
+                         placeholder="you@example.com"
+                         required autocomplete="email"
+                         aria-required="true" aria-describedby="gEmailErr" />
+                  <span class="form-error" id="gEmailErr" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="gSubject">Subject <span aria-hidden="true">*</span></label>
+                <select id="gSubject" name="subject" required
+                        aria-required="true" aria-describedby="gSubjectErr">
+                  <option value="">Choose a topic…</option>
+                  <option value="general">General Enquiry</option>
+                  <option value="taproom">Taproom Question</option>
+                  <option value="beer-club">Beer Club</option>
+                  <option value="press">Press &amp; Media</option>
+                  <option value="wholesale">Wholesale</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="form-error" id="gSubjectErr" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="gMessage">Message <span aria-hidden="true">*</span></label>
+                <textarea id="gMessage" name="message"
+                          placeholder="Tell us what's on your mind…"
+                          required rows="5"
+                          aria-required="true" aria-describedby="gMessageErr"></textarea>
+                <span class="form-error" id="gMessageErr" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Honey pot (spam prevention, hidden from humans) -->
+              <div class="form-group" style="display:none" aria-hidden="true">
+                <label for="hpot">Leave blank</label>
+                <input type="text" id="hpot" name="hpot" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i> Send Message
+              </button>
+
+              <div class="form-success" id="generalSuccess" role="status" aria-live="polite">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                Message sent! We'll get back to you within 24 hours.
+              </div>
+
+            </form>
+          </div>
+
+          <!-- ── TAB 2: Private Event ── -->
+          <div class="form-panel-body hidden" id="panel-event" role="tabpanel"
+               aria-labelledby="tab-event">
+            <form class="contact-form" id="eventForm" novalidate aria-label="Private event enquiry form">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="evName">Contact Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="evName" name="name"
+                         placeholder="Sophie Williams"
+                         required autocomplete="name"
+                         aria-required="true" aria-describedby="evNameErr" />
+                  <span class="form-error" id="evNameErr" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="evEmail">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="evEmail" name="email"
+                         placeholder="you@example.com"
+                         required autocomplete="email"
+                         aria-required="true" aria-describedby="evEmailErr" />
+                  <span class="form-error" id="evEmailErr" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="evType">Event Type <span aria-hidden="true">*</span></label>
+                  <select id="evType" name="event-type" required
+                          aria-required="true" aria-describedby="evTypeErr">
+                    <option value="">Select event type…</option>
+                    <option value="birthday">Birthday / Celebration</option>
+                    <option value="corporate">Corporate Event</option>
+                    <option value="wedding">Wedding Reception</option>
+                    <option value="stag">Stag / Hen Party</option>
+                    <option value="tasting">Private Tasting</option>
+                    <option value="tour">Brewery Tour</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span class="form-error" id="evTypeErr" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="evGuests">Guest Count <span aria-hidden="true">*</span></label>
+                  <input type="number" id="evGuests" name="guests"
+                         placeholder="30" min="2" max="200"
+                         required aria-required="true" aria-describedby="evGuestsErr" />
+                  <span class="form-error" id="evGuestsErr" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="evDate">Preferred Date <span aria-hidden="true">*</span></label>
+                  <input type="date" id="evDate" name="date"
+                         required aria-required="true" aria-describedby="evDateErr" />
+                  <span class="form-error" id="evDateErr" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="evBudget">Approximate Budget</label>
+                  <select id="evBudget" name="budget">
+                    <option value="">Select range…</option>
+                    <option value="under-500">Under ₹500</option>
+                    <option value="500-1500">₹500 – ₹1,500</option>
+                    <option value="1500-3000">₹1,500 – ₹3,000</option>
+                    <option value="3000-plus">₹3,000+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="evDetails">Event Details &amp; Special Requests</label>
+                <textarea id="evDetails" name="details"
+                          placeholder="Tell us about the occasion, any dietary needs, custom brews, décor preferences…"
+                          rows="4"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa fa-calendar-check" aria-hidden="true"></i> Submit Event Request
+              </button>
+
+              <div class="form-success" id="eventSuccess" role="status" aria-live="polite">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                Event request received! Our events team will contact you within 48 hours.
+              </div>
+
+            </form>
+          </div>
+
+          <!-- ── TAB 3: Membership ── -->
+          <div class="form-panel-body hidden" id="panel-member" role="tabpanel"
+               aria-labelledby="tab-member">
+            <form class="contact-form" id="memberForm" novalidate aria-label="Membership enquiry form">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="mbName">Full Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="mbName" name="name"
+                         placeholder="Lena Kirchner"
+                         required autocomplete="name"
+                         aria-required="true" aria-describedby="mbNameErr" />
+                  <span class="form-error" id="mbNameErr" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="mbEmail">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="mbEmail" name="email"
+                         placeholder="you@example.com"
+                         required autocomplete="email"
+                         aria-required="true" aria-describedby="mbEmailErr" />
+                  <span class="form-error" id="mbEmailErr" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="mbTier">Membership Tier of Interest</label>
+                <select id="mbTier" name="tier">
+                  <option value="">Select a tier…</option>
+                  <option value="hop-head">🌾 Hop Head — ₹1600/mo</option>
+                  <option value="brew-master">🍺 Brew Master — ₹2400/mo</option>
+                  <option value="barrel-lord">🥇 Barrel Lord — ₹4800/mo</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mbQuestion">Your Question or Comment <span aria-hidden="true">*</span></label>
+                <textarea id="mbQuestion" name="question"
+                          placeholder="Ask us anything about the Beer Club — perks, cancellation, gifting…"
+                          required rows="4"
+                          aria-required="true" aria-describedby="mbQuestionErr"></textarea>
+                <span class="form-error" id="mbQuestionErr" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Existing member checkbox -->
+              <div class="form-check">
+                <input type="checkbox" id="mbExisting" name="existing" />
+                <label for="mbExisting">I'm already a Beer Club member</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa fa-star" aria-hidden="true"></i> Send Membership Enquiry
+              </button>
+
+              <div class="form-success" id="memberSuccess" role="status" aria-live="polite">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                Thanks for your interest! We'll reply within 24 hours. Cheers! 🍺
+              </div>
+
+            </form>
+          </div>
+
+        </div><!-- /form-panel -->
+
+        <!-- ── MAP + ADDRESS PANEL ── -->
+        <div class="map-panel reveal">
+
+          <!-- Map embed placeholder (real project: replace src with Google Maps embed URL) -->
+          <div class="map-embed" role="region" aria-label="Brewery location map">
+            <iframe
+  title="TechEchos Innovation Hyderabad location map"
+  src="https://www.google.com/maps?q=TechEchos%20Innovation%20Hyderabad%20Telangana&output=embed"
+  width="100%" height="100%"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  aria-label="Interactive map showing TechEchos Innovation Hyderabad location">
+</iframe>
+            <!-- Map overlay for dark mode tint -->
+            <div class="map-tint" aria-hidden="true"></div>
+          </div>
+
+          <!-- Address card below map -->
+          <div class="address-card">
+            <div class="ac-row">
+              <div class="ac-item">
+                <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                <div>
+                  <strong>Address</strong>
+                  <span>Hyderabad, Telangana, India 300002</span>
+                </div>
+              </div>
+              <div class="ac-item">
+                <i class="fa fa-parking" aria-hidden="true"></i>
+                <div>
+                  <strong>Parking</strong>
+                  <span>Free lot on Jaya Suda Heights(50 spaces)</span>
+                </div>
+              </div>
+            </div>
+            <div class="ac-row">
+              <div class="ac-item">
+                <i class="fa fa-bus" aria-hidden="true"></i>
+                <div>
+                  <strong>Transit</strong>
+                  <span>Metro line connected to Madhapur</span>
+                </div>
+              </div>
+              <div class="ac-item">
+                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                <div>
+                  <strong>Accessibility</strong>
+                  <span>Fully accessible — ramp &amp; lift available</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://maps.google.com/?q=TechEchos+Innovation+Hyderabad+Telangana"
+   target="_blank" rel="noopener noreferrer"
+   class="btn btn-outline btn-full" style="margin-top:8px"
+   aria-label="Open directions to TechEchos Innovation in Google Maps">
+  <i class="fa fa-directions" aria-hidden="true"></i> Open in Google Maps
+</a>
+          </div>
+
+        </div><!-- /map-panel -->
+
+      </div><!-- /contact-grid -->
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       VISIT INFO — Three feature strips: Taproom, Private Events, Beer Club
+  =================================================================== -->
+  <section class="section visit-strips" aria-label="Visit options">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Plan Your Visit</span>
+        <h2>There's Something Here <em>for Everyone</em></h2>
+      </div>
+
+      <div class="visit-grid" role="list">
+
+        <article class="visit-card reveal" role="listitem" tabindex="0">
+          <div class="vc-img">
+            <img src="contact-1.jpg"
+                 alt="Taproom bar with 12 craft taps in a warm amber setting" loading="lazy" />
+          </div>
+          <div class="vc-body">
+            <div class="vc-icon-wrap" aria-hidden="true"><i class="fa fa-beer"></i></div>
+            <h3>Drop in for a Pint</h3>
+            <p>No reservation needed for our taproom. Walk in, find a stool, and let us take it from there. 12 taps rotating weekly.</p>
+            <a href="#contact-form" class="btn btn-sm btn-outline">Ask a Question</a>
+          </div>
+        </article>
+
+        <article class="visit-card vc-featured reveal" role="listitem" tabindex="0">
+          <div class="vc-img">
+            <img src="contact-2.webp"
+                 alt="Private event dining room with custom table settings and tap signage" loading="lazy" />
+          </div>
+          <div class="vc-body">
+            <div class="vc-icon-wrap" aria-hidden="true"><i class="fa fa-glass-cheers"></i></div>
+            <h3>Host a Private Event</h3>
+            <p>Birthdays, corporate dinners, weddings — our private dining room seats up to 80 guests with bespoke catering and custom brews.</p>
+            <a href="#" onclick="document.getElementById('tab-event').click(); document.getElementById('contact-form').scrollIntoView({behavior:'smooth'}); return false;"
+               class="btn btn-sm btn-primary">Plan Your Event</a>
+          </div>
+        </article>
+
+        <article class="visit-card reveal" role="listitem" tabindex="0">
+          <div class="vc-img">
+            <img src="contact-3.png"
+                 alt="Guided tasting flight of six beers arranged on a wooden board" loading="lazy" />
+          </div>
+          <div class="vc-body">
+            <div class="vc-icon-wrap" aria-hidden="true"><i class="fa fa-star"></i></div>
+            <h3>Book a Tasting Tour</h3>
+            <p>Join our head brewer for a guided cellar walk, barrel tasting, and a 6-pour flight. Available Sat & Sun 2pm.</p>
+            <a href="../home-1/home.html#book" class="btn btn-sm btn-outline">Reserve a Spot</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FAQ — Accordion
+  =================================================================== -->
+  <section class="section faq" id="faq" aria-labelledby="faqHeading">
+    <div class="container">
+      <div class="faq-inner">
+
+        <div class="faq-header reveal">
+          <span class="section-tag">FAQ</span>
+          <h2 id="faqHeading">Frequently Asked <em>Questions</em></h2>
+          <p>Can't find your answer? Just send us a message using the form above.</p>
+        </div>
+
+        <div class="faq-list" role="list">
+
+          <!-- FAQ Item -->
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq1-body"
+                    id="faq1-btn">
+              <span>Do I need to book a table for the taproom?</span>
+              <i class="fa fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-body" id="faq1-body" role="region"
+                 aria-labelledby="faq1-btn" hidden>
+              <p>Walk-ins are always welcome during regular taproom hours. For groups of 6 or more, or if you want a guaranteed table on a busy evening, we recommend booking via the form or calling us directly.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq2-body"
+                    id="faq2-btn">
+              <span>Can I bring my own food to the taproom?</span>
+              <i class="fa fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-body" id="faq2-body" role="region"
+                 aria-labelledby="faq2-btn" hidden>
+              <p>We serve a rotating food menu of small plates and artisan boards that pair beautifully with our brews. Outside food is not permitted in the taproom, but we are happy to accommodate dietary requirements — just let us know in advance.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq3-body"
+                    id="faq3-btn">
+              <span>How do Beer Club deliveries work?</span>
+              <i class="fa fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-body" id="faq3-body" role="region"
+                 aria-labelledby="faq3-btn" hidden>
+              <p>Beer Club members receive their monthly allocation on the first Tuesday of each month. Deliveries cover the contiguous US. Limited-release notifications go out 48 hours before public sale, giving members first access. You can manage your deliveries in the member dashboard.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq4-body"
+                    id="faq4-btn">
+              <span>Is the brewery dog-friendly?</span>
+              <i class="fa fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-body" id="faq4-body" role="region"
+                 aria-labelledby="faq4-btn" hidden>
+              <p>Absolutely — well-behaved dogs on leads are welcome in our outdoor beer garden. We even keep a water bowl and dog treats at the bar. Our taproom host Biscuit (a golden retriever) will probably come say hello.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq5-body"
+                    id="faq5-btn">
+              <span>Can we commission a custom brew for our event?</span>
+              <i class="fa fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-body" id="faq5-body" role="region"
+                 aria-labelledby="faq5-btn" hidden>
+              <p>Yes! We offer custom batch brewing for weddings, corporate events, and special occasions. Minimum order is 20 litres. We'll work with you on the recipe, naming, and label design. Enquire via the Private Event form with at least 8 weeks notice.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq6-body"
+                    id="faq6-btn">
+              <span>Do you offer wholesale or distribution?</span>
+              <i class="fa fa-plus faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-body" id="faq6-body" role="region"
+                 aria-labelledby="faq6-btn" hidden>
+              <p>We supply a select number of independent restaurants and bottle shops across California. We're intentionally small-batch, so availability is limited. Send a wholesale enquiry via the General Contact form selecting "Wholesale" as the subject.</p>
+            </div>
+          </div>
+
+        </div><!-- /faq-list -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       NEWSLETTER — Minimal strip CTA
+  =================================================================== -->
+  <section class="newsletter" aria-labelledby="nlHeading">
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <div class="nl-text">
+          <h2 id="nlHeading">Never Miss a <em>Drop</em></h2>
+          <p>Limited releases, event invites, and brewing stories — straight to your inbox.</p>
+        </div>
+        <form class="nl-form" id="nlForm" novalidate aria-label="Newsletter signup">
+          <label for="nlEmail" class="sr-only">Email address</label>
+          <input type="email" id="nlEmail" name="email"
+                 placeholder="Your email address" required aria-required="true" />
+          <button type="submit" class="btn btn-primary">
+            Subscribe <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =====================================================================
+     FOOTER
+===================================================================== -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer>
+
+<script src="contact.js"></script>
+</body>
+</html>

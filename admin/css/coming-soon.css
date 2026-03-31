@@ -1,0 +1,60 @@
+.headline{
+font-family:"Bebas Neue";
+font-size:48px;
+letter-spacing:1px;
+}
+
+.countdown-box{
+background:#141210;
+border:1px solid #44403C;
+padding:16px;
+border-radius:10px;
+}
+
+.countdown-box span{
+font-size:28px;
+color:#D4A373;
+font-weight:600;
+}
+
+.countdown-box p{
+font-size:12px;
+opacity:.7;
+margin-top:4px;
+}
+
+.email-input{
+background:#141210;
+border:1px solid #44403C;
+padding:10px 14px;
+border-radius:8px;
+flex:1;
+font-size:14px;
+}
+
+.email-input:focus{
+outline:none;
+border-color:#D4A373;
+}
+
+.subscribe-btn{
+background:#8A5A1F;
+padding:10px 18px;
+border-radius:8px;
+font-size:14px;
+transition:.3s;
+}
+
+.subscribe-btn:hover{
+background:#D4A373;
+color:#1c1917;
+}
+
+.social{
+transition:.3s;
+}
+
+.social:hover{
+color:#D4A373;
+transform:translateY(-3px);
+}

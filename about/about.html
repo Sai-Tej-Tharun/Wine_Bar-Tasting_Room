@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO ── -->
+  <meta name="description" content="About Heart & Wine — Our story, mission, history, and the passionate team behind every craft pint. Est. 2012, Hyderabad, Telangana, India." />
+  <meta name="keywords" content="Mash and Ale, about us, craft brewery, brewers, team, history, mission, taproom" />
+  <meta name="author" content="Mash & Ale Craft Brewery" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:title" content="About Heart & Wine — Our Story & Team" />
+  <meta property="og:description" content="From a backyard homebrew operation to an award-winning craft brewery — meet the people behind every pour." />
+  <meta property="og:type" content="website" />
+
+  <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+
+  <!-- ── Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Heart & Wine",
+    "description": "The story, mission, and team behind Heart & Wine Craft Brewery.",
+    "url": "https://www.hyderabad.com/about",
+    "mainEntity": {
+      "@type": "Brewery",
+      "name": "Mash & Ale",
+      "foundingDate": "2012",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hyderabad, Telangana, India",
+        "addressLocality": "",
+        "addressRegion": "CA"
+      }
+    }
+  }
+  </script>
+
+  <title>About Us — Heart &amp; Wine Craft Brewery</title>
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <!-- ── Icons ── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ── Styles ── -->
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+<!-- ===== GRAIN OVERLAY ===== -->
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ===== FOAM CURSOR ===== -->
+<div id="foamCursor" aria-hidden="true"></div>
+
+<!-- =======================================================
+     NAVBAR
+======================================================= -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link active">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <!-- HOME -->
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">
+      Home Pages <i class="fa fa-chevron-down"></i>
+    </button>
+
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+
+  <!-- SERVICES -->
+  <a href="../services/services.html" class="mob-link">Services</a>
+
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">
+      Service Details <i class="fa fa-chevron-down"></i>
+    </button>
+
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+
+  <!-- ABOUT -->
+  <a href="../about/about.html" class="mob-link">About</a>
+
+
+  <!-- BLOG -->
+  <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">
+      Blog Details <i class="fa fa-chevron-down"></i>
+    </button>
+
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+
+  <!-- CONTACT -->
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+
+  <!-- CTA -->
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+
+  <!-- LOGIN -->
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<!-- =======================================================
+     MAIN CONTENT
+======================================================= -->
+<main id="main-content">
+
+  <!-- =======================================================
+       PAGE HERO — Cinematic full-bleed with parallax image
+       and large overlapping headline
+  ======================================================= -->
+  <section class="about-hero" aria-labelledby="aboutHeroHeading">
+    <div class="ah-bg" data-parallax aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1559818989-c6cf2a17faa3?w=1600&q=80"
+           alt="" loading="eager" />
+      <div class="ah-overlay"></div>
+    </div>
+
+   
+
+    <div class="ah-content">
+      <p class="ah-eyebrow reveal">Est. 2012 ·Hyderabad, Telangana, India</p>
+      <h1 class="ah-title reveal" id="aboutHeroHeading">
+        <span class="aht-line">BREWED</span>
+        <span class="aht-line aht-italic">with Heart</span>
+        <span class="aht-line">SINCE 2012</span>
+      </h1>
+      <p class="ah-sub reveal">
+        From two guys in a garage with a 5-gallon homebrew kit to one of the
+        West Coast's most loved independent breweries. This is our story.
+      </p>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="ah-scroll" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+
+    <!-- Quick stats bar pinned at bottom of hero -->
+    <div class="ah-stats-bar reveal" role="list" aria-label="Key statistics">
+      <div class="ahstat" role="listitem">
+        <span class="ahstat-num" data-count="14">0</span>
+        <span class="ahstat-label">Years Brewing</span>
+      </div>
+      <div class="ahstat-divider" aria-hidden="true"></div>
+      <div class="ahstat" role="listitem">
+        <span class="ahstat-num" data-count="47">0</span>
+        <span class="ahstat-label">Recipes Created</span>
+      </div>
+      <div class="ahstat-divider" aria-hidden="true"></div>
+      <div class="ahstat" role="listitem">
+        <span class="ahstat-num" data-count="12">0</span>
+        <span class="ahstat-label">Awards Won</span>
+      </div>
+      <div class="ahstat-divider" aria-hidden="true"></div>
+      <div class="ahstat" role="listitem">
+        <span class="ahstat-num" data-count="8500">0</span>
+        <span class="ahstat-label">Club Members</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       OUR STORY — Two-column narrative with big pull-quote
+  ======================================================= -->
+  <section class="section story" id="story" aria-labelledby="storyHeading">
+    <div class="container">
+      <div class="story-inner">
+
+        <!-- Left: image stack -->
+        <div class="story-images reveal">
+          <div class="si-main">
+            <img src="about-1.webp"
+                 alt="Hari Kiran and Marcus, founders of Heart & Wine, standing in front of the original brew kettle" loading="lazy" />
+          </div>
+          <div class="si-secondary">
+            <img src="about-2.jpg"
+                 alt="Original homebrew equipment used when the brewery first started" loading="lazy" />
+            <div class="si-year-badge" aria-label="Founded in 2012">
+              <span class="syb-num">2012</span>
+              <span class="syb-label">Founded</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: text -->
+        <div class="story-text">
+          <span class="section-tag reveal">Our Story</span>
+          <h2 class="reveal" id="storyHeading">
+            Two Friends,<br>One <em>Obsession</em>
+          </h2>
+
+          <blockquote class="story-pull reveal">
+            "We brewed our first batch in Hari Kiran's garage on a Tuesday night. By Wednesday
+            morning half the street had knocked to ask what that incredible smell was."
+          </blockquote>
+
+          <p class="reveal">
+            It started in 2012 when Hari Kiran and Marcus Reid — a former chef and a
+            chemical engineer — discovered they shared the same obsession: the pursuit of
+            the perfect pint. What began as weekend hobby brewing soon became an all-consuming
+            passion that neither could ignore.
+          </p>
+          <p class="reveal">
+            After two years of recipe development, 230 failed batches, and one particularly
+            memorable golden ale that earned a standing ovation at a local farmers market,
+            the pair took the leap. They signed a lease on a disused warehouse on hyderabad,
+            Hyderabad, Telangana, India, converted it with their own hands, and Heart &amp; Wine was born.
+          </p>
+          <p class="reveal">
+            Today we operate one of California's most respected independent taprooms, a
+            thriving beer club with 8,500 members, and a barrel-aging programme that
+            attracts collectors from across the country. The garage is long gone, but the
+            obsession? Unchanged.
+          </p>
+
+          <a href="#timeline" class="btn btn-outline reveal" style="margin-top:24px">
+            See Our Full Timeline <i class="fa fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       MISSION & VALUES — Icon grid with editorial layout
+  ======================================================= -->
+  <section class="section mission" id="mission" aria-labelledby="missionHeading">
+    <!-- Full-bleed tinted band -->
+    <div class="mission-band" aria-hidden="true"></div>
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Mission &amp; Values</span>
+        <h2 id="missionHeading">What We <em>Stand For</em></h2>
+        <p>Beer is just the medium. Community, craft, and honesty are the message.</p>
+      </div>
+
+      <!-- Mission statement -->
+      <div class="mission-statement reveal">
+        <i class="fa fa-quote-left ms-quote-icon" aria-hidden="true"></i>
+        <p>
+          To brew exceptional, honest beer that builds a genuine community — one
+          pint, one conversation, one story at a time.
+        </p>
+      </div>
+
+      <!-- Values grid -->
+      <div class="values-grid" role="list">
+
+        <article class="value-card reveal" role="listitem" tabindex="0">
+          <div class="vc-icon" aria-hidden="true">
+            <i class="fa fa-flask"></i>
+          </div>
+          <h3>Craft Over Convenience</h3>
+          <p>We never rush a fermentation, never cut a corner, never choose the cheap ingredient when the right one exists. Good beer takes time and we respect that.</p>
+        </article>
+
+        <article class="value-card reveal" role="listitem" tabindex="0">
+          <div class="vc-icon" aria-hidden="true">
+            <i class="fa fa-leaf"></i>
+          </div>
+          <h3>Local &amp; Sustainable</h3>
+          <p>85% of our grain is sourced from within 150 miles. Our hop garden produces Centennial and Cascade year-round. Solar panels power 60% of our brew house.</p>
+        </article>
+
+        <article class="value-card reveal" role="listitem" tabindex="0">
+          <div class="vc-icon" aria-hidden="true">
+            <i class="fa fa-users"></i>
+          </div>
+          <h3>Community First</h3>
+          <p>Our taproom is a living room, not a bar. We host free homebrewer meetups, donate 1% of profits to local food banks, and never turn a regular into a stranger.</p>
+        </article>
+
+        <article class="value-card reveal" role="listitem" tabindex="0">
+          <div class="vc-icon" aria-hidden="true">
+            <i class="fa fa-eye"></i>
+          </div>
+          <h3>Radical Transparency</h3>
+          <p>Every label lists full ingredients, brewing dates, and ABV to two decimal places. You deserve to know exactly what you're drinking. No asterisks. No small print.</p>
+        </article>
+
+        <article class="value-card reveal" role="listitem" tabindex="0">
+          <div class="vc-icon" aria-hidden="true">
+            <i class="fa fa-lightbulb"></i>
+          </div>
+          <h3>Relentless Curiosity</h3>
+          <p>We run 12 experimental batches every year. Some fail spectacularly. Some become bestsellers. We believe the willingness to fail is the only path to greatness.</p>
+        </article>
+
+        <article class="value-card reveal" role="listitem" tabindex="0">
+          <div class="vc-icon" aria-hidden="true">
+            <i class="fa fa-handshake"></i>
+          </div>
+          <h3>Respect in Every Glass</h3>
+          <p>We respect our drinkers enough to brew honestly, our employees enough to pay fairly, and our planet enough to operate responsibly. It's the only way we know.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       BREWERY HISTORY TIMELINE — Vertical scrolling timeline
+  ======================================================= -->
+  <section class="section timeline-section" id="timeline" aria-labelledby="timelineHeading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Our History</span>
+        <h2 id="timelineHeading">14 Years in the <em>Making</em></h2>
+        <p>Every chapter shaped by passion, setbacks, and the relentless search for the perfect pour.</p>
+      </div>
+
+      <div class="timeline" role="list">
+
+        <!-- 2012 -->
+        <div class="tl-item reveal" role="listitem">
+          <div class="tl-year" aria-label="Year 2012">2012</div>
+          <div class="tl-node" aria-hidden="true">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-icon" aria-hidden="true"><i class="fa fa-home"></i></div>
+            <h3>The Garage Years</h3>
+            <p>Hari Kiran and Marcus brew their first official batch — a golden ale called <em>First Light</em> — from a 5-gallon kit in Hari Kiran's garage. Neighbours ask for bottles. The seed is planted.</p>
+          </div>
+        </div>
+
+        <!-- 2013 -->
+        <div class="tl-item tl-right reveal" role="listitem">
+          <div class="tl-year" aria-label="Year 2013">2013</div>
+          <div class="tl-node" aria-hidden="true">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-icon" aria-hidden="true"><i class="fa fa-store"></i></div>
+            <h3>hyderabad Opens</h3>
+            <p>After 230 test batches and one extraordinary farmers market response, the duo sign a lease on Hyderabad, Telangana, India. The entire fit-out is built by hand over eight weekends.</p>
+          </div>
+        </div>
+
+        <!-- 2014 -->
+        <div class="tl-item reveal" role="listitem">
+          <div class="tl-year" aria-label="Year 2014">2014</div>
+          <div class="tl-node" aria-hidden="true">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-icon" aria-hidden="true"><i class="fa fa-trophy"></i></div>
+            <h3>First Award</h3>
+            <p>Golden Harvest Ale wins Silver at the California Craft Beer Summit — Heart &amp; Wine's first-ever award. The local press covers it. The weekend queue stretches to the street.</p>
+          </div>
+        </div>
+
+        <!-- 2016 -->
+        <div class="tl-item tl-right reveal" role="listitem">
+          <div class="tl-year" aria-label="Year 2016">2016</div>
+          <div class="tl-node" aria-hidden="true">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-icon" aria-hidden="true"><i class="fa fa-wine-bottle"></i></div>
+            <h3>Barrel Programme Begins</h3>
+            <p>Head Brewer Elena Vasquez joins the team and launches the barrel-aging programme with 12 ex-bourbon casks sourced from Kentucky. The first release sells out in 4 hours.</p>
+          </div>
+        </div>
+
+        <!-- 2018 -->
+        <div class="tl-item reveal" role="listitem">
+          <div class="tl-year" aria-label="Year 2018">2018</div>
+          <div class="tl-node" aria-hidden="true">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-icon" aria-hidden="true"><i class="fa fa-star"></i></div>
+            <h3>Beer Club Launched</h3>
+            <p>The Heart &amp; Wine Beer Club opens its doors. 500 charter members sign up in the first week. By year end membership passes 2,000. The loyalty programme redefines craft beer community.</p>
+          </div>
+        </div>
+
+        <!-- 2020 -->
+        <div class="tl-item tl-right reveal" role="listitem">
+          <div class="tl-year" aria-label="Year 2020">2020</div>
+          <div class="tl-node" aria-hidden="true">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-icon tl-icon-warn" aria-hidden="true"><i class="fa fa-heart"></i></div>
+            <h3>Community Through Crisis</h3>
+            <p>During the pandemic, Heart &amp; Wine pivots to direct delivery and online club events. The team donates 3,000 meals to the local food bank. The community rallies around us — and we rally back.</p>
+          </div>
+        </div>
+
+        <!-- 2022 -->
+        <div class="tl-item reveal" role="listitem">
+          <div class="tl-year" aria-label="Year 2022">2022</div>
+          <div class="tl-node" aria-hidden="true">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-icon" aria-hidden="true"><i class="fa fa-expand-arrows-alt"></i></div>
+            <h3>The Big Expansion</h3>
+            <p>Taproom doubles in size. A dedicated barrel cellar, private dining room, and outdoor beer garden open. The World Beer Cup awards Gold for the Midnight Obsidian Imperial Stout.</p>
+          </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="tl-item tl-right reveal" role="listitem">
+          <div class="tl-year" aria-label="Year 2025 — present">2025</div>
+          <div class="tl-node" aria-hidden="true">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="" aria-label="Current chapter">Now</div>
+            <div class="tl-icon" aria-hidden="true"><i class="fa fa-rocket"></i></div>
+            <h3>Still Writing the Story</h3>
+            <p>8,500 Beer Club members. 47 recipes in rotation. 12 awards on the wall. A new distillery licence in process. And two founders who still argue over hop schedules every Tuesday morning.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       TEAM — Profile cards
+  ======================================================= -->
+  <section class="section team" id="team" aria-labelledby="teamHeading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Meet the Team</span>
+        <h2 id="teamHeading">The People Behind <em>Every Pour</em></h2>
+        <p>Brewers, dreamers, and passionate perfectionists — united by one goal: making your next pint unforgettable.</p>
+      </div>
+
+      <div class="team-grid" role="list">
+
+        <!-- Founder 1 -->
+        <article class="team-card reveal" role="listitem" tabindex="0">
+          <div class="tc-img-wrap">
+            <img src="person-1.avif"
+                 alt="Hari Kiran, Co-founder and Head Brewer" loading="lazy" />
+            <div class="tc-overlay">
+              <p>"Brewing is cooking with science and patience. The beer tells you when it's ready — and you'd better listen."</p>
+              <div class="tc-social" role="list" aria-label="Hari Kiran's social links">
+                <a href="#" aria-label="Hari Kiran on LinkedIn" role="listitem"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Hari Kiran on Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tc-info">
+            <h3>Hari Kiran</h3>
+            <p class="tc-role">Co-founder &amp; Head Brewer</p>
+            <p class="tc-bio">
+              Former professional chef turned obsessive brewer. Hari Kiran drives flavour development and has personally crafted 31 of our 47 recipes. Favourite beer: Golden Harvest Ale.
+            </p>
+            <div class="tc-tags">
+              <span>Recipe Dev</span><span>Fermentation</span><span>Wood Aging</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Founder 2 -->
+        <article class="team-card reveal" role="listitem" tabindex="0">
+          <div class="tc-img-wrap">
+            <img src="person-2.avif"
+                 alt="Marcus Reid, Co-founder and Operations Director" loading="lazy" />
+            <div class="tc-overlay">
+              <p>"The chemistry of fermentation is a love language. You start talking to the yeast and suddenly you understand everything."</p>
+              <div class="tc-social" role="list" aria-label="Marcus's social links">
+                <a href="#" aria-label="Marcus on LinkedIn" role="listitem"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Marcus on Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tc-info">
+            <h3>Manish Raj</h3>
+            <p class="tc-role">Co-founder &amp; Operations Director</p>
+            <p class="tc-bio">
+              Chemical engineer by training, hospitality obsessive by nature. Marcus runs every aspect of the operation, from water chemistry to tap maintenance. Favourite beer: Midnight Obsidian Imperial.
+            </p>
+            <div class="tc-tags">
+              <span>Water Chemistry</span><span>Operations</span><span>Quality Control</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Head Brewer -->
+        <article class="team-card reveal" role="listitem" tabindex="0">
+          <div class="tc-img-wrap">
+            <img src="person-3.avif"
+                 alt="Elena Vasquez, Head Brewer and Barrel Programme Lead" loading="lazy" />
+            <div class="tc-overlay">
+              <p>"A barrel isn't a vessel — it's a collaborator. It has opinions, and it's usually right."</p>
+              <div class="tc-social" role="list" aria-label="Elena's social links">
+                <a href="#" aria-label="Elena on LinkedIn" role="listitem"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Elena on Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tc-info">
+            <h3>Hari Priya</h3>
+            <p class="tc-role">Head Brewer &amp; Barrel Programme Lead</p>
+            <p class="tc-bio">
+              Award-winning brewer and Master Cicerone, Elena joined in 2016 and launched our entire barrel-aging collection. Her Midnight Obsidian won the World Beer Cup Gold in 2022.
+            </p>
+            <div class="tc-tags">
+              <span>Barrel Aging</span><span>Stouts</span><span>Cicerone MC</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Events Manager -->
+        <article class="team-card reveal" role="listitem" tabindex="0">
+          <div class="tc-img-wrap">
+            <img src="person-4.jpg"
+                 alt="Priya Nair, Community and Events Manager" loading="lazy" />
+            <div class="tc-overlay">
+              <p>"The beer is the excuse. The community is the reason. We just happen to make great beer."</p>
+              <div class="tc-social" role="list" aria-label="Priya's social links">
+                <a href="#" aria-label="Priya on LinkedIn" role="listitem"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Priya on Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tc-info">
+            <h3>Pranith Singh</h3>
+            <p class="tc-role">Community &amp; Events Manager</p>
+            <p class="tc-bio">
+              Priya built the Beer Club from 0 to 8,500 members and produces every event on our calendar. She genuinely knows the names of most of our regulars and their usual order.
+            </p>
+            <div class="tc-tags">
+              <span>Events</span><span>Beer Club</span><span>Community</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Join the team CTA -->
+      <div class="team-join reveal">
+        <div class="tj-text">
+          <h3>Think you belong here?</h3>
+          <p>We're always on the lookout for passionate people — brewers, hospitality pros, and everything in between.</p>
+        </div>
+        <a href="../contact/contact.html" class="btn btn-outline">
+          <i class="fa fa-briefcase" aria-hidden="true"></i> View Open Roles
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================
+       AWARDS & PRESS — Horizontal trophy shelf
+  ======================================================= -->
+  <section class="section awards" id="awards" aria-labelledby="awardsHeading">
+    <div class="awards-bg" aria-hidden="true"></div>
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Recognition</span>
+        <h2 id="awardsHeading">Awards &amp; <em>Accolades</em></h2>
+        <p>We're proud of the recognition, but prouder still of the people who inspired us to earn it.</p>
+      </div>
+
+      <div class="awards-shelf" role="list" aria-label="Award collection">
+
+        <div class="award-trophy reveal" role="listitem" tabindex="0">
+          <div class="at-medal gold" aria-hidden="true">
+            <i class="fa fa-trophy"></i>
+          </div>
+          <h3>World Beer Cup</h3>
+          <p class="at-cat">Gold Medal — Imperial Stout</p>
+          <p class="at-year">2022</p>
+        </div>
+
+        <div class="award-trophy reveal" role="listitem" tabindex="0">
+          <div class="at-medal silver" aria-hidden="true">
+            <i class="fa fa-trophy"></i>
+          </div>
+          <h3>CA Craft Beer Summit</h3>
+          <p class="at-cat">Silver — Golden Ale</p>
+          <p class="at-year">2014</p>
+        </div>
+
+        <div class="award-trophy reveal" role="listitem" tabindex="0">
+          <div class="at-medal gold" aria-hidden="true">
+            <i class="fa fa-star"></i>
+          </div>
+          <h3>Beverage Digest</h3>
+          <p class="at-cat">98 Points — Barleywine</p>
+          <p class="at-year">2023</p>
+        </div>
+
+        <div class="award-trophy reveal" role="listitem" tabindex="0">
+          <div class="at-medal bronze" aria-hidden="true">
+            <i class="fa fa-trophy"></i>
+          </div>
+          <h3>West Coast IPA Open</h3>
+          <p class="at-cat">Bronze — Hazy IPA</p>
+          <p class="at-year">2021</p>
+        </div>
+
+        <div class="award-trophy reveal" role="listitem" tabindex="0">
+          <div class="at-medal gold" aria-hidden="true">
+            <i class="fa fa-fire"></i>
+          </div>
+          <h3>Eater — Best Taproom</h3>
+          <p class="at-cat">#1 West Coast Taproom</p>
+          <p class="at-year">2024</p>
+        </div>
+
+        <div class="award-trophy reveal" role="listitem" tabindex="0">
+          <div class="at-medal silver" aria-hidden="true">
+            <i class="fa fa-medal"></i>
+          </div>
+          <h3>GABF</h3>
+          <p class="at-cat">Silver — American Amber</p>
+          <p class="at-year">2019</p>
+        </div>
+
+      </div>
+
+      <!-- Press logos strip -->
+      <div class="press-strip reveal" role="list" aria-label="As featured in">
+        <span class="press-strip-label">As featured in</span>
+        <div class="press-logos-row" role="presentation">
+          <span role="listitem">Bon Appétit</span>
+          <span role="listitem">Food &amp; Wine</span>
+          <span role="listitem">Eater West</span>
+          <span role="listitem">Craft Beer &amp; Brewing</span>
+          <span role="listitem">The Infatuation</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================
+       TESTIMONIALS — Masonry quote wall
+  ======================================================= -->
+  <section class="section testimonials" id="testimonials" aria-labelledby="testimonialsHeading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">What People Say</span>
+        <h2 id="testimonialsHeading">Words from the <em>Regulars</em></h2>
+      </div>
+
+      <div class="testimonials-masonry" role="list">
+
+        <blockquote class="tq-card reveal" role="listitem">
+          <div class="tq-stars" aria-label="5 stars">★★★★★</div>
+          <p>"This isn't just a brewery — it's a community hub. I moved to Hyderabad, Telangana, India three years ago knowing nobody. I came in on a Tuesday, met the regulars, and never felt like a stranger again."</p>
+          <footer><cite>— Lena K., Hop Master Member</cite></footer>
+        </blockquote>
+
+        <blockquote class="tq-card tq-card--tall reveal" role="listitem">
+          <div class="tq-stars" aria-label="5 stars">★★★★★</div>
+          <p>"The Golden Harvest Ale is everything a golden ale should be — and about 40% more. I've been to craft breweries across eight countries and this taproom genuinely stands up with the world's best."</p>
+          <footer><cite>— Thomas A., Beer Traveller</cite></footer>
+        </blockquote>
+
+        <blockquote class="tq-card reveal" role="listitem">
+          <div class="tq-stars" aria-label="5 stars">★★★★★</div>
+          <p>"Joined the Beer Club on a whim and now I can't imagine life without those monthly early-release bottles. Worth every single penny."</p>
+          <footer><cite>— Marcus R., Brewmaster Member</cite></footer>
+        </blockquote>
+
+        <blockquote class="tq-card reveal" role="listitem">
+          <div class="tq-stars" aria-label="5 stars">★★★★★</div>
+          <p>"Hosted my wedding reception here. The staff were incredible and the custom brew they made for us was completely out of this world. We get asked about it at every family gathering."</p>
+          <footer><cite>— Sophie &amp; Tom W., Private Event</cite></footer>
+        </blockquote>
+
+        
+
+        <blockquote class="tq-card reveal" role="listitem">
+          <div class="tq-stars" aria-label="5 stars">★★★★★</div>
+          <p>"Elena talked us through the entire barrel program for 20 minutes. The passion from every single person on that team is palpable. The beer proves it."</p>
+          <footer><cite>— Sarah M., First-time Visitor</cite></footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       CTA — Join the community
+  ======================================================= -->
+  <section class="about-cta" aria-labelledby="ctaHeading">
+    <div class="about-cta-bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1566633806327-68e152aaf26d?w=1400&q=80"
+           alt="" loading="lazy" />
+      <div class="about-cta-overlay"></div>
+    </div>
+    <div class="container about-cta-inner">
+      <div class="reveal">
+        <span class="section-tag">Come Find Us</span>
+        <h2 id="ctaHeading">The Story Continues<br>at <em>Hyderabad, Telangana, India</em></h2>
+        <p>Every great beer deserves great company. Pull up a stool, order a pint, and let's add another chapter together.</p>
+        <div class="cta-buttons">
+          <a href="../home-1/home.html#book" class="btn btn-primary">
+            <i class="fa fa-calendar-check" aria-hidden="true"></i> Reserve a Table
+          </a>
+          <a href="../login/login.html#register" class="btn btn-ghost">
+            Join the Wine Club
+          </a>
+        </div>
+        <p class="cta-address">
+          <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+          Hyderabad, Telangana, India &nbsp;·&nbsp;
+          <i class="fa fa-clock" aria-hidden="true"></i>
+          Open Daily from 12pm
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main><!-- /main -->
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer>
+
+<script src="about.js"></script>
+</body>
+</html>

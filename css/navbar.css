@@ -1,0 +1,41 @@
+/* dropdown container */
+
+.nav-item{
+position:relative;
+}
+
+.dropdown{
+position:absolute;
+top:100%;
+left:0;
+background:#1c1917;
+border-radius:8px;
+min-width:200px;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+transition:0.25s ease;
+z-index:999;
+}
+
+/* dropdown links */
+
+.dropdown a{
+display:block;
+padding:10px 16px;
+color:#F5F5F4;
+text-decoration:none;
+}
+
+.dropdown a:hover{
+background:#8A5A1F;
+}
+
+/* show dropdown */
+
+.nav-item:hover .dropdown{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}

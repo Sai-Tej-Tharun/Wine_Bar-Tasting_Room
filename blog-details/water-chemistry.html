@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Water Chemistry: The Invisible Ingredient That Shapes Every Beer You Drink — Heart &amp; Wine Journal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="bd.css"/>
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div id="foamCursor" aria-hidden="true"></div>
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link active">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html" class="nav-link active">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+<section class="art-hero">
+
+  <!-- LEFT CONTENT -->
+
+  <div class="container ah-left">
+
+
+<nav class="breadcrumb reveal">
+  <a href="../home-1/home.html">Home</a>
+  <span>·</span>
+  <a href="../blogs/blogs.html">Journal</a>
+  <span>·</span>
+  <span>Science</span>
+</nav>
+
+<p class="ah-eyebrow reveal">
+  <span class="ey-line"></span>
+  Science · Brewing Chemistry
+</p>
+
+<h1 class="ah-title reveal">
+  Water Chemistry: The Invisible Ingredient That Shapes Every Beer You Drink
+</h1>
+
+<p class="ah-deck reveal">
+  Water is 93% of your beer. Its mineral content shapes bitterness, mouthfeel, and hop aroma in ways yeast and grain simply cannot override.
+</p>
+
+<div class="ah-meta reveal">
+
+  <div class="ah-author">
+    <div class="ah-avatar">JO</div>
+    <div>
+      <div class="ah-name">Hari Kiran</div>
+      <div class="ah-role">Head Brewer, Heart &amp; Wine</div>
+    </div>
+  </div>
+
+  <div class="meta-sep"></div>
+
+  <span>
+    <i class="fa fa-calendar" style="margin-right:6px;font-size:.8rem"></i>
+    November 2024
+  </span>
+
+  <div class="meta-sep"></div>
+
+  <span id="readTime">11 min read</span>
+
+  <div class="ah-share">
+    <button class="share-btn" data-platform="twitter" aria-label="Share on Twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+    </button>
+
+    <button class="share-btn" data-platform="facebook" aria-label="Share on Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </button>
+
+    <button class="share-btn" data-platform="copy" aria-label="Copy link">
+      <i class="fa fa-link"></i>
+    </button>
+  </div>
+
+</div>
+
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div class="ah-right">
+    <div class="ah-bg" data-parallax style="background-image:url('1-5.jpg'); filter:brightness(60%);"></div>
+    <div class="ah-overlay"></div>
+  </div>
+
+</section>
+
+<section class="container">
+  <div class="article-wrap">
+    <article class="art-content">
+      <p class="drop-cap" id="intro">Before yeast. Before hops. Before malt. There is water — and not just any water, but water with a specific mineral fingerprint that, in many cases, literally created the beer style you are drinking. Burton-on-Trent built the India Pale Ale not because its brewers were uniquely talented, but because the town sat above one of the most sulfate-rich aquifers in the world. The water did not follow the style. The style followed the water.</p>
+      <h2 id="s1">The Six Key Minerals</h2>
+      <p>Six minerals matter most in brewing water: calcium, magnesium, sodium, chloride, sulfate, and bicarbonate. Calcium is the most universally beneficial — it aids enzyme activity during mashing, promotes yeast health, precipitates oxalate (which can cause haze), and helps clarify finished beer. Target 50–150 mg/L in almost all styles. Magnesium contributes a harsh, astringent bitterness at high levels and is generally kept below 30 mg/L. Sodium in small quantities enhances malt fullness and smoothness, but above 150 mg/L it creates an unpleasant mineral saltiness. Bicarbonate has the most dramatic effect on pH — high bicarbonate raises mash pH, which reduces fermentability and increases perceived harshness in the finished beer. It must be carefully managed in all brewing profiles.</p>
+      <blockquote class="pull-quote">"Burton water built the IPA. Pilsen water built the lager. The water did not follow the beer — the beer followed the water." <cite>— Hari Kiran, Head Brewer</cite></blockquote>
+      <h2 id="s2">Five Great Brewing Water Cities</h2>
+      <p>The mineral profiles of five historic brewing cities shaped five great beer traditions. Burton-on-Trent, England, with its extraordinarily high sulfate content (600–800 mg/L), produces a hard, dry, minerally water that amplifies hop bitterness and produces the distinctive "Burton snatch" — a brief sulfurous flash on the nose considered a hallmark of authentic Burton-style pale ale. Pilsen, Czech Republic, sits at the complete opposite extreme: near-distilled softness, almost zero dissolved minerals. This allows malt sweetness to come through completely unimpeded by mineral interference, producing the delicately rounded character that defines Bohemian pilsner. Dublin's water is characterised by high bicarbonate content, which buffers roasted grain acidity and creates the soft, full mouthfeel that defines Irish Stout.</p>
+      <figure class="art-img"><img src="2-5.jpg" alt="Water chemistry lab analysis at Heart and Wine" loading="lazy"/></figure>
+      <div class="fact-box"><h4>Five Cities, Five Water Profiles</h4><ul><li>Burton, England: Sulfate 600–800 mg/L — extremely dry, hop bitterness amplified</li><li>Pilsen, Czech Rep: Near-zero minerals — soft, malt-forward, delicate</li><li>Dublin, Ireland: High bicarbonate — buffers roast, ideal for stout</li><li>Munich, Germany: Moderate calcium carbonate — suits amber lagers, wheat</li><li>London, England: Moderately hard, some sulfate — suits porter and bitter</li></ul></div>
+      <h2 id="s3">The Sulfate-to-Chloride Ratio</h2>
+      <p>The most practically useful number in brewing water chemistry is not any individual mineral — it is the ratio of sulfate to chloride. A sulfate-to-chloride ratio above 2:1 produces a beer that tastes dry, crisp, and hop-forward. The bitterness is accentuated; the finish is clean and quick. A ratio below 1:2 — more chloride than sulfate — produces a beer that tastes full, soft, and malt-forward. The bitterness becomes rounder and less aggressive; the body is more substantial. The skill of water treatment is essentially the skill of targeting this ratio precisely for the beer you are brewing.</p>
+      <h2 id="s4">How We Adjust Water at Heart &amp; Wine</h2>
+      <p>Our source water here in Hyderabad, Telangana, India, California, is moderately hard with a sulfate-to-chloride ratio close to 1:1 — a neutral profile that requires adjustment for most of our recipes. For Pacific Divide IPA, we add calcium sulfate (gypsum) to push sulfate toward 200–250 mg/L, and keep chloride below 60 mg/L. For our Oatmeal Stout, we flip the ratio using calcium chloride additions, target chloride of 120–150 mg/L, and add a small amount of bicarbonate to buffer the roasted malt acidity. The pH target is 5.2–5.4 for the mash in both cases — this sweet spot maximises enzyme activity and produces the cleanest, most fermentable wort. Every batch is treated individually. There is no universal water profile at Heart &amp; Wine.</p>
+      <div class="art-tags"><a href="#" class="at">Water Chemistry</a><a href="#" class="at">Brewing Science</a><a href="#" class="at">Sulfate</a><a href="#" class="at">Chloride</a><a href="#" class="at">Burton</a><a href="#" class="at">Pilsen</a></div>
+      <div class="author-box"><div class="au-avatar">JO</div><div><div class="au-role">Author</div><div class="au-name">Hari Kiran</div><p class="au-bio">Head Brewer at Heart &amp; Wine since 2016. IBD Master Brewer. Formerly Sierra Nevada and Lagunitas. Has obsessively tracked water chemistry across 120+ production batches and still considers it the most underappreciated variable in brewing.</p><div class="au-socials"><a href="#" class="au-social"><i class="fa-brands fa-x-twitter"></i></a><a href="#" class="au-social"><i class="fa-brands fa-linkedin-in"></i></a></div></div></div>
+    </article>
+    <aside class="art-sidebar">
+      <div class="sidebar-card"><div class="reading-pill"><span class="rp-label">Progress</span><div class="rp-bar"><div class="rp-fill"></div></div><span class="rp-pct">0%</span></div></div>
+      <div class="sidebar-card"><div class="sc-title">Contents</div><nav class="toc-list"><a href="#intro" class="toc-link">Introduction</a><a href="#s1" class="toc-link">Section One</a><a href="#s2" class="toc-link">Section Two</a><a href="#s3" class="toc-link">Section Three</a><a href="#s4" class="toc-link">Section Four</a></nav></div>
+      <div class="sidebar-card"><div class="sc-title">Also in the Journal</div><div class="sb-related">
+        <a href="flagship-ipa.html" class="sbr-item"><div class="sbr-img"><img src="3-1.jfif" alt="" loading="lazy"/></div><div><div class="sbr-title">Flagship IPA: 14 Batches</div><div class="sbr-meta">Oct 2024 · 7 min</div></div></a>
+        <a href="barrel-aging.html" class="sbr-item"><div class="sbr-img"><img src="3-2.jfif" alt="" loading="lazy"/></div><div><div class="sbr-title">Inside the Barrel: 24 Months</div><div class="sbr-meta">Feb 2025 · 12 min</div></div></a>
+        <a href="hop-varieties.html" class="sbr-item"><div class="sbr-img"><img src="3-3.png" alt="" loading="lazy"/></div><div><div class="sbr-title">Hop Varieties Field Guide</div><div class="sbr-meta">Jan 2025 · 9 min</div></div></a>
+      </div></div>
+    </aside>
+  </div>
+</section>
+<section class="bd-related"><div class="container"><div class="rel-header"><div><span class="stag reveal">More Reading</span><h2 class="reveal">From the <em>Journal</em></h2></div><a href="../blogs/blogs.html" class="rel-see reveal">All Articles <i class="fa fa-arrow-right"></i></a></div><div class="rel-grid">
+  <a href="flagship-ipa.html" class="rel-card reveal"><div class="rc-img"><img src="3-1.jfif" alt="" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Brewing</div><div class="rc-title">Flagship IPA: 14 Batches</div><div class="rc-meta">Oct 2024 · 7 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a>
+  <a href="barrel-aging.html" class="rel-card reveal"><div class="rc-img"><img src="3-2.jfif" alt="" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Science</div><div class="rc-title">Inside the Barrel: 24 Months</div><div class="rc-meta">Feb 2025 · 12 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a>
+  <a href="hop-varieties.html" class="rel-card reveal"><div class="rc-img"><img src="3-3.png" alt="" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Tasting</div><div class="rc-title">Hop Varieties Field Guide</div><div class="rc-meta">Jan 2025 · 9 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a>
+</div></div></section>
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer><script src="bd.js"></script>
+</body></html>

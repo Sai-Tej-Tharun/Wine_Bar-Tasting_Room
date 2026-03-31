@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Heart & Winw Admin Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="../global-css/global.css">
+<link rel="stylesheet" href="../components/navbar.css">
+<link rel="stylesheet" href="../components/footer.css">
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+
+colors: {
+brand:'#8A5A1F',
+accent:'#D4A373',
+background:'#1c1917',
+secondary:'#44403C',
+text:'#F5F5F4'
+}
+
+}
+}
+}
+</script>
+
+</head>
+
+<body class="bg-background text-text font-[Inter]">
+
+<div class="flex min-h-screen">
+
+<!-- SIDEBAR -->
+
+<aside id="sidebar" class="w-64 bg-[#141210] border-r border-secondary transition-all duration-300">
+
+<div class="p-6 text-3xl font-[Bebas Neue] tracking-wide">
+Heart and Wine
+</div>
+
+<nav class="px-4 space-y-2">
+
+<a href="#" class="sidebar-item">Dashboard</a>
+<a href="#" class="sidebar-item">Bookings</a>
+<a href="#" class="sidebar-item">Events</a>
+<a href="#" class="sidebar-item">Wine Club Members</a>
+<a href="#" class="sidebar-item">Orders</a>
+<a href="#" class="sidebar-item">Messages</a>
+<a href="#" class="sidebar-item">Analytics</a>
+<a href="#" class="sidebar-item">Settings</a>
+<a href="#" class="sidebar-item">Logout</a>
+
+</nav>
+
+</aside>
+
+<!-- MAIN -->
+
+<div class="flex-1 flex flex-col">
+
+<!-- TOPBAR -->
+
+<header class="bg-[#141210] border-b border-secondary px-6 py-4 flex justify-between items-center">
+
+<button id="menuToggle" class="text-accent text-xl">☰</button>
+
+<input
+type="text"
+placeholder="Search..."
+class="bg-secondary rounded-lg px-4 py-2 w-72 text-sm"
+/>
+
+<div class="flex items-center gap-6">
+
+<button class="text-xl">🔔</button>
+
+<div class="relative">
+
+<button id="profileBtn" class="flex items-center gap-2">
+
+<img src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+style="width:40px;height:40px;border-radius:50%;">
+<span>Admin</span>
+
+</button>
+
+<div id="profileMenu" class="hidden absolute right-0 mt-3 bg-[#141210] border border-secondary rounded-lg w-40">
+
+<a class="block px-4 py-2 hover:bg-secondary">Profile</a>
+<a class="block px-4 py-2 hover:bg-secondary">Logout</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- CONTENT -->
+
+<main class="p-6 space-y-8">
+
+<!-- STATS -->
+
+<section class="grid md:grid-cols-4 gap-6">
+
+<div class="dashboard-card">
+<h4>Total Members</h4>
+<p class="stat-number">1,284</p>
+</div>
+
+<div class="dashboard-card">
+<h4>Upcoming Events</h4>
+<p class="stat-number">6</p>
+</div>
+
+<div class="dashboard-card">
+<h4>New Reservations</h4>
+<p class="stat-number">34</p>
+</div>
+
+<div class="dashboard-card">
+<h4>Monthly Revenue</h4>
+<p class="stat-number">₹18,00,000</p>
+</div>
+
+</section>
+
+<!-- CHARTS -->
+
+<section class="grid md:grid-cols-2 gap-6">
+
+<div class="chart-card">
+
+<h3>Membership Growth</h3>
+
+<canvas id="membersChart"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h3>Monthly Bookings</h3>
+
+<canvas id="bookingChart"></canvas>
+
+</div>
+
+</section>
+
+<!-- TABLE -->
+
+<section>
+
+<h3 class="table-title">Recent Reservations</h3>
+
+<div class="overflow-x-auto">
+
+<table class="dashboard-table">
+
+<thead>
+
+<tr>
+<th data-sort="customer">Customer</th>
+<th data-sort="event">Event</th>
+<th data-sort="date">Date</th>
+<th data-sort="status">Status</th>
+<th>Actions</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Mohan A</td>
+<td>Brewery Tour</td>
+<td>June 12</td>
+<td class="status-confirmed">Confirmed</td>
+<td><button class="table-btn">View</button></td>
+</tr>
+
+<tr>
+<td>Sneha V</td>
+<td>Wine Tasting</td>
+<td>June 15</td>
+<td class="status-pending">Pending</td>
+<td><button class="table-btn">View</button></td>
+</tr>
+
+<tr>
+<td>Manish Raj</td>
+<td>Live Music Night</td>
+<td>June 20</td>
+<td class="status-cancelled">Cancelled</td>
+<td><button class="table-btn">View</button></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="../global-js/main.js"></script>
+<script src="../components/navbar.js"></script>
+<script src="../components/footer.js"></script>
+</body>
+</html>

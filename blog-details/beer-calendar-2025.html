@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Our 2025 Beer Calendar: Every Planned Release From January to December — Heart &amp; Wine Journal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="bd.css"/>
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div id="foamCursor" aria-hidden="true"></div>
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link active">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html" class="nav-link active">Beer Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+<section class="art-hero">
+
+  <!-- LEFT CONTENT -->
+
+  <div class="container ah-left">
+
+
+<nav class="breadcrumb reveal">
+  <a href="../home-1/home.html">Home</a>
+  <span>·</span>
+  <a href="../blogs/blogs.html">Journal</a>
+  <span>·</span>
+  <span>Science</span>
+</nav>
+
+<p class="ah-eyebrow reveal">
+  <span class="ey-line"></span>Science · Long Read
+</p>
+
+<h1 class="ah-title reveal">
+  Barrel Aging 101: How Time and Oak Transform Beer Into Something Else Entirely
+</h1>
+
+<p class="ah-deck reveal">
+  There is no shortcut to a great barrel-aged beer. We walk you through every stage of what happens inside a cask — from the initial fill to the final pull.
+</p>
+
+<div class="ah-meta reveal">
+
+  <div class="ah-author">
+    <div class="ah-avatar">JO</div>
+    <div>
+      <div class="ah-name">Hari Kiran</div>
+      <div class="ah-role">Head Brewer</div>
+    </div>
+  </div>
+
+  <div class="meta-sep"></div>
+
+  <span>
+    <i class="fa fa-calendar" style="margin-right:6px;font-size:.8rem"></i>
+    February 2025
+  </span>
+
+  <div class="meta-sep"></div>
+
+  <span id="readTime">12 min read</span>
+
+  <div class="ah-share">
+    <button class="share-btn" data-platform="twitter" aria-label="Share on Twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+    </button>
+
+    <button class="share-btn" data-platform="facebook" aria-label="Share on Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </button>
+
+    <button class="share-btn" data-platform="copy" aria-label="Copy link">
+      <i class="fa fa-link"></i>
+    </button>
+  </div>
+
+</div>
+
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div class="ah-right">
+    <div class="ah-bg" data-parallax style="background-image:url('1-6.jpg'); filter:brightness(60%);"></div>
+    <div class="ah-overlay"></div>
+  </div>
+
+</section>
+
+<section class="container">
+  <div class="article-wrap">
+    <article class="art-content">
+      <p class="drop-cap" id="intro">We have never published a full release calendar before. There are entirely reasonable grounds for this — brewing is unpredictable, ingredients fail, fermentations surprise you, and committing publicly to a specific beer in a specific month is essentially an invitation for the universe to demonstrate its indifference to your plans. But after four years of requests from Beer Club members and taproom regulars, we have decided to take the risk. Here, in full, is what we intend to brew and release in 2025.</p>
+      <h2 id="s1">Q1: January to March</h2>
+      <p>January opens with the highly anticipated release of our Bourbon Barrel Imperial Stout — Batch 22, which has been aging in former Maker's Mark barrels since February 2023. At nearly two years in oak, it is the longest we have ever cellared a beer, and Hari Kiran describes it as "the most complex thing we have ever produced." It will be limited to 600 bottles, available exclusively to Beer Club members for the first 48 hours. February brings our first entirely new recipe of the year: a cold-fermented Kölsch-style ale brewed with California-grown pale malt and Hallertau Blanc hops, designed to capture the clean, dry expressiveness of the Cologne originals while celebrating local ingredients. March sees the return of our Dry-Hopped Saison — an annual spring release that changes its dry hop selection each year based on what is freshest from our Yakima Valley supplier at the time of brewing.</p>
+      <blockquote class="pull-quote">"The foraged saison might be the strangest thing we have ever attempted. It might also be the best." <cite>— Hari Kiran, Head Brewer</cite></blockquote>
+      <h2 id="s2">Q2: April to June</h2>
+      <p>April is our most anticipated release of the first half of the year: Pacific Divide Reserve, the first variation on our flagship IPA we have ever produced commercially. The grain bill and yeast are identical to the original Pacific Divide; the entire hop programme is replaced with Nelson Sauvin and Riwaka from New Zealand. This should produce something that tastes unmistakably like our flagship in structure, but with a wine-like, gooseberry-and-grapefruit character that its predecessor has never had. May brings a Gose — our first foray into sour, saline wheat beer territory — brewed with natural Californian sea salt and hand-harvested Meyer lemons from a farm in Sonoma County. June sees the year-round launch of our American Wheat, graduating from seasonal to permanent tap status following three years of strong demand.</p>
+      <figure class="art-img"><img src="2-6.webp" alt="Preview of the 2025 beer lineup bottles arranged on the bar" loading="lazy"/></figure>
+      <div class="fact-box"><h4>Full 2025 Release Schedule</h4><ul><li>Jan: Bourbon Barrel Imperial Stout — Batch 22 (600 bottles)</li><li>Feb: California Kölsch (keg + can)</li><li>Mar: Dry-Hopped Saison — 2025 hop selection</li><li>Apr: Pacific Divide Reserve — NZ hops (limited)</li><li>May: Meyer Lemon Gose (keg + can)</li><li>Jun: American Wheat (year-round launch)</li><li>Jul: West Coast Session IPA — 3.8% ABV</li><li>Aug: Foraged Wild Saison (wildcard — limited)</li><li>Sep: Fresh Hop Harvest Pale Ale</li><li>Oct: Autumn Amber Ale (no pumpkin)</li><li>Nov: Oatmeal Stout (winter annual return)</li><li>Dec: Christmas Spiced Porter + Barrel Reserve</li></ul></div>
+      <h2 id="s3">The August Wildcard: The Foraged Saison</h2>
+      <p>The August release is the one the entire team is simultaneously most excited and most nervous about. The Foraged Wild Saison will be brewed using only locally foraged botanical adjuncts — yarrow, elderflower, California bay laurel leaves, and black sage — as a complete replacement for commercial hops. This is an attempt to produce a pre-hop era beer using entirely regional, hand-gathered ingredients, in the spirit of the gruits that preceded the widespread adoption of hops as the universal bittering and preserving ingredient in European ale. We have made a small test batch. The results were genuinely strange, genuinely interesting, and wholly unlike anything else we make. Whether the full production batch achieves the same result is entirely unknown.</p>
+      <div class="art-tags"><a href="#" class="at">2025 Releases</a><a href="#" class="at">New Beers</a><a href="#" class="at">Barrel Release</a><a href="#" class="at">Foraged Beer</a><a href="#" class="at">Pacific Divide Reserve</a></div>
+      <div class="author-box"><div class="au-avatar">MH</div><div><div class="au-role">Author</div><div class="au-name">Maya Hall</div><p class="au-bio">Editorial Director of the Heart &amp; Wine Journal since 2021. Previously craft beer correspondent for a Bay Area food magazine. Specialises in interviewing brewers, translating technical brewing concepts for general audiences, and finding the stories behind the labels.</p><div class="au-socials"><a href="#" class="au-social"><i class="fa-brands fa-x-twitter"></i></a><a href="#" class="au-social"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" class="au-social"><i class="fa-brands fa-instagram"></i></a></div></div></div>
+    </article>
+    <aside class="art-sidebar">
+      <div class="sidebar-card"><div class="reading-pill"><span class="rp-label">Progress</span><div class="rp-bar"><div class="rp-fill"></div></div><span class="rp-pct">0%</span></div></div>
+      <div class="sidebar-card"><div class="sc-title">Contents</div><nav class="toc-list"><a href="#intro" class="toc-link">Introduction</a><a href="#s1" class="toc-link">Section One</a><a href="#s2" class="toc-link">Section Two</a><a href="#s3" class="toc-link">Section Three</a><a href="#s4" class="toc-link">Section Four</a></nav></div>
+      <div class="sidebar-card"><div class="sc-title">Also in the Journal</div><div class="sb-related">
+        <a href="flagship-ipa.html" class="sbr-item"><div class="sbr-img"><img src="3-1.jfif" alt="" loading="lazy"/></div><div><div class="sbr-title">Flagship IPA: Three Years, Fourteen Batches</div><div class="sbr-meta">Oct 2024 · 7 min</div></div></a>
+        <a href="barrel-aging.html" class="sbr-item"><div class="sbr-img"><img src="3-2.jfif" alt="" loading="lazy"/></div><div><div class="sbr-title">Inside the Barrel: 24 Months in Oak</div><div class="sbr-meta">Feb 2025 · 12 min</div></div></a>
+        <a href="hop-varieties.html" class="sbr-item"><div class="sbr-img"><img src="3-3.png" alt="" loading="lazy"/></div><div><div class="sbr-title">Hop Varieties: A Field Guide</div><div class="sbr-meta">Jan 2025 · 9 min</div></div></a>
+      </div></div>
+    </aside>
+  </div>
+</section>
+<section class="bd-related"><div class="container"><div class="rel-header"><div><span class="stag reveal">More Reading</span><h2 class="reveal">From the <em>Journal</em></h2></div><a href="../blogs/blogs.html" class="rel-see reveal">All Articles <i class="fa fa-arrow-right"></i></a></div><div class="rel-grid">
+  <a href="flagship-ipa.html" class="rel-card reveal"><div class="rc-img"><img src="3-1.jfif" alt="" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Brewing</div><div class="rc-title">Flagship IPA: Three Years, Fourteen Batches</div><div class="rc-meta">Oct 2024 · 7 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a>
+  <a href="barrel-aging.html" class="rel-card reveal"><div class="rc-img"><img src="3-2.jfif" alt="" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Science</div><div class="rc-title">Inside the Barrel: 24 Months in Oak</div><div class="rc-meta">Feb 2025 · 12 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a>
+  <a href="hop-varieties.html" class="rel-card reveal"><div class="rc-img"><img src="3-3.png" alt="" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Tasting</div><div class="rc-title">Hop Varieties: A Field Guide</div><div class="rc-meta">Jan 2025 · 9 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a>
+</div></div></section>
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer><script src="bd.js"></script>
+</body></html>

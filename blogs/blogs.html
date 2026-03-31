@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Heart & Wine Journal — brewing stories, tasting guides, beer science, and taproom news from Hyderabad, Telangana, India, CA." />
+  <title>The Journal — Heart &amp; Wine Craft Brewery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<style>
+
+/* ── Tokens ── */
+:root{
+  --bg:#0c0800;--bg2:#160e02;--bg3:#1f1504;--card:#231804;
+  --gold:#F2C14E;--gold-d:#D4A030;--gold-l:#FFD970;--amber:#E8921A;
+  --txt:#FFF8E7;--txt2:#CFA96E;--txt3:#8A6A3A;
+  --border:rgba(196,130,30,0.22);--bh:rgba(242,193,78,0.42);
+  --grad:linear-gradient(135deg,#D4A030,#F2C14E,#D4A030);
+  --font-d:'Bebas Neue',sans-serif;--font-h:'Playfair Display',serif;
+  --font-b:'Crimson Text',serif;--font-u:'DM Sans',sans-serif;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+}
+[data-theme="light"]{--bg:#FFF8E7;--bg2:#FDF3D8;--bg3:#FAE8C0;--card:#FFFBF0;--txt:#1a1005;--txt2:#5a3a10;--txt3:#8A6A3A;--border:rgba(196,130,30,0.2);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--font-b);font-size:1.05rem;line-height:1.75;overflow-x:hidden;transition:background .3s,color .3s}
+img{max-width:100%;display:block;object-fit:cover}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* AMBIENT */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.4;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");}
+.scroll-bar{position:fixed;top:0;left:0;width:0;height:3px;background:var(--grad);z-index:9999;border-radius:0 2px 2px 0;}
+#fc{position:fixed;width:20px;height:20px;border-radius:50%;background:radial-gradient(circle,rgba(255,248,231,.85) 0%,transparent 70%);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;mix-blend-mode:screen;}
+.container{max-width:1240px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+.section{padding:96px 0}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ── NAVBAR ── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 32px;transition:background .4s,box-shadow .4s;}
+.navbar.scrolled{
+  background:var(--bg);
+  backdrop-filter:blur(16px);
+  box-shadow:0 2px 30px rgba(0,0,0,.15);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;}
+.nav-logo em{color:var(--gold);font-style:normal;}
+
+.nav-link{font-family:var(--font-u);font-size:.86rem;font-weight:500;color:var(--txt2);padding:8px 14px;border-radius:4px;transition:color .3s;position:relative;}
+.nav-link::after{content:'';position:absolute;bottom:4px;left:14px;right:14px;height:1.5px;background:var(--gold);transform:scaleX(0);transition:transform .3s var(--ease);}
+.nav-link:hover,.nav-link.active{color:var(--txt);}
+.nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);}
+.nav-cta{background:var(--grad);color:#0c0800!important;font-weight:700;padding:8px 20px;border-radius:4px;}
+.nav-cta::after{display:none;}
+.nav-acts{display:flex;align-items:center;gap:12px;}
+.tt{background:none;border:1px solid var(--border);color:var(--txt2);width:38px;height:38px;border-radius:50%;cursor:pointer;transition:border-color .3s,color .3s;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.tt:hover{border-color:var(--gold);color:var(--gold);}
+.nb{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.nb span{display:block;width:24px;height:2px;background:var(--txt);border-radius:2px;}
+.mm{display:none;flex-direction:column;background:rgba(12,8,0,.98);padding:16px 32px 24px;border-bottom:1px solid var(--border);}
+.mm.open{display:flex;}
+.ml{font-family:var(--font-u);font-size:1rem;color:var(--txt2);padding:12px 0;border-bottom:1px solid var(--border);transition:color .3s;}
+.ml:hover,.mlc{color:var(--gold)!important;}
+.dropdown a,
+.dropdown a:visited,
+.dropdown a:active,
+.dropdown a:focus{
+  display:block;
+  padding:10px 16px;
+  color:#ffffff !important;
+  text-decoration:none;
+}
+
+.dropdown a:hover{
+  background:#8A5A1F;
+  color:#ffffff !important;
+}
+/* ── SECTION TAG ── */
+.stag{font-family:var(--font-u);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(242,193,78,.08);border:1px solid rgba(242,193,78,.2);padding:4px 14px;border-radius:999px;display:inline-block;margin-bottom:16px;}
+
+.mob-dropdown {
+  border-top: 1px solid var(--border);
+}
+
+.mob-drop-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--txt);
+  font-size: 1rem;
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mob-drop-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.mob-drop-menu a {
+  padding: 10px 0;
+  font-size: .9rem;
+  color: var(--txt2);
+}
+
+.mob-dropdown.active .mob-drop-menu {
+  max-height: 500px;
+}
+
+.mob-dropdown.active i {
+  transform: rotate(180deg);
+}
+
+.mob-drop-toggle i {
+  transition: transform .3s;
+}
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HERO — Editorial masthead
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.blog-hero{
+  min-height:100vh;display:grid;
+  grid-template-columns:1fr 1fr;
+  padding-top:72px;
+}
+
+/* Left — text */
+.bh-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 64px 80px 0;
+  border-right:1px solid var(--border);
+  position:relative;z-index:2;
+}
+.bh-issue{font-family:var(--font-u);font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.bh-title{font-family:var(--font-d);font-size:clamp(4.5rem,9vw,9rem);line-height:.86;letter-spacing:.02em;margin-bottom:28px;}
+.bh-title .tg{color:var(--gold);}
+.bh-title .to{-webkit-text-stroke:2px var(--gold-d);color:transparent;}
+.bh-sub{font-family:var(--font-h);font-style:italic;font-size:1.05rem;color:var(--txt2);max-width:420px;line-height:1.8;margin-bottom:36px;}
+
+/* Category pills */
+.bh-cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;}
+.cat-pill{
+  font-family:var(--font-u);font-size:.72rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 14px;border-radius:999px;
+  border:1px solid var(--border);color:var(--txt3);
+  cursor:pointer;transition:border-color .3s,color .3s,background .3s;
+  background:none;
+}
+.cat-pill:hover,.cat-pill.active{border-color:var(--gold);color:var(--gold);background:rgba(242,193,78,.07);}
+
+.bh-stats{display:flex;gap:32px;}
+.bhs{display:flex;flex-direction:column;}
+.bhs-n{font-family:var(--font-d);font-size:2.2rem;color:var(--gold);line-height:1;}
+.bhs-l{font-family:var(--font-u);font-size:.65rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);}
+
+/* Right — featured post */
+.bh-right{
+  position:relative;overflow:hidden;
+}
+.bh-feat-img{
+  position:absolute;inset:0;
+  transition:transform 8s ease;
+}
+.bh-feat-img img{width:100%;height:100%;transition:transform 8s ease;}
+.blog-hero:hover .bh-feat-img img{transform:scale(1.05);}
+.bh-feat-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(12,8,0,.08) 0%,rgba(12,8,0,.7) 100%);
+}
+.bh-feat-card{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:40px 40px 48px;
+  z-index:2;
+}
+.bh-fc-cat{font-family:var(--font-u);font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+
+.bh-fc-meta{font-family:var(--font-u);font-size:.78rem;color:var(--txt3);display:flex;align-items:center;gap:14px;margin-bottom:18px;}
+.bh-fc-meta i{font-size:.7rem;}
+
+.bh-fc-title{
+  font-family:var(--font-h);
+  font-size:1.55rem;
+  font-weight:700;
+  line-height:1.2;
+  margin-bottom:12px;
+  color:#F5F5F4;   /* dark mode text */
+}
+
+.bh-fc-excerpt{
+  font-size:.9rem;
+  line-height:1.7;
+  margin-bottom:20px;
+  max-width:400px;
+  color:#E0AD3C;   /* dark mode secondary text */
+}
+.bh-fc-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-u);font-size:.78rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);transition:gap .3s;
+}
+.bh-fc-link:hover{gap:14px;}
+.bh-fc-link i{font-size:.72rem;}
+/* ================= FOOTER ================= */
+
+.footer{
+  background:var(--bg);
+  border-top:1px solid var(--border);
+  position:relative;
+  overflow:hidden;
+  padding-top:64px;
+}
+
+.footer-foam{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    var(--amber),
+    var(--gold),
+    transparent
+  );
+  opacity:.5;
+}
+
+/* Layout */
+
+.footer-inner{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;
+  gap:48px;
+  padding-bottom:48px;
+}
+
+/* Logo */
+
+.footer-logo{
+  font-family:var(--font-d);
+  font-size:1.6rem;
+  letter-spacing:.08em;
+  color:var(--txt);
+  margin-bottom:12px;
+}
+
+/* Brand text */
+
+.footer-brand p{
+  font-size:.88rem;
+  color:var(--txt3);
+  margin-bottom:20px;
+  max-width:220px;
+  line-height:1.7;
+}
+
+/* Social icons */
+
+.footer-social{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.footer-social a{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--txt3);
+  font-size:.88rem;
+  transition:border-color .3s,color .3s,background .3s;
+}
+
+.footer-social a:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+  background:rgba(242,193,78,.08);
+}
+
+/* Footer columns */
+
+.footer-col h4{
+  font-family:var(--font-u);
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:16px;
+}
+
+.footer-col a,
+.footer-col p{
+  display:block;
+  font-size:.88rem;
+  color:var(--txt3);
+  margin-bottom:8px;
+  transition:color .3s;
+  line-height:1.5;
+}
+
+.footer-col a:hover{
+  color:var(--txt);
+}
+
+/* Hours */
+
+.footer-hours{
+  color:var(--txt3) !important;
+}
+
+/* Address */
+
+.footer-addr{
+  color:var(--txt3) !important;
+  display:flex !important;
+  align-items:center;
+  gap:6px;
+}
+
+.footer-addr i{
+  color:var(--gold);
+}
+
+/* Bottom bar */
+
+.footer-bottom{
+  border-top:1px solid var(--border);
+  padding:20px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+  font-family:var(--font-u);
+  font-size:.8rem;
+  color:var(--txt3);
+}
+
+.footer-bottom a{
+  color:var(--txt3);
+  transition:color .3s;
+}
+
+.footer-bottom a:hover{
+  color:var(--gold);
+}
+
+/* ================= FOOTER RESPONSIVE ================= */
+
+@media (max-width:1024px){
+
+  .footer-inner{
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TICKER BAND
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.ticker-band{
+  background:var(--gold-d);
+  padding:12px 0;overflow:hidden;
+  border-top:1px solid var(--border);
+}
+.ticker-track{
+  display:flex;gap:0;
+  animation:ticker 28s linear infinite;
+  white-space:nowrap;
+}
+.ticker-track:hover{animation-play-state:paused;}
+.ticker-item{
+  font-family:var(--font-d);font-size:1rem;letter-spacing:.12em;text-transform:uppercase;
+  color:#0c0800;padding:0 28px;
+  display:flex;align-items:center;gap:14px;
+  flex-shrink:0;
+}
+.ticker-item::after{content:'✦';font-size:.6rem;opacity:.6;}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   LATEST POSTS — Asymmetric grid
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.latest{background:var(--bg2);border-top:1px solid var(--border);}
+.latest-header{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:56px;flex-wrap:wrap;gap:16px;
+}
+.latest-header h2{font-family:var(--font-h);font-size:clamp(2rem,4vw,3rem);font-weight:700;}
+.latest-header h2 em{color:var(--gold);font-style:italic;}
+.see-all{
+  font-family:var(--font-u);font-size:.8rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:8px;
+  transition:gap .3s;
+}
+.nav-logo{
+display:flex;
+align-items:center;
+gap:8px;
+font-family:var(--font-d);
+font-size:1.5rem;
+letter-spacing:.08em;
+}
+.see-all:hover{gap:13px;}
+
+/* Main grid */
+.posts-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  grid-template-rows:auto auto;
+  gap:24px;
+}
+
+.post-card{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .4s var(--ease),border-color .4s,box-shadow .4s;
+}
+.post-card:hover{transform:translateY(-6px);border-color:var(--bh);box-shadow:0 20px 50px rgba(0,0,0,.45),0 0 30px rgba(242,193,78,.12);}
+.post-card.tall{grid-row:span 2;}
+
+.pc-img{
+  overflow:hidden;
+  position:relative;
+}
+.pc-img img{width:100%;height:220px;transition:transform .7s var(--ease);}
+.post-card.tall .pc-img img{height:320px;}
+.post-card:hover .pc-img img{transform:scale(1.06);}
+
+/* Reading time badge */
+.pc-badge{
+  position:absolute;top:14px;right:14px;
+  background:rgba(12,8,0,.8);backdrop-filter:blur(8px);
+  border:1px solid var(--border);border-radius:6px;
+  font-family:var(--font-u);font-size:.68rem;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;
+  color:var(--gold);padding:4px 10px;
+}
+
+.pc-body{padding:22px 24px 24px;flex:1;display:flex;flex-direction:column;}
+.pc-cat{font-family:var(--font-u);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.pc-title{font-family:var(--font-h);font-size:1.1rem;font-weight:700;line-height:1.25;margin-bottom:10px;transition:color .3s;}
+.post-card:hover .pc-title{color:var(--gold-l);}
+.post-card.tall .pc-title{font-size:1.3rem;}
+.pc-excerpt{font-size:.88rem;color:var(--txt2);line-height:1.7;flex:1;margin-bottom:18px;}
+.pc-meta{display:flex;align-items:center;gap:10px;font-family:var(--font-u);font-size:.76rem;color:var(--txt3);}
+.pc-avatar{width:28px;height:28px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--gold);flex-shrink:0;font-family:var(--font-d);}
+.pc-meta-sep{width:3px;height:3px;border-radius:50%;background:var(--txt3);}
+.pc-link{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--font-u);font-size:.75rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);transition:gap .3s;margin-top:14px;
+}
+.post-card:hover .pc-link{gap:12px;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TOPIC BANDS — Two inline-list sections
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.topics-band{
+  background:var(--bg);
+  border-top:1px solid var(--border);
+  padding:56px 0;
+}
+.topics-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+.topic-item{
+  padding:32px 28px;
+  border-right:1px solid var(--border);
+  cursor:pointer;
+  transition:background .3s;
+}
+.topic-item:last-child{border-right:none;}
+.topic-item:hover{background:rgba(242,193,78,.04);}
+.ti-icon{font-size:1.6rem;margin-bottom:12px;}
+.ti-name{font-family:var(--font-h);font-size:1.05rem;font-weight:700;margin-bottom:6px;}
+.ti-count{font-family:var(--font-u);font-size:.78rem;color:var(--txt3);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   EDITORIAL FEATURE — Full-width cinematic
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.editorial{
+  position:relative;overflow:hidden;
+  min-height:560px;display:flex;align-items:center;
+  border-top:1px solid var(--border);
+}
+.ed-bg{position:absolute;inset:0;}
+.ed-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.35);}
+.ed-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,8,0,.92) 0%,rgba(12,8,0,.5) 60%,rgba(12,8,0,.15) 100%);}
+.ed-content{position:relative;z-index:2;max-width:620px;padding:80px 0;}
+.ed-label{font-family:var(--font-u);font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.ed-label::before{content:'';width:32px;height:1px;background:var(--gold);}
+.ed-title{font-family:var(--font-d);font-size:clamp(2.8rem,5vw,5rem);line-height:.9;letter-spacing:.02em;margin-bottom:22px;}
+.ed-title span{display:block;}
+.ed-title .eg{color:var(--gold);}
+.ed-body{font-family:var(--font-h);font-style:italic;font-size:1.05rem;color:var(--txt2);max-width:480px;line-height:1.8;margin-bottom:28px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:4px;font-family:var(--font-u);font-weight:600;font-size:.88rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border:none;transition:transform .3s,box-shadow .3s;}
+.btn-primary{background:var(--grad);color:#0c0800;box-shadow:0 4px 20px rgba(212,160,48,.4);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(242,193,78,.5);}
+.btn-ghost{background:transparent;color:var(--gold);border:1.5px solid rgba(242,193,78,.45);padding:13px 32px;}
+.btn-ghost:hover{background:rgba(242,193,78,.07);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   POPULAR POSTS — Horizontal scroll on mobile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.popular{background:var(--bg2);border-top:1px solid var(--border);}
+.popular-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:44px;}
+.popular-header h2{font-family:var(--font-h);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;}
+.popular-header h2 em{color:var(--gold);font-style:italic;}
+
+.popular-list{display:flex;flex-direction:column;gap:0;}
+.pop-item{
+  display:grid;grid-template-columns:80px 1fr;gap:20px;
+  padding:22px 0;border-bottom:1px solid var(--border);
+  align-items:center;
+  transition:background .3s;cursor:pointer;
+}
+.pop-item:first-child{border-top:1px solid var(--border);}
+.pop-item:hover{background:rgba(242,193,78,.03);padding-left:8px;}
+.pop-num{font-family:var(--font-d);font-size:3.5rem;color:rgba(242,193,78,.12);line-height:1;transition:color .3s;}
+.pop-item:hover .pop-num{color:rgba(242,193,78,.25);}
+.pop-title{font-family:var(--font-h);font-size:1rem;font-weight:700;margin-bottom:4px;transition:color .3s;}
+.pop-item:hover .pop-title{color:var(--gold-l);}
+.pop-meta{font-family:var(--font-u);font-size:.76rem;color:var(--txt3);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   NEWSLETTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.nl{
+  background:linear-gradient(135deg,#160e02,#2a1804);
+  border-top:1px solid var(--border);padding:72px 0;
+}
+.nl-inner{display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;}
+.nl-text h2{
+  font-family:var(--font-h);
+  font-size:clamp(1.8rem,3vw,2.4rem);
+  font-weight:700;
+  margin-bottom:8px;
+  color:#fff; /* stays white in both themes */
+}
+
+.nl-text h2 em{
+  color:var(--gold);
+  font-style:italic;
+}
+.nl-text p{color:var(--txt2);font-size:.95rem;max-width:380px;}
+.nl-form{display:flex;gap:10px;flex:1;max-width:480px;flex-wrap:wrap;}
+.nl-form input{flex:1;min-width:200px;background:rgba(255,255,255,.05);border:1.5px solid var(--border);border-radius:6px;padding:12px 18px;font-family:var(--font-u);font-size:.9rem;color:var(--txt);outline:none;transition:border-color .3s,box-shadow .3s;}
+.nl-form input:focus{border-color:var(--gold-d);box-shadow:0 0 0 3px rgba(212,160,48,.12);}
+.nl-form input::placeholder{color:var(--txt3);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ARCHIVE GRID — 3-col mini cards
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.archive{background:var(--bg);border-top:1px solid var(--border);}
+.archive-header{text-align:center;margin-bottom:56px;}
+.archive-header h2{font-family:var(--font-h);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;margin-bottom:8px;}
+.archive-header h2 em{color:var(--gold);font-style:italic;}
+.archive-header p{color:var(--txt2);font-size:1rem;max-width:500px;margin:0 auto;}
+
+.archive-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  margin-bottom:0;
+}
+.ac{
+  background:var(--card);border:1px solid var(--border);border-radius:10px;
+  overflow:hidden;
+  transition:transform .4s var(--ease),border-color .4s,box-shadow .4s;
+}
+.ac:hover{transform:translateY(-5px);border-color:var(--bh);box-shadow:0 18px 44px rgba(0,0,0,.4);}
+.ac-img{height:180px;overflow:hidden;}
+.ac-img img{width:100%;height:100%;transition:transform .6s var(--ease);}
+.ac:hover .ac-img img{transform:scale(1.06);}
+.ac-body{padding:18px 20px;}
+.ac-cat{font-family:var(--font-u);font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.ac-title{font-family:var(--font-h);font-size:.98rem;font-weight:700;line-height:1.25;margin-bottom:8px;transition:color .3s;}
+.ac:hover .ac-title{color:var(--gold-l);}
+.ac-meta{font-family:var(--font-u);font-size:.74rem;color:var(--txt3);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FEATURED EXCERPTS — 6 cards → blog-details
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.excerpts{
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+}
+.excerpts-header{text-align:center;margin-bottom:64px;}
+.excerpts-header h2{font-family:var(--font-h);font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:10px;}
+.excerpts-header h2 em{color:var(--gold);font-style:italic;}
+.excerpts-header p{color:var(--txt2);font-size:1rem;max-width:500px;margin:0 auto;}
+
+.excerpts-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+.exc{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .45s var(--ease),border-color .45s,box-shadow .45s;
+}
+.exc:hover{transform:translateY(-10px);border-color:var(--bh);box-shadow:0 28px 64px rgba(0,0,0,.5),0 0 36px rgba(242,193,78,.14);}
+
+.exc-img{
+  height:230px;overflow:hidden;position:relative;
+}
+.exc-img img{width:100%;height:100%;transition:transform .8s var(--ease);}
+.exc:hover .exc-img img{transform:scale(1.08);}
+
+/* Category ribbon on excerpt card */
+.exc-cat-badge{
+  position:absolute;top:16px;left:16px;
+  font-family:var(--font-u);font-size:.65rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:#0c0800;background:var(--gold);
+  padding:4px 12px;border-radius:4px;
+}
+
+.exc-body{padding:26px 28px;flex:1;display:flex;flex-direction:column;}
+
+.exc-title{
+  font-family:var(--font-h);font-size:1.2rem;font-weight:700;
+  line-height:1.2;margin-bottom:12px;
+  transition:color .3s;
+}
+.exc:hover .exc-title{color:var(--gold-l);}
+
+.exc-excerpt{
+  font-family:var(--font-b);font-size:.94rem;
+  color:var(--txt2);line-height:1.75;
+  margin-bottom:20px;flex:1;
+}
+
+/* Pull quote inside excerpt */
+.exc-pull{
+  border-left:3px solid var(--gold-d);
+  padding:10px 16px;
+  background:rgba(242,193,78,.05);
+  border-radius:0 6px 6px 0;
+  font-family:var(--font-h);font-style:italic;
+  font-size:.88rem;color:var(--txt2);
+  margin-bottom:20px;line-height:1.6;
+}
+
+.exc-meta{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--font-u);font-size:.76rem;color:var(--txt3);
+  margin-bottom:18px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border);
+}
+.exc-avatar{width:30px;height:30px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--gold);flex-shrink:0;font-family:var(--font-d);}
+.exc-dot{width:3px;height:3px;border-radius:50%;background:var(--txt3);}
+
+.exc-footer{
+  display:flex;align-items:center;justify-content:space-between;
+}
+.exc-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.exc-tag{
+  font-family:var(--font-u);font-size:.64rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--txt3);background:rgba(255,255,255,.04);
+  border:1px solid var(--border);border-radius:4px;
+  padding:3px 9px;
+}
+.exc-read{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--font-u);font-size:.75rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);white-space:nowrap;
+  transition:gap .3s;
+}
+.exc:hover .exc-read{gap:12px;}
+.exc-read i{font-size:.7rem;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FOOTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@media(max-width:1024px){
+  .blog-hero{grid-template-columns:1fr;}
+  .bh-right{height:480px;}
+  .bh-left{padding:100px 0 56px;border-right:none;border-bottom:1px solid var(--border);}
+  .posts-grid{grid-template-columns:1fr 1fr;}
+  .post-card.tall{grid-row:auto;}
+  .excerpts-grid{grid-template-columns:1fr 1fr;}
+  .archive-grid{grid-template-columns:1fr 1fr;}
+  .topics-inner{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}.nb{display:flex;}
+  .posts-grid{grid-template-columns:1fr;}
+  .excerpts-grid{grid-template-columns:1fr;}
+  .archive-grid{grid-template-columns:1fr;}
+  .nl-inner{flex-direction:column;text-align:center;}
+  .popular-header,.latest-header{flex-direction:column;align-items:flex-start;}
+}
+@media(max-width:480px){
+  .section{padding:64px 0;}
+  .topics-inner{grid-template-columns:1fr;}
+}
+.nav-links{
+display:flex;
+align-items:center;
+gap:24px;
+}
+
+.nav-item{
+position:relative;
+}
+
+.dropdown{
+position:absolute;
+top:100%;
+left:0;
+background:#1c1917;
+border-radius:10px;
+min-width:220px;
+padding:10px 0;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+transition:0.25s ease;
+}
+
+.dropdown a{
+display:block;
+padding:10px 18px;
+color:#fff;
+text-decoration:none;
+}
+
+.dropdown a:hover{
+background:#8A5A1F;
+}
+
+.nav-item:hover .dropdown{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+/* MOBILE */
+
+.nav-burger{
+display:none;
+flex-direction:column;
+gap:4px;
+}
+
+.nav-burger span{
+width:22px;
+height:2px;
+background:#fff;
+}
+
+.mobile-menu{
+display:none;
+flex-direction:column;
+background:#1c1917;
+padding:20px;
+}
+
+.mob-sub{
+display:none;
+flex-direction:column;
+padding-left:15px;
+}
+
+.mob-sub.open{
+display:flex;
+}
+
+.mobile-menu.open{
+display:flex;
+}
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+}
+
+.nav-burger{
+display:flex;
+}
+
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-bar" id="sb"></div>
+<div id="fc" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-inner">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link ">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link active">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-acts">
+
+      <button class="tt" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<!-- ═══════════════════════
+     HERO — Editorial masthead
+═══════════════════════ -->
+<section class="blog-hero">
+  <div class="container bh-left">
+    <p class="bh-issue reveal">The Journal — Issue 24 · Spring 2025</p>
+    <div class="bh-title reveal">
+      <span class="tg">HEART</span>
+      <span>&amp;</span>
+      <span class="to">WINE</span>
+      <span>JOURNAL</span>
+    </div>
+    <p class="bh-sub reveal">Stories, science, and serious opinions about craft beer — from the people who make it.</p>
+    <div class="bh-cats reveal" role="list" aria-label="Blog categories">
+      <button class="cat-pill active" data-cat="all">All</button>
+      <button class="cat-pill" data-cat="brewing">Brewing</button>
+      <button class="cat-pill" data-cat="tasting">Tasting</button>
+      <button class="cat-pill" data-cat="events">Events</button>
+      <button class="cat-pill" data-cat="news">News</button>
+      <button class="cat-pill" data-cat="science">Science</button>
+    </div>
+    <div class="bh-stats reveal">
+      <div class="bhs"><span class="bhs-n">120+</span><span class="bhs-l">Articles</span></div>
+      <div class="bhs"><span class="bhs-n">6</span><span class="bhs-l">Editors</span></div>
+      <div class="bhs"><span class="bhs-n">4K</span><span class="bhs-l">Subscribers</span></div>
+    </div>
+  </div>
+
+  <!-- Featured post preview -->
+  <div class="bh-right">
+    <div class="bh-feat-img">
+      <img src="a-1.jfif" style="filter:brightness(60%);" alt="Brewer checking fermentation tanks" loading="eager" />
+    </div>
+    <div class="bh-feat-overlay"></div>
+    <div class="bh-feat-card">
+      <div class="bh-fc-cat">✦ Editor's Pick · Brewing Science</div>
+      <h2 class="bh-fc-title">The Yeast Beneath: How a Single Cell Strain Can Change Everything About a Beer</h2>
+
+      <a href="../blog-details/flagship-ipa.html" class="bh-fc-link">Read the Full Article <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-band" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">Brewing Stories</span><span class="ticker-item">Hop Science</span>
+    <span class="ticker-item">Tasting Notes</span><span class="ticker-item">Food Pairing</span>
+    <span class="ticker-item">Barrel Aging</span><span class="ticker-item">Beer History</span>
+    <span class="ticker-item">Yeast Lab</span><span class="ticker-item">Water Chemistry</span>
+    <span class="ticker-item">New Releases</span><span class="ticker-item">Event Recaps</span>
+    <!-- dupe for seamless loop -->
+    <span class="ticker-item">Brewing Stories</span><span class="ticker-item">Hop Science</span>
+    <span class="ticker-item">Tasting Notes</span><span class="ticker-item">Food Pairing</span>
+    <span class="ticker-item">Barrel Aging</span><span class="ticker-item">Beer History</span>
+    <span class="ticker-item">Yeast Lab</span><span class="ticker-item">Water Chemistry</span>
+    <span class="ticker-item">New Releases</span><span class="ticker-item">Event Recaps</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════
+     LATEST POSTS
+═══════════════════════ -->
+<section class="section latest" id="latest">
+  <div class="container">
+    <div class="latest-header">
+      <div>
+        <span class="stag reveal">Latest</span>
+        <h2 class="reveal">From the <em>Journal</em></h2>
+      </div>
+      <a href="#excerpts" class="see-all reveal">View All <i class="fa fa-arrow-right"></i></a>
+    </div>
+
+    <div class="posts-grid">
+
+      <!-- Tall feature card -->
+      <div class="post-card tall reveal" data-cat="brewing">
+        <div class="pc-img">
+          <img src="a-2.png" alt="Barrel aging room" loading="lazy" />
+          <span class="pc-badge">12 min read</span>
+        </div>
+        <div class="pc-body">
+          <div class="pc-cat">Brewing · Science</div>
+          <h3 class="pc-title">Inside the Barrel: What Happens to Beer Over 24 Months in Oak</h3>
+          <p class="pc-excerpt">Oak barrels are living vessels. The wood breathes, the liquid evaporates (the so-called "angel's share"), and a slow alchemy of esters, lactones, and vanillin transforms raw ale into something unrecognisable from its younger self. We open every cask in our aging cellar and explain what's happening chemically inside each one.</p>
+          <div class="pc-meta">
+            <div class="pc-avatar">JO</div>
+            <span>Hari Kiran</span>
+            <div class="pc-meta-sep"></div>
+            <span>Feb 2025</span>
+          </div>
+          <a href="../blog-details/barrel-aging.html" class="pc-link">Read Article <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Regular cards -->
+      <div class="post-card reveal" data-cat="tasting">
+        <div class="pc-img">
+          <img src="a3.webp" alt="Hop varieties in bowls" loading="lazy" />
+          <span class="pc-badge">6 min read</span>
+        </div>
+        <div class="pc-body">
+          <div class="pc-cat">Tasting · Hops</div>
+          <h3 class="pc-title">Citra, Mosaic, Simcoe: The Hop Varieties That Defined a Decade</h3>
+          <p class="pc-excerpt">Three hop varieties changed what modern beer tastes like. We profile each one — aroma character, oil chemistry, and the beers that made them famous.</p>
+          <div class="pc-meta">
+            <div class="pc-avatar">SR</div>
+            <span>Sara Reeves</span>
+            <div class="pc-meta-sep"></div>
+            <span>Jan 2025</span>
+          </div>
+          <a href="../blog-details/hop-varieties.html" class="pc-link">Read Article <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="post-card reveal" data-cat="events">
+        <div class="pc-img">
+          <img src="a4.webp" alt="Beer and food pairing" loading="lazy" />
+          <span class="pc-badge">5 min read</span>
+        </div>
+        <div class="pc-body">
+          <div class="pc-cat">Tasting · Food</div>
+          <h3 class="pc-title">Why a West Coast IPA and Sharp Cheddar Is the Most Underrated Pairing in Gastronomy</h3>
+          <p class="pc-excerpt">Our head Cicerone makes the case for reordering the hierarchy of beer and food pairing — starting with the most polarising combination in the room.</p>
+          <div class="pc-meta">
+            <div class="pc-avatar">CK</div>
+            <span>Clara Kim</span>
+            <div class="pc-meta-sep"></div>
+            <span>Dec 2024</span>
+          </div>
+          <a href="../blog-details/food-pairing.html" class="pc-link">Read Article <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="post-card reveal" data-cat="science">
+        <div class="pc-img">
+          <img src="a5.avif" alt="Brewing water analysis" loading="lazy" />
+          <span class="pc-badge">9 min read</span>
+        </div>
+        <div class="pc-body">
+          <div class="pc-cat">Science · Brewing</div>
+          <h3 class="pc-title">Soft vs. Hard: How Water Chemistry Silently Shapes Every Beer You've Ever Drunk</h3>
+          <p class="pc-excerpt">The mineral profile of brewing water is the most invisible and most powerful variable in the brewhouse. We profile five great brewing water regions and explain why Burton-on-Trent's gypsum-rich wells built the IPA style.</p>
+          <div class="pc-meta">
+            <div class="pc-avatar">JO</div>
+            <span>Hari Kiran</span>
+            <div class="pc-meta-sep"></div>
+            <span>Nov 2024</span>
+          </div>
+          <a href="../blog-details/water-chemistry.html" class="pc-link">Read Article <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="post-card reveal" data-cat="news">
+        <div class="pc-img">
+          <img src="a6.webp" alt="2025 beer lineup" loading="lazy" />
+          <span class="pc-badge">4 min read</span>
+        </div>
+        <div class="pc-body">
+          <div class="pc-cat">News · Releases</div>
+          <h3 class="pc-title">What's Coming from the Cellar in 2025: Our Full Release Calendar Revealed</h3>
+          <p class="pc-excerpt">From a wild fermentation saison brewed with foraged ingredients to the return of our cult Imperial Stout aged in bourbon barrels — here's every planned release for 2025.</p>
+          <div class="pc-meta">
+            <div class="pc-avatar">MH</div>
+            <span>Maya Hall</span>
+            <div class="pc-meta-sep"></div>
+            <span>Jan 2025</span>
+          </div>
+          <a href="../blog-details/beer-calendar-2025.html" class="pc-link">Read Article <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════
+     TOPICS BAND
+═══════════════════════ -->
+<div class="topics-band">
+  <div class="container">
+    <div class="topics-inner">
+      <div class="topic-item reveal">
+        <div class="ti-icon">🧪</div>
+        <div class="ti-name">Brewing Science</div>
+        <div class="ti-count">24 articles</div>
+      </div>
+      <div class="topic-item reveal">
+        <div class="ti-icon">🍋</div>
+        <div class="ti-name">Tasting & Flavour</div>
+        <div class="ti-count">31 articles</div>
+      </div>
+      <div class="topic-item reveal">
+        <div class="ti-icon">🌿</div>
+        <div class="ti-name">Hops & Ingredients</div>
+        <div class="ti-count">18 articles</div>
+      </div>
+      <div class="topic-item reveal">
+        <div class="ti-icon">🍻</div>
+        <div class="ti-name">Events & Taproom</div>
+        <div class="ti-count">42 articles</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════
+     EDITORIAL FEATURE
+═══════════════════════ -->
+<div class="editorial reveal">
+  <div class="ed-bg">
+    <img src="https://images.unsplash.com/photo-1600789040898-4f9cc11a9b7a?w=1400&q=75" alt="Tasting masterclass session" loading="lazy" />
+  </div>
+  <div class="ed-overlay"></div>
+  <div class="container ed-content">
+    <p class="ed-label">In Depth</p>
+    <h2 class="ed-title">
+      <span>THE</span>
+      <span class="eg">INVISIBLE</span>
+      <span>INGREDIENT</span>
+    </h2>
+    <p class="ed-body">Water makes up over 90% of every pint. Yet for centuries it was invisible in brewing education. We trace the story of how Burton-on-Trent's mineral-rich wells accidentally created the India Pale Ale — and what modern brewers do to replicate those conditions in a California summer.</p>
+    <a href="../blog-details/water-chemistry.html" class="btn btn-primary">Read the Deep Dive <i class="fa fa-arrow-right"></i></a>
+  </div>
+</div>
+
+<!-- ═══════════════════════
+     POPULAR POSTS
+═══════════════════════ -->
+<section class="section popular">
+  <div class="container">
+    <div class="popular-header">
+      <div>
+        <span class="stag reveal">Most Read</span>
+        <h2 class="reveal">Reader <em>Favourites</em></h2>
+      </div>
+    </div>
+    <div class="popular-list" role="list">
+      <a href="../blog-details/barrel-aging.html" class="pop-item reveal" role="listitem">
+        <div class="pop-num">01</div>
+        <div><div class="pop-title">Inside the Barrel: What Happens to Beer Over 24 Months in Oak</div><div class="pop-meta">Brewing Science · 12 min read · Feb 2025</div></div>
+      </a>
+      <a href="../blog-details/hop-varieties.html" class="pop-item reveal" role="listitem">
+        <div class="pop-num">02</div>
+        <div><div class="pop-title">Citra, Mosaic, Simcoe: The Hop Varieties That Defined a Decade</div><div class="pop-meta">Tasting · 6 min read · Jan 2025</div></div>
+      </a>
+      <a href="../blog-details/food-pairing.html" class="pop-item reveal" role="listitem">
+        <div class="pop-num">03</div>
+        <div><div class="pop-title">Why IPA and Cheddar Is the Most Underrated Pairing in Gastronomy</div><div class="pop-meta">Food & Beer · 5 min read · Dec 2024</div></div>
+      </a>
+      <a href="../blog-details/water-chemistry.html" class="pop-item reveal" role="listitem">
+        <div class="pop-num">04</div>
+        <div><div class="pop-title">How Water Chemistry Shapes Every Beer You've Ever Drunk</div><div class="pop-meta">Science · 9 min read · Nov 2024</div></div>
+      </a>
+      <a href="../blog-details/flagship-ipa.html" class="pop-item reveal" role="listitem">
+        <div class="pop-num">05</div>
+        <div><div class="pop-title">The Story Behind Our Flagship IPA: Three Years, Fourteen Batches</div><div class="pop-meta">Brewing · 7 min read · Oct 2024</div></div>
+      </a>
+      <a href="../blog-details/beer-calendar-2025.html" class="pop-item reveal" role="listitem">
+        <div class="pop-num">06</div>
+        <div><div class="pop-title">Our Full 2026 Release Calendar Revealed</div><div class="pop-meta">News · 4 min read · Jan 2025</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════
+     NEWSLETTER
+═══════════════════════ -->
+<section class="nl" aria-label="Newsletter signup">
+  <div class="container">
+    <div class="nl-inner reveal">
+      <div class="nl-text">
+        <h2>The Journal in Your <em>Inbox</em></h2>
+        <p>New articles, tasting notes, and limited-release announcements — every Tuesday morning.</p>
+      </div>
+      <form class="nl-form" id="nlf" novalidate>
+        <label for="nle" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
+        <input type="email" id="nle" placeholder="your@email.com" required />
+        <button type="submit" class="btn btn-primary">Subscribe <i class="fa fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════
+     ARCHIVE — Quick mini grid
+═══════════════════════ -->
+<section class="section archive">
+  <div class="container">
+    <div class="archive-header reveal">
+      <span class="stag">Browse the Archive</span>
+      <h2>More from the <em>Journal</em></h2>
+      <p>Over 120 articles on brewing, tasting, events, and the craft beer world — dive in.</p>
+    </div>
+    <div class="archive-grid">
+      <a href="../blog-details/flagship-ipa.html" class="ac reveal">
+        <div class="ac-img"><img src="b1.webp" alt="IPA glasses" loading="lazy" /></div>
+        <div class="ac-body"><div class="ac-cat">Brewing</div><div class="ac-title">The Story Behind Our Flagship IPA: Three Years, Fourteen Batches</div><div class="ac-meta">Oct 2024 · 7 min</div></div>
+      </a>
+      <a href="../blog-details/barrel-aging.html" class="ac reveal">
+        <div class="ac-img"><img src="b2.webp" alt="Wild fermentation" loading="lazy" /></div>
+        <div class="ac-body"><div class="ac-cat">Science</div><div class="ac-title">Wild Fermentation: Chasing Terroir in a Stainless Steel Tank</div><div class="ac-meta">Sep 2024 · 10 min</div></div>
+      </a>
+      <a href="../blog-details/hop-varieties.html" class="ac reveal">
+        <div class="ac-img"><img src="b3.webp" alt="Winter seasonal release" loading="lazy" /></div>
+        <div class="ac-body"><div class="ac-cat">Releases</div><div class="ac-title">Our Winter Seasonal: A Christmas Spiced Porter Built for the Cold</div><div class="ac-meta">Nov 2024 · 5 min</div></div>
+      </a>
+      <a href="../blog-details/food-pairing.html" class="ac reveal">
+        <div class="ac-img"><img src="b4.webp" alt="Lager history" loading="lazy" /></div>
+        <div class="ac-body"><div class="ac-cat">History</div><div class="ac-title">How Bavarian Lager Conquered the World in Under 50 Years</div><div class="ac-meta">Aug 2024 · 8 min</div></div>
+      </a>
+      <a href="../blog-details/water-chemistry.html" class="ac reveal">
+        <div class="ac-img"><img src="b5.jpg" alt="Dry hopping technique" loading="lazy" /></div>
+        <div class="ac-body"><div class="ac-cat">Technique</div><div class="ac-title">The Dry Hop Debate: Cold Side, Warm Side, and Everything In Between</div><div class="ac-meta">Jul 2024 · 6 min</div></div>
+      </a>
+      <a href="../blog-details/beer-calendar-2025.html" class="ac reveal">
+        <div class="ac-img"><img src="b6.webp" alt="Drinking local" loading="lazy" /></div>
+        <div class="ac-body"><div class="ac-cat">Culture</div><div class="ac-title">Drink Local: The Environmental Case for Supporting Your Regional Brewery</div><div class="ac-meta">Jun 2024 · 6 min</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FEATURED EXCERPTS — 6 → blog-details
+═══════════════════════════════════ -->
+<section class="section excerpts" id="excerpts">
+  <div class="container">
+    <div class="excerpts-header reveal">
+      <span class="stag">Deep Reads</span>
+      <h2>Six Articles Worth <em>Savouring</em></h2>
+      <p>Our most substantial long-form pieces — pour yourself a pint and settle in.</p>
+    </div>
+
+    <div class="excerpts-grid">
+
+      <!-- 1 -->
+      <a href="../blog-details/flagship-ipa.html" class="exc reveal">
+        <div class="exc-img">
+          <img src="3-1.jfif" alt="Flagship IPA development" loading="lazy" />
+          <span class="exc-cat-badge">Brewing</span>
+        </div>
+        <div class="exc-body">
+          <h3 class="exc-title">The Story Behind Our Flagship IPA: Three Years and Fourteen Batches</h3>
+          <p class="exc-excerpt">In 2019, Hari Kiran set out to brew the most expressive West Coast IPA in California. Three years later, after fourteen different grain bills and enough hop failures to fertilise an orchard, Batch 15 became the beer that changed everything for Heart &amp; Wine. This is the full, unguarded account of what it takes to perfect a single recipe.</p>
+          <blockquote class="exc-pull">"We binned 800 litres of batch nine. It tasted like artichoke water. The team nearly mutinied."</blockquote>
+          <div class="exc-meta">
+            <div class="exc-avatar">JO</div>
+            <span>Hari Kiran</span>
+            <div class="exc-dot"></div>
+            <span>Oct 2024</span>
+            <div class="exc-dot"></div>
+            <span>7 min read</span>
+          </div>
+          <div class="exc-footer">
+            <div class="exc-tags">
+              <span class="exc-tag">IPA</span>
+              <span class="exc-tag">Recipe Dev</span>
+            </div>
+            <span class="exc-read">Read <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2 -->
+      <a href="../blog-details/barrel-aging.html" class="exc reveal">
+        <div class="exc-img">
+          <img src="3-2.jfif" alt="Barrel aging cellar" loading="lazy" />
+          <span class="exc-cat-badge">Science</span>
+        </div>
+        <div class="exc-body">
+          <h3 class="exc-title">Barrel Aging 101: How Time and Oak Transform Beer Into Something Else Entirely</h3>
+          <p class="exc-excerpt">There is no shortcut to a great barrel-aged beer. The science of wood, alcohol, and time is nuanced, often uncontrollable, and occasionally magical. We walk you through every stage of what happens inside a cask — from the initial fill to the final pull — including why some barrels are spectacular and others are quietly drained down the sink.</p>
+          <blockquote class="exc-pull">"The oak doesn't add flavour — it acts as a gateway for oxygen, and oxygen is the real flavour architect."</blockquote>
+          <div class="exc-meta">
+            <div class="exc-avatar">JO</div>
+            <span>Hari Kiran</span>
+            <div class="exc-dot"></div>
+            <span>Feb 2025</span>
+            <div class="exc-dot"></div>
+            <span>12 min read</span>
+          </div>
+          <div class="exc-footer">
+            <div class="exc-tags">
+              <span class="exc-tag">Barrel</span>
+              <span class="exc-tag">Ageing</span>
+            </div>
+            <span class="exc-read">Read <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 3 -->
+      <a href="../blog-details/hop-varieties.html" class="exc reveal">
+        <div class="exc-img">
+          <img src="3-3.png" alt="Hop varieties field" loading="lazy" />
+          <span class="exc-cat-badge">Tasting</span>
+        </div>
+        <div class="exc-body">
+          <h3 class="exc-title">Hop Varieties Explained: A Brewer's Field Guide to the Flowers That Flavour Your Beer</h3>
+          <p class="exc-excerpt">From Saaz's noble spice to Citra's tropical fruit bomb, the world of hop varieties is staggeringly complex — and constantly evolving. Our brewing team profiles twelve essential varieties, explaining the oil chemistry behind each aroma, the beers they built, and how to identify them blind in a glass.</p>
+          <blockquote class="exc-pull">"If you can smell the difference between Mosaic and Citra, you're already thinking like a brewer."</blockquote>
+          <div class="exc-meta">
+            <div class="exc-avatar">SR</div>
+            <span>Sara Reeves</span>
+            <div class="exc-dot"></div>
+            <span>Jan 2025</span>
+            <div class="exc-dot"></div>
+            <span>9 min read</span>
+          </div>
+          <div class="exc-footer">
+            <div class="exc-tags">
+              <span class="exc-tag">Hops</span>
+              <span class="exc-tag">Aroma</span>
+            </div>
+            <span class="exc-read">Read <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 4 -->
+      <a href="../blog-details/food-pairing.html" class="exc reveal">
+        <div class="exc-img">
+          <img src="3-4.jpg" alt="Beer and food pairing table" loading="lazy" />
+          <span class="exc-cat-badge">Food & Beer</span>
+        </div>
+        <div class="exc-body">
+          <h3 class="exc-title">The Art of Beer and Food Pairing: Contrast, Complement, and Cut</h3>
+          <p class="exc-excerpt">Wine has decades of pairing tradition. Beer has centuries — it just hasn't always been written down. Our resident Cicerone Clara Kim dismantles the idea that craft beer is a casual accompaniment and argues it's the most versatile pairing ingredient at any table. A practical, opinionated guide to matching twelve beer styles with food.</p>
+          <blockquote class="exc-pull">"A Witbier with oysters is the best twenty seconds in all of gastronomy. I will die on this hill."</blockquote>
+          <div class="exc-meta">
+            <div class="exc-avatar">CK</div>
+            <span>Clara Kim</span>
+            <div class="exc-dot"></div>
+            <span>Dec 2024</span>
+            <div class="exc-dot"></div>
+            <span>8 min read</span>
+          </div>
+          <div class="exc-footer">
+            <div class="exc-tags">
+              <span class="exc-tag">Pairing</span>
+              <span class="exc-tag">Cicerone</span>
+            </div>
+            <span class="exc-read">Read <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 5 -->
+      <a href="../blog-details/water-chemistry.html" class="exc reveal">
+        <div class="exc-img">
+          <img src="3-5.webp" alt="Water mineral analysis" loading="lazy" />
+          <span class="exc-cat-badge">Science</span>
+        </div>
+        <div class="exc-body">
+          <h3 class="exc-title">Brewing Water Chemistry: The Invisible Ingredient That Makes or Breaks Every Batch</h3>
+          <p class="exc-excerpt">Water is 93% of your beer. Its mineral content shapes perceived bitterness, mouthfeel, hop aroma, and malt character in ways that yeast and grain simply cannot override. Hari Kiran profiles the water chemistry of five great brewing cities, explains sulfate-to-chloride ratios, and shows why we treat every Heart &amp; Wine batch differently depending on the target style.</p>
+          <blockquote class="exc-pull">"Burton water built the IPA. Pilsen water built the lager. The water didn't follow the beer — the beer followed the water."</blockquote>
+          <div class="exc-meta">
+            <div class="exc-avatar">JO</div>
+            <span>Hari Kiran</span>
+            <div class="exc-dot"></div>
+            <span>Nov 2024</span>
+            <div class="exc-dot"></div>
+            <span>11 min read</span>
+          </div>
+          <div class="exc-footer">
+            <div class="exc-tags">
+              <span class="exc-tag">Water</span>
+              <span class="exc-tag">Chemistry</span>
+            </div>
+            <span class="exc-read">Read <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 6 -->
+      <a href="../blog-details/beer-calendar-2025.html" class="exc reveal">
+        <div class="exc-img">
+          <img src="3-6.webp" alt="2025 beer lineup bottles" loading="lazy" />
+          <span class="exc-cat-badge">News</span>
+        </div>
+        <div class="exc-body">
+          <h3 class="exc-title">Our 2025 Beer Calendar: Every Planned Release from January to December</h3>
+          <p class="exc-excerpt">For the first time, we're publishing our full annual release schedule — twelve months, fourteen planned beers, and one wildcard batch that we're brewing entirely with foraged local ingredients. Editor Maya Hall interviews each brewer about their upcoming release, what inspired it, and what drinkers should expect when the taps open.</p>
+          <blockquote class="exc-pull">"The foraged saison might be the strangest thing we've ever attempted. It might also be the best."</blockquote>
+          <div class="exc-meta">
+            <div class="exc-avatar">MH</div>
+            <span>Maya Hall</span>
+            <div class="exc-dot"></div>
+            <span>Jan 2025</span>
+            <div class="exc-dot"></div>
+            <span>6 min read</span>
+          </div>
+          <div class="exc-footer">
+            <div class="exc-tags">
+              <span class="exc-tag">2025</span>
+              <span class="exc-tag">Releases</span>
+            </div>
+            <span class="exc-read">Read <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+    </div><!-- /excerpts-grid -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer>
+
+<script>
+'use strict';
+// Theme
+// Theme Toggle
+const h = document.documentElement;
+const tt = document.getElementById('themeToggle');
+const ti = document.getElementById('themeIcon');
+
+const savedTheme =
+  localStorage.getItem('mashaletheme') ||
+  (window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark');
+
+h.setAttribute('data-theme', savedTheme);
+
+if (ti) {
+  ti.className = savedTheme === 'dark' ? 'fa fa-moon' : 'fa fa-sun';
+}
+
+tt?.addEventListener('click', () => {
+  const newTheme = h.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+
+  h.setAttribute('data-theme', newTheme);
+
+  if (ti) {
+    ti.className = newTheme === 'dark' ? 'fa fa-moon' : 'fa fa-sun';
+  }
+
+  localStorage.setItem('mashaletheme', newTheme);
+});
+// Scroll bar
+window.addEventListener('scroll',()=>{const sp=document.getElementById('sb');if(sp)sp.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';},{passive:true});
+// Navbar
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nav?.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+// Mobile menu
+const nb=document.getElementById('nb'),mm=document.getElementById('mm');
+nb?.addEventListener('click',()=>{const o=mm.classList.toggle('open');nb.setAttribute('aria-expanded',o);});
+// Reveal
+const ro=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*75);ro.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+// Foam cursor
+const fc=document.getElementById('fc');
+if(fc){let mx=0,my=0,cx=0,cy=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;fc.style.opacity='1';});document.addEventListener('mouseleave',()=>{fc.style.opacity='0';});(function loop(){cx+=(mx-cx)*.12;cy+=(my-cy)*.12;fc.style.left=cx+'px';fc.style.top=cy+'px';requestAnimationFrame(loop);})();}
+// Category filter
+document.querySelectorAll('.cat-pill').forEach(pill=>{
+  pill.addEventListener('click',()=>{
+    document.querySelectorAll('.cat-pill').forEach(p=>p.classList.remove('active'));
+    pill.classList.add('active');
+    const cat=pill.dataset.cat;
+    document.querySelectorAll('.post-card[data-cat]').forEach(card=>{
+      card.style.opacity=cat==='all'||card.dataset.cat===cat?'1':'0.3';
+      card.style.transform=cat==='all'||card.dataset.cat===cat?'':'scale(0.97)';
+    });
+  });
+});
+// Newsletter
+document.getElementById('nlf')?.addEventListener('submit',e=>{
+  e.preventDefault();
+  const inp=document.getElementById('nle');
+  const btn=e.target.querySelector('button');
+  if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value)){
+    const o=btn.innerHTML;
+    btn.innerHTML='<i class="fa fa-check"></i> Subscribed!';
+    btn.style.background='linear-gradient(135deg,#1a9e3a,#2dd962)';
+    btn.style.color='#fff';
+    inp.value='';
+    setTimeout(()=>{btn.innerHTML=o;btn.style.background='';btn.style.color='';},3200);
+  }else{
+    inp.style.borderColor='#ff5555';
+    setTimeout(()=>{inp.style.borderColor='';},2000);
+  }
+});
+// Ripple
+const rs=document.createElement('style');rs.textContent='@keyframes blrpl{to{width:64px;height:64px;opacity:0}}';document.head.appendChild(rs);
+document.addEventListener('click',e=>{const d=document.createElement('div');d.style.cssText=`position:fixed;left:${e.clientX}px;top:${e.clientY}px;width:0;height:0;border-radius:50%;border:2px solid rgba(242,193,78,.4);transform:translate(-50%,-50%);animation:blrpl .65s ease-out forwards;pointer-events:none;z-index:9997;`;document.body.appendChild(d);setTimeout(()=>d.remove(),700);});
+</script>
+<script>
+  document.querySelectorAll(".mob-drop-toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const parent = btn.parentElement;
+    parent.classList.toggle("active");
+  });
+});
+</script>
+</body>
+</html>

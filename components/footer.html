@@ -1,0 +1,210 @@
+<style>
+/* ===== FOOTER ===== */
+
+.footer{
+background:var(--bg);
+border-top:1px solid var(--border);
+position:relative;
+overflow:hidden;
+padding-top:80px;
+}
+
+.footer-foam{
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:4px;
+background:linear-gradient(90deg,transparent,var(--gold),var(--amber),var(--gold),transparent);
+opacity:.5;
+}
+
+.footer-inner{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;
+gap:48px;
+padding-bottom:48px;
+}
+
+.footer-logo{
+font-family:var(--font-d);
+font-size:1.6rem;
+letter-spacing:.08em;
+color:var(--txt);
+margin-bottom:12px;
+}
+
+.footer-brand p{
+font-size:.93rem;
+color:var(--txt3);
+margin-bottom:20px;
+max-width:220px;
+line-height:1.7;
+}
+
+.footer-social{
+display:flex;
+gap:12px;
+}
+
+.footer-social a{
+width:36px;
+height:36px;
+border-radius:50%;
+border:1px solid var(--border);
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--txt3);
+transition:all .3s;
+font-size:.9rem;
+}
+
+.footer-social a:hover{
+border-color:var(--gold);
+color:var(--gold);
+background:rgba(242,193,78,.08);
+}
+
+.footer-col h4{
+font-family:var(--font-u);
+font-size:.75rem;
+font-weight:700;
+letter-spacing:.12em;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:16px;
+}
+
+.footer-col a,
+.footer-col p{
+display:block;
+font-size:.9rem;
+color:var(--txt3);
+margin-bottom:8px;
+transition:color .3s;
+line-height:1.5;
+}
+
+.footer-col a:hover{
+color:var(--txt);
+}
+
+.footer-hours,
+.footer-addr{
+color:var(--txt3) !important;
+}
+
+.footer-addr i{
+color:var(--gold);
+margin-right:4px;
+}
+
+.footer-bottom{
+border-top:1px solid var(--border);
+padding:20px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:12px;
+font-family:var(--font-u);
+font-size:.82rem;
+color:var(--txt3);
+}
+
+.footer-bottom a{
+color:var(--txt3);
+transition:color .3s;
+}
+
+.footer-bottom a:hover{
+color:var(--gold);
+}
+
+.footer-bottom p{
+padding:0 24px;
+}
+
+/* ===== FOOTER RESPONSIVE ===== */
+
+@media(max-width:1024px){
+.footer-inner{
+grid-template-columns:1fr 1fr;
+gap:32px;
+}
+}
+
+@media(max-width:768px){
+.footer-inner{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:480px){
+.footer-bottom{
+flex-direction:column;
+text-align:center;
+}
+}
+</style>
+
+
+<footer class="footer" role="contentinfo">
+
+<div class="footer-foam" aria-hidden="true"></div>
+
+<div class="container footer-inner">
+
+<div class="footer-brand">
+<div class="footer-logo">🍺 Heart &amp; Wine</div>
+<p>Small batch. Big heart. Every pour made with obsession and barley.</p>
+
+<div class="footer-social">
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+
+<div class="footer-col">
+<h4>Explore</h4>
+<a href="home.html">Home</a>
+<a href="../services/services.html">Our Brews</a>
+<a href="../about/about.html">About Us</a>
+<a href="../blogs/blogs.html">Blog</a>
+</div>
+
+<div class="footer-col">
+<h4>Visit Us</h4>
+<a href="../contact/contact.html">Contact</a>
+<a href="#book">Book a Table</a>
+<a href="#">Taproom Hours</a>
+<a href="#">Private Events</a>
+</div>
+
+<div class="footer-col">
+<h4>Members</h4>
+<a href="../login/login.html">Sign In</a>
+<a href="../login/login.html#register">Join Beer Club</a>
+<a href="../admin-dashboard/dashboard.html">Dashboard</a>
+<a href="#">Loyalty Points</a>
+</div>
+
+<div class="footer-col">
+<h4>Open Hours</h4>
+<p class="footer-hours">Mon–Thu: 3pm – 11pm</p>
+<p class="footer-hours">Fri–Sat: 12pm – 1am</p>
+<p class="footer-hours">Sunday: 12pm – 9pm</p>
+<p class="footer-addr"><i class="fa fa-map-marker-alt"></i> Hyderabad, Telangana, India</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+<p><a href="../404-page/404.html">404</a> · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</div>
+
+</footer>

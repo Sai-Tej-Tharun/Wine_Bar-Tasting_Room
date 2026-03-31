@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Page Not Found | Heart & Wine</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="css/404.css">
+<link rel="stylesheet" href="../global-css/global.css">
+<link rel="stylesheet" href="../components/navbar.css">
+<link rel="stylesheet" href="../components/footer.css">
+
+<script>
+tailwind.config = {
+theme:{
+extend:{
+colors:{
+brand:"#8A5A1F",
+accent:"#D4A373",
+background:"#1c1917",
+secondary:"#44403C",
+text:"#F5F5F4"
+}
+}
+}
+}
+</script>
+
+</head>
+
+<body class="bg-background text-text font-[Inter] flex flex-col min-h-screen">
+
+
+
+<!-- MAIN -->
+
+<main class="flex-1 flex items-center justify-center px-6">
+
+<div class="text-center max-w-xl">
+
+<h1 class="error-number">404</h1>
+
+<h2 class="error-title">
+Looks like this page got lost in the brewery.
+</h2>
+
+<p class="mt-4 text-sm opacity-80">
+Maybe it wandered off during a late-night tasting session.
+</p>
+
+<!-- Illustration -->
+
+<div class="beer-icon mt-10">
+🍺
+</div>
+
+<!-- Buttons -->
+
+<div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+
+<a href="../home-1/home.html" class="btn-primary">
+Return Home
+</a>
+
+<a href="../services/services.html" class="btn-secondary">
+Browse Wines
+</a>
+
+</div>
+
+</div>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="bg-[#141210] border-t border-secondary">
+
+<div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm opacity-70">
+
+© 2026 Heart & Wine Microbrewery. Crafted with passion.
+
+</div>
+
+</footer>
+
+<script src="js/404.js"></script>
+<script src="../global-js/main.js"></script>
+<script src="../components/navbar.js"></script>
+<script src="../components/footer.js"></script>
+</body>
+</html>

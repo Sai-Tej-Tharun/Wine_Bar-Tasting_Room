@@ -1,0 +1,59 @@
+.nav-link{
+color:#F5F5F4;
+font-size:14px;
+transition:.3s;
+}
+
+.nav-link:hover{
+color:#D4A373;
+}
+
+.error-number{
+font-family:"Bebas Neue";
+font-size:140px;
+color:#D4A373;
+line-height:1;
+}
+
+.error-title{
+font-family:"Bebas Neue";
+font-size:32px;
+margin-top:10px;
+}
+
+.beer-icon{
+font-size:60px;
+animation:float 3s ease-in-out infinite;
+}
+
+.btn-primary{
+background:#8A5A1F;
+padding:12px 22px;
+border-radius:8px;
+font-size:14px;
+transition:.3s;
+}
+
+.btn-primary:hover{
+background:#D4A373;
+color:#1c1917;
+}
+
+.btn-secondary{
+border:1px solid #44403C;
+padding:12px 22px;
+border-radius:8px;
+font-size:14px;
+transition:.3s;
+}
+
+.btn-secondary:hover{
+border-color:#D4A373;
+color:#D4A373;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+100%{transform:translateY(0)}
+}

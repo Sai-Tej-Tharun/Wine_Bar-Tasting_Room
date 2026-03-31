@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Hop Varieties: A Brewer's Field Guide — Heart &amp; Wine Journal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="bd.css"/>
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div id="foamCursor" aria-hidden="true"></div>
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link ">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link active">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html" class="nav-link active">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<section class="art-hero">
+
+  <!-- LEFT CONTENT -->
+
+  <div class="container ah-left">
+
+
+<nav class="breadcrumb reveal">
+  <a href="../home-1/home.html">Home</a>
+  <span>·</span>
+  <a href="../blogs/blogs.html">Journal</a>
+  <span>·</span>
+  <span>Tasting</span>
+</nav>
+
+<p class="ah-eyebrow reveal">
+  <span class="ey-line"></span>
+  Tasting · Hops · Field Guide
+</p>
+
+<h1 class="ah-title reveal">
+  Hop Varieties Explained: A Brewer's Field Guide to the Flowers That Flavour Your Beer
+</h1>
+
+<p class="ah-deck reveal">
+  From Saaz's noble spice to Citra's tropical fruit bomb — our brewing team profiles twelve essential varieties and the essential oil chemistry behind every aroma.
+</p>
+
+<div class="ah-meta reveal">
+
+  <div class="ah-author">
+    <div class="ah-avatar">SR</div>
+    <div>
+      <div class="ah-name">Sara Reeves</div>
+      <div class="ah-role">Head Cicerone &amp; Hop Specialist</div>
+    </div>
+  </div>
+
+  <div class="meta-sep"></div>
+
+  <span>
+    <i class="fa fa-calendar" style="margin-right:6px;font-size:.8rem"></i>
+    January 2025
+  </span>
+
+  <div class="meta-sep"></div>
+
+  <span id="readTime">9 min read</span>
+
+  <div class="ah-share">
+    <button class="share-btn" data-platform="twitter" aria-label="Share on Twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+    </button>
+
+    <button class="share-btn" data-platform="facebook" aria-label="Share on Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </button>
+
+    <button class="share-btn" data-platform="copy" aria-label="Copy link">
+      <i class="fa fa-link"></i>
+    </button>
+  </div>
+
+</div>
+
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div class="ah-right">
+    <div class="ah-bg" data-parallax style="background-image:url('2-3.jpg'); filter:brightness(60%);"></div>
+    <div class="ah-overlay"></div>
+  </div>
+
+</section>
+
+
+<section class="container">
+  <div class="article-wrap">
+    <article class="art-content">
+
+      <p class="drop-cap" id="intro">Spend enough time around brewers and you will hear hops spoken about with the reverence usually reserved for terroir in wine. There is good reason for this. The hop plant — Humulus lupulus — is responsible for the single most diverse flavour spectrum of any brewing ingredient. A lupulin-rich Citra cone can smell like passion fruit, mango, and grapefruit all at once. A Saaz hop smells of clean, herbal spice and nothing else. The same species, wildly different characters, grown from slightly different genetics.</p>
+
+      <h2 id="s1">The Chemistry of Hop Aroma</h2>
+      <p>Hop aroma is primarily driven by essential oils — volatile organic compounds concentrated in the lupulin glands of the hop cone. The two most important oil fractions are myrcene and the so-called "fine aroma" compounds: linalool, geraniol, and farnesene. Myrcene contributes a raw, resinous, almost diesel-like note in its pure form — not particularly pleasant — but it volatilises rapidly during boiling, which is why most of it burns off in the kettle. The fine aroma compounds survive better and contribute the floral, tropical, and citrus notes that define modern hop-forward beers.</p>
+      <p>Alpha acids — humulone, cohumulone, and adhumulone — are a separate compound class responsible for bitterness rather than aroma. They are chemically insoluble in wort until isomerised by heat during the boil, at which point they become iso-alpha acids and create the perceived bitterness we measure in IBUs. Varieties bred for high alpha acid content are primarily used as bittering additions; varieties prized for their oil profile are used for late kettle and dry hopping.</p>
+
+      <blockquote class="pull-quote">"If you can smell the difference between Mosaic and Citra blind, you are already thinking like a brewer." <cite>— Sara Reeves, Head Cicerone</cite></blockquote>
+
+      <h2 id="s2">The Classic American Trio</h2>
+      <p>Cascade, Centennial, and Chinook — the "Three Cs" — define the American craft beer revolution of the 1980s and 90s. Cascade, released in 1972 and popularised by Sierra Nevada Pale Ale, delivers a distinctive grapefruit and floral character that remains one of the most recognisable hop aromas in the world. It was derived from a cross of English Fuggle and a wild male from Utah — which makes its grapefruity character all the more surprising given its parentage. Centennial is sometimes called "super Cascade" — higher alpha acids (9–11% vs Cascade's 5–7%), more intense citrus, and a cleaner bitterness profile. Chinook brings pine resin and a distinctive spiced, smoky undertone that makes it useful as a bittering hop or for adding structural depth to a dry hop blend.</p>
+
+      <figure class="art-img">
+        <img src="1-3.jpg" alt="Various hop varieties in small bowls for aroma analysis" loading="lazy"/>
+        
+      </figure>
+
+      <h2 id="s3">The Modern Era: Citra and Mosaic</h2>
+      <p>No two hops have done more to redefine what modern beer smells like than Citra and Mosaic. Citra, released by the Hop Breeding Company in 2007, carries unusually high levels of geraniol and linalool that produce an unmistakable tropical fruit blast — passion fruit, mango, and key lime in its freshest form. It is one of the most widely used hops in craft brewing globally, appearing in everything from session IPAs to hazy NEIPAs to sour fruited ales where its aromatics amplify fruit additions. Mosaic, a Citra offspring released in 2012, is arguably even more complex in isolation: blueberry and stone fruit dominate, with a secondary layer of earthy pine that prevents it from tipping into candy territory.</p>
+
+      <div class="fact-box">
+        <h4>Quick Reference: 8 Key Varieties</h4>
+        <ul>
+          <li><strong>Citra</strong>: Tropical fruit — passion fruit, mango, key lime. High geraniol, myrcene.</li>
+          <li><strong>Mosaic</strong>: Blueberry, stone fruit, earthy pine. Citra's more complex offspring.</li>
+          <li><strong>Simcoe</strong>: Pine resin, apricot, dank. Superb dual-use (bittering + aroma).</li>
+          <li><strong>Cascade</strong>: Grapefruit, floral — the definitive American craft hop.</li>
+          <li><strong>Centennial</strong>: Citrus-forward, clean bitterness. Cascade with more intensity.</li>
+          <li><strong>Saaz</strong>: Noble spice, herbal, earthy. Defines Czech pilsner.</li>
+          <li><strong>Nelson Sauvin</strong>: White wine, gooseberry, distinctive. New Zealand's showstopper.</li>
+          <li><strong>Hallertau Blanc</strong>: Passionfruit, grapefruit — German-grown but American-spirited.</li>
+        </ul>
+      </div>
+
+      <h2 id="s4">Noble Hops and the Old World</h2>
+      <p>While American brewers were building the craft revolution on Cascade and Chinook, European brewers had been quietly growing four "noble" varieties for centuries: Saaz (Czech Republic), Hallertau Mittelfrüh (Germany), Spalter (Germany), and Tettnang (Germany and Austria). These varieties share low alpha acid content — typically 2–5% — and a refined, spicy, herbal character that defines German lager and Czech pilsner. They are not dramatic. They are not tropical. They are precise, restrained, and almost impossible to use badly — which is why they have persisted for centuries in the world's most consistent beer styles. The terroir argument for hops is most compelling here: genuine Saaz grown in the Žatec region of Bohemia has a distinctly different character from the same cultivar grown in Germany or the Pacific Northwest, due to differences in soil composition, day length, and average temperature.</p>
+
+      <h2 id="s5">New World Varieties and the Future</h2>
+      <p>Australia and New Zealand have quietly produced some of the most exciting hop breeding programs of the last twenty years. Nelson Sauvin — named for its wine-like character reminiscent of Sauvignon Blanc — is unlike anything grown in either the US or Europe, and has catalysed a whole sub-genre of wine-influenced pale ales. Galaxy, from Australia, delivers a tropical fruit intensity that rivals Citra with a distinctive passionfruit-and-peach note. Riwaka brings lime and grapefruit in a different register than American citrus varieties. These Southern Hemisphere varieties have fundamentally expanded what brewers can achieve aromatically.</p>
+
+      <div class="art-tags">
+        <a href="#" class="at">Hops</a>
+        <a href="#" class="at">Citra</a>
+        <a href="#" class="at">Mosaic</a>
+        <a href="#" class="at">Noble Hops</a>
+        <a href="#" class="at">Aroma Chemistry</a>
+        <a href="#" class="at">New Zealand Hops</a>
+      </div>
+
+      <div class="author-box">
+        <div class="au-avatar">SR</div>
+        <div>
+          <div class="au-role">Author</div>
+          <div class="au-name">Sara Reeves</div>
+          <p class="au-bio">Head Cicerone at Heart &amp; Wine. Certified by the Cicerone Certification Program and holds a BSc in Food Science from UC Davis. Spent two years working at a Yakima Valley hop farm before moving into brewing.</p>
+          <div class="au-socials">
+            <a href="#" class="au-social"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="au-social"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="au-social"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <aside class="art-sidebar">
+      <div class="sidebar-card"><div class="reading-pill"><span class="rp-label">Progress</span><div class="rp-bar"><div class="rp-fill"></div></div><span class="rp-pct">0%</span></div></div>
+      <div class="sidebar-card">
+        <div class="sc-title">Contents</div>
+        <nav class="toc-list">
+          <a href="#intro" class="toc-link">Introduction</a>
+          <a href="#s1" class="toc-link">The Chemistry of Hop Aroma</a>
+          <a href="#s2" class="toc-link">The Classic American Trio</a>
+          <a href="#s3" class="toc-link">Citra and Mosaic</a>
+          <a href="#s4" class="toc-link">Noble Hops &amp; the Old World</a>
+          <a href="#s5" class="toc-link">New World Varieties</a>
+        </nav>
+      </div>
+      <div class="sidebar-card">
+        <div class="sc-title">Also in the Journal</div>
+        <div class="sb-related">
+          <a href="flagship-ipa.html" class="sbr-item"><div class="sbr-img"><img src="3-1.jfif" alt="" loading="lazy"/></div><div><div class="sbr-title">Flagship IPA: 14 Batches</div><div class="sbr-meta">7 min · Oct 2024</div></div></a>
+          <a href="food-pairing.html" class="sbr-item"><div class="sbr-img"><img src="3-3.png" alt="" loading="lazy"/></div><div><div class="sbr-title">Beer &amp; Food Pairing Guide</div><div class="sbr-meta">8 min · Dec 2024</div></div></a>
+          <a href="water-chemistry.html" class="sbr-item"><div class="sbr-img"><img src="3-5.webp" alt="" loading="lazy"/></div><div><div class="sbr-title">Water Chemistry Explained</div><div class="sbr-meta">11 min · Nov 2024</div></div></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="bd-related"><div class="container"><div class="rel-header"><div><span class="stag reveal">More Reading</span><h2 class="reveal">From the <em>Journal</em></h2></div><a href="../blogs/blogs.html" class="rel-see reveal">All Articles <i class="fa fa-arrow-right"></i></a></div><div class="rel-grid"><a href="flagship-ipa.html" class="rel-card reveal"><div class="rc-img"><img src="3-1.jfif" alt="" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Brewing</div><div class="rc-title">Flagship IPA: Three Years, Fourteen Batches</div><div class="rc-meta">Oct 2024 · 7 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a><a href="food-pairing.html" class="rel-card reveal"><div class="rc-img"><img src="3-4.jpg" alt="" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Food</div><div class="rc-title">Beer and Food Pairing Guide</div><div class="rc-meta">Dec 2024 · 8 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a><a href="barrel-aging.html" class="rel-card reveal"><div class="rc-img"><img src="3-2.jfif" alt="" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Science</div><div class="rc-title">Inside the Barrel: 24 Months in Oak</div><div class="rc-meta">Feb 2025 · 12 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a></div></div></section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer><script src="bd.js"></script>
+</body></html>

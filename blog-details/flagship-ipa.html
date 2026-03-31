@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="The story behind Heart & Wine's flagship IPA — three years, fourteen batches, and what it really takes to perfect a single recipe."/>
+  <title>The Story Behind Our Flagship IPA — Heart &amp; Wine Journal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="bd.css"/>
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div id="foamCursor" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link active">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html" class="nav-link active">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<!-- HERO -->
+<section class="art-hero">
+
+  <!-- LEFT CONTENT -->
+
+  <div class="container ah-left">
+
+
+<nav class="breadcrumb reveal">
+  <a href="../home-1/home.html">Home</a>
+  <span>·</span>
+  <a href="../blogs/blogs.html">Journal</a>
+  <span>·</span>
+  <span>Brewing</span>
+</nav>
+
+<p class="ah-eyebrow reveal">
+  <span class="ey-line"></span>
+  Brewing · Long Read
+</p>
+
+<h1 class="ah-title reveal">
+  The Story Behind Our Flagship IPA: Three Years, Fourteen Batches
+</h1>
+
+<p class="ah-deck reveal">
+  In 2019, Hari Kiran set out to brew the most expressive West Coast IPA in California. This is the full, unguarded account of what it actually takes to perfect a single recipe.
+</p>
+
+<div class="ah-meta reveal">
+
+  <div class="ah-author">
+    <div class="ah-avatar">JO</div>
+    <div>
+      <div class="ah-name">Hari Kiran</div>
+      <div class="ah-role">Head Brewer, Heart &amp; Wine</div>
+    </div>
+  </div>
+
+  <div class="meta-sep"></div>
+
+  <span>
+    <i class="fa fa-calendar" style="margin-right:6px;font-size:.8rem"></i>
+    October 2024
+  </span>
+
+  <div class="meta-sep"></div>
+
+  <span id="readTime">
+    <i class="fa fa-clock" style="margin-right:6px;font-size:.8rem"></i>
+    7 min read
+  </span>
+
+  <div class="meta-sep"></div>
+
+  <span>Brewing</span>
+
+  <div class="ah-share">
+    <button class="share-btn" data-platform="twitter" aria-label="Share on Twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+    </button>
+
+    <button class="share-btn" data-platform="facebook" aria-label="Share on Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </button>
+
+    <button class="share-btn" data-platform="copy" aria-label="Copy link">
+      <i class="fa fa-link"></i>
+    </button>
+  </div>
+
+</div>
+
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div class="ah-right">
+    <div class="ah-bg" data-parallax style="background-image:url('1-1.webp'); filter:brightness(60%);"></div>
+    <div class="ah-overlay"></div>
+  </div>
+
+</section>
+
+
+<!-- ARTICLE BODY -->
+<section class="container">
+  <div class="article-wrap">
+
+    <!-- CONTENT -->
+    <article class="art-content">
+
+      <p class="drop-cap" id="intro">It began, as most of our better ideas do, with a catastrophic failure. The year was 2019, and I had just drained 800 litres of what I'd confidently pitched to our team as our "definitive West Coast IPA" down the brewery drain. It smelled faintly of artichoke water. The team nearly mutinied. That was Batch One.</p>
+
+      <h2 id="s1">Why the West Coast IPA?</h2>
+      <p>The West Coast IPA is a deceptively simple beer. It should be clear, dry, bitter, and fiercely aromatic. The malt character should whisper, not shout. The hops should arrive in layers — a resinous pine-and-citrus hit on the nose, followed by a clean, lasting bitterness that dries the palate and makes you reach for another sip. In practice, achieving all of this in a single beer, consistently, batch after batch, is extraordinarily hard.</p>
+      <p>The problem is that every single variable in the brewhouse interacts. Sulfate levels in the water affect perceived bitterness. Hop addition timing affects whether you get aroma or bitterness. Dry hop contact time affects murkiness. Yeast health affects attenuation. We had 23 variables we were tracking by Batch Four. By Batch Seven, it was 41.</p>
+
+      <blockquote class="pull-quote">"We binned 800 litres of batch nine. It tasted like artichoke water. The team nearly mutinied." <cite>— Hari Kiran, Head Brewer</cite></blockquote>
+
+      <h2 id="s2">The Grain Bill Problem</h2>
+      <p>West Coast IPAs are traditionally built on a simple backbone — pale two-row malt with perhaps a small percentage of crystal malt for body. Too much crystal malt adds a residual sweetness that clashes with aggressive hop bitterness. Too little and the beer can taste thin and harsh.</p>
+      <p>For our first eight batches, we used a 94% pale malt / 6% crystal 40L split that had worked brilliantly in pilot-scale testing. At production scale, something changed. The crystal malt contribution was being lost entirely, resulting in a beer that was technically correct but felt skeletal — clean, yes, but ultimately unsatisfying. The aroma was there. The bitterness was there. But there was nothing for either element to land on.</p>
+
+      <figure class="art-img">
+        <img src="2-1.jpg" alt="Malt grain varieties laid out for selection" loading="lazy"/>
+      </figure>
+
+      <p>The solution came from an unlikely source: a conversation with a maltster in Oregon who mentioned that Maris Otter malt — traditionally associated with English bitters, not American IPAs — was delivering exceptional mid-palate structure in pale ales without the cloying sweetness of crystal malt. We substituted 15% of our base malt with Maris Otter in Batch Nine. The artichoke water incident was entirely unrelated, I should clarify. That was a contaminated fermentation vessel.</p>
+
+      <h2 id="s3">The Hop Selection</h2>
+      <p>West Coast hop selection is contentious territory. The old guard insists on Chinook, Centennial, and Columbus — the so-called "Three Cs" that defined California brewing in the 1990s. A newer school argues for the tropical expressiveness of Citra and Mosaic. We tried both approaches, and both were wrong for what we were building.</p>
+
+      <div class="fact-box">
+        <h4>Final Hop Schedule — Batch 15</h4>
+        <ul>
+          <li>60 min bittering: Columbus (14 IBU contribution)</li>
+          <li>15 min flavour: Centennial + Chinook (dual addition)</li>
+          <li>Whirlpool: Citra + Simcoe (equal parts, 30 min steep)</li>
+          <li>Dry Hop 1: Mosaic + Citra (cold-side, day 3 of fermentation)</li>
+          <li>Dry Hop 2: Centennial (conditioning tank, 48 hours)</li>
+        </ul>
+      </div>
+
+      <p>The breakthrough came when I stopped thinking of hops as a single ingredient and started thinking of them as a layered flavour architecture. The bittering addition creates the structural bitterness. The late additions create flavour identity. The whirlpool defines the aroma character. The dry hops provide the top note — the first thing you smell when the glass hits your nose. By treating each addition as a distinct layer with a distinct purpose, Batch 14 came close. Batch 15 nailed it.</p>
+
+      <h2 id="s4">Batch 15: The Beer That Finally Worked</h2>
+      <p>Batch 15 was brewed on a grey Tuesday in March 2022. The team had been through two and a half years of failures, incremental improvements, and occasional moments of genuine despair. When I pulled the first sample from the fermenter on day four, the aroma that hit me was exactly what I had been chasing since 2019: a complex, layered wave of pine resin, fresh grapefruit pith, tropical stone fruit, and a whisper of fresh-cut grass.</p>
+      <p>We named it <em>Pacific Divide</em>. It won a Gold at the California Craft Beer Summit that September. More importantly, it became the beer that our regulars ask for by name at the taproom every week — the one where a first sip makes people pause mid-conversation and look down at the glass with raised eyebrows. That's the test that matters.</p>
+
+      <table class="art-table">
+        <thead><tr><th>Batch</th><th>Key Problem</th><th>Resolution</th><th>Outcome</th></tr></thead>
+        <tbody>
+          <tr><td>1–3</td><td>Malt body too thin</td><td>Increased crystal malt %</td><td>Too sweet</td></tr>
+          <tr><td>4–6</td><td>Bitterness too harsh</td><td>Reduced bittering hop rate</td><td>Lost structure</td></tr>
+          <tr><td>7–9</td><td>Contamination / off-flavours</td><td>Full vessel audit</td><td>Resolved</td></tr>
+          <tr><td>10–12</td><td>Aroma lacks complexity</td><td>Introduced Maris Otter</td><td>Significant improvement</td></tr>
+          <tr><td>13–14</td><td>Dry hop murk</td><td>Adjusted timing and temp</td><td>Near-final</td></tr>
+          <tr><td>15</td><td>—</td><td>All variables aligned</td><td>✦ Gold award-winning recipe</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="s5">What Three Years Taught Me</h2>
+      <p>If I had to compress three years of brewing development into a single lesson, it would be this: the variables you think matter are rarely the ones that actually matter. We spent six months obsessing over hop addition timing, only to discover the actual problem was mineral content in our brewing water. We blamed our yeast strain for batch failures that turned out to be a temperature controller fault. Brewing is humbling in the best possible way.</p>
+      <p>Pacific Divide is now our best-selling beer. It represents fourteen failures and one success — and I wouldn't change any of it.</p>
+
+      <div class="art-tags">
+        <a href="#" class="at">IPA</a>
+        <a href="#" class="at">Recipe Development</a>
+        <a href="#" class="at">Hops</a>
+        <a href="#" class="at">West Coast</a>
+        <a href="#" class="at">Brewing Science</a>
+      </div>
+
+      <!-- AUTHOR BOX -->
+      <div class="author-box">
+        <div class="au-avatar">JO</div>
+        <div>
+          <div class="au-role">Author</div>
+          <div class="au-name">Hari Kiran</div>
+          <p class="au-bio">Head Brewer at Heart &amp; Wine since 2016. Formerly of Sierra Nevada and Lagunitas. Master Brewer certified by the IBD. Obsessed with yeast physiology, water chemistry, and the IPA.</p>
+          <div class="au-socials">
+            <a href="#" class="au-social" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="au-social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="au-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="art-sidebar">
+      <div class="sidebar-card">
+        <div class="reading-pill">
+          <span class="rp-label">Progress</span>
+          <div class="rp-bar"><div class="rp-fill"></div></div>
+          <span class="rp-pct">0%</span>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sc-title">Contents</div>
+        <nav class="toc-list" aria-label="Article contents">
+          <a href="#intro" class="toc-link">Introduction</a>
+          <a href="#s1" class="toc-link">Why the West Coast IPA?</a>
+          <a href="#s2" class="toc-link">The Grain Bill Problem</a>
+          <a href="#s3" class="toc-link">The Hop Selection</a>
+          <a href="#s4" class="toc-link">Batch 15: The Beer That Worked</a>
+          <a href="#s5" class="toc-link">What Three Years Taught Me</a>
+        </nav>
+      </div>
+      <div class="sidebar-card">
+        <div class="sc-title">Also in the Journal</div>
+        <div class="sb-related">
+          <a href="barrel-aging.html" class="sbr-item">
+            <div class="sbr-img"><img src="3-2.jfif" alt="Barrel aging" loading="lazy"/></div>
+            <div><div class="sbr-title">Inside the Barrel: 24 Months in Oak</div><div class="sbr-meta">12 min · Feb 2025</div></div>
+          </a>
+          <a href="hop-varieties.html" class="sbr-item">
+            <div class="sbr-img"><img src="3-3.png" alt="Hop varieties" loading="lazy"/></div>
+            <div><div class="sbr-title">Hop Varieties: A Brewer's Field Guide</div><div class="sbr-meta">9 min · Jan 2025</div></div>
+          </a>
+          <a href="water-chemistry.html" class="sbr-item">
+            <div class="sbr-img"><img src="3-5.webp" alt="Water chemistry" loading="lazy"/></div>
+            <div><div class="sbr-title">Water Chemistry: The Invisible Ingredient</div><div class="sbr-meta">11 min · Nov 2024</div></div>
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="bd-related">
+  <div class="container">
+    <div class="rel-header">
+      <div><span class="stag reveal">More Reading</span><h2 class="reveal">From the <em>Journal</em></h2></div>
+      <a href="../blogs/blogs.html" class="rel-see reveal">All Articles <i class="fa fa-arrow-right"></i></a>
+    </div>
+    <div class="rel-grid">
+      <a href="barrel-aging.html" class="rel-card reveal"><div class="rc-img"><img src="3-2.jfif" alt="Barrel aging" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Science</div><div class="rc-title">Inside the Barrel: 24 Months in Oak</div><div class="rc-meta">Feb 2025 · 12 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a>
+      <a href="hop-varieties.html" class="rel-card reveal"><div class="rc-img"><img src="3-3.png" alt="Hop varieties" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Tasting</div><div class="rc-title">Hop Varieties: A Brewer's Field Guide</div><div class="rc-meta">Jan 2025 · 9 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a>
+      <a href="water-chemistry.html" class="rel-card reveal"><div class="rc-img"><img src="3-5.webp" alt="Water chemistry" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Science</div><div class="rc-title">Water Chemistry: The Invisible Ingredient</div><div class="rc-meta">Nov 2024 · 11 min</div><span class="rc-link">Read <i class="fa fa-arrow-right"></i></span></div></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer><script src="bd.js"></script>
+</body></html>
