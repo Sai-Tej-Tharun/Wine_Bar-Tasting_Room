@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stock Heart & Wine craft beers in your bar, restaurant, or bottle shop — flexible wholesale and distribution across California." />
+  <title>Wholesale & Distribution — Heart &amp; Wine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="sd.css" />
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div id="foamCursor" aria-hidden="true"></div>
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link ">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link active">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html" class="nav-link active">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<section class="sd-hero">
+
+  <!-- LEFT CONTENT -->
+
+  <div class="container sd-left">
+
+
+<nav class="sd-breadcrumb reveal">
+  <a href="../home-1/home.html">Home</a>
+  <span>·</span>
+  <a href="../services/services.html">Services</a>
+  <span>·</span>
+  <span>Wholesale</span>
+</nav>
+
+<p class="sd-eyebrow reveal">
+  <span class="eyebrow-line"></span>Trade
+</p>
+
+<h1 class="sd-hero-title reveal">
+  <span class="ht-gold">WHOLE</span><br>
+  <span>SALE</span><br>
+  <span class="ht-outline">&amp;</span><br>
+  <span>TRADE</span>
+</h1>
+
+<p class="sd-hero-sub reveal">
+  Supply your venue with award-winning craft beer direct from the source. Flexible MOQs, chilled delivery, and a dedicated trade account manager across California.
+</p>
+
+<div class="sd-hero-stats reveal">
+  <div class="sd-hstat">
+    <span class="sd-hstat-n" data-count="47">47</span>
+    <span class="sd-hstat-l">SKUs Available</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">Keg</span>
+    <span class="sd-hstat-l">&amp; Canned</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">CA</span>
+    <span class="sd-hstat-l">Wide Delivery</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">Net 30</span>
+    <span class="sd-hstat-l">Trade Terms</span>
+  </div>
+</div>
+
+<div class="sd-hero-actions reveal">
+  <a href="../contact/contact.html#contact-form" class="btn btn-primary">
+    <i class="fa fa-truck"></i> Open a Trade Account
+  </a>
+
+  <a href="#overview" class="btn btn-ghost">
+    <i class="fa fa-info-circle"></i> Learn More
+  </a>
+</div>
+
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div class="sd-right">
+    <div class="sd-hero-bg" style="background-image:url('hero-5.avif'); filter:brightness(60%);"></div>
+    <div class="sd-hero-overlay"></div>
+  </div>
+
+</section>
+
+
+<section class="section sd-overview" id="overview">
+  <div class="container">
+    <div class="sd-overview-grid">
+      <div class="ov-text reveal">
+        <span class="section-tag">Trade Partnership</span>
+        <h2>Craft Beer Your <em>Customers Will Talk About</em></h2>
+        <p>We work with a select network of independent bars, restaurants, and bottle shops across California. We're proudly small-batch and intentional — so availability is limited to venues that share our commitment to quality.</p>
+        <p>All trade accounts benefit from <strong>Net 30 payment terms</strong>, flexible minimum order quantities, regular new product notifications, and marketing support including tap badges and point-of-sale materials.</p>
+        <div class="ov-features">
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-truck-loading"></i></div><div class="ov-feat-body"><strong>Chilled Direct Delivery</strong><p>Temperature-controlled delivery to your venue weekly or bi-weekly across the full California coverage area.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-file-invoice-dollar"></i></div><div class="ov-feat-body"><strong>Flexible Trade Terms</strong><p>Net 30 payment terms on approved accounts. Competitive trade pricing with volume incentives.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-tags"></i></div><div class="ov-feat-body"><strong>POS Support</strong><p>Custom tap badges, A-frames, menus, and digital assets provided at no cost for all active accounts.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-user-tie"></i></div><div class="ov-feat-body"><strong>Dedicated Account Manager</strong><p>One point of contact handles everything from ordering to new product briefings and staff training days.</p></div></div>
+        </div>
+        <a href="../contact/contact.html#contact-form" class="btn btn-primary">Apply for Trade Account</a>
+      </div>
+      <div class="ov-images reveal">
+        <div class="ov-img-main"><img src="sd5-1.jpg" alt="Wholesale keg line" loading="lazy" /></div>
+        <div class="ov-img-row">
+          <div class="ov-img-sm"><img src="sd5-2.webp" alt="Canned range" loading="lazy" /></div>
+          <div class="ov-img-sm"><img src="sd5-3.avif" alt="On-tap bar" loading="lazy" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-pricing">
+  <div class="container">
+    <div class="sd-pricing-header reveal"><span class="section-tag">Trade Tiers</span><h2>Scale as You <em>Grow</em></h2><p>Three trade account levels with increasing benefits, pricing advantages, and support as your order volume grows.</p></div>
+    <div class="pricing-cards">
+      <div class="pc reveal">
+        <div class="pc-icon"><i class="fa fa-store"></i></div>
+        <div class="pc-name">Stockist</div>
+        <div class="pc-title">Bottle Shop / Off-Trade</div>
+        <div class="pc-price"><span class="amount">POA</span><span class="period">MOQ: 1 case</span></div>
+        <div class="pc-desc">Ideal for bottle shops and off-licences looking to add independent craft to their range. Low MOQs, flexible ordering.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> 330ml &amp; 500ml canned range</li>
+          <li><i class="fa fa-check"></i> 1-case minimum order</li>
+          <li><i class="fa fa-check"></i> POS materials provided</li>
+          <li><i class="fa fa-check"></i> New release priority access</li>
+          <li class="no"><i class="fa fa-times"></i> Draught / keg lines</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-ghost" style="width:100%;justify-content:center">Apply Now</a>
+      </div>
+      <div class="pc featured reveal">
+        <div class="pc-ribbon">On-Trade</div>
+        <div class="pc-icon"><i class="fa fa-glass-whiskey"></i></div>
+        <div class="pc-name">Draught Partner</div>
+        <div class="pc-title">Bars &amp; Restaurants</div>
+        <div class="pc-price"><span class="amount">POA</span><span class="period">MOQ: 1 keg/week</span></div>
+        <div class="pc-desc">For venues serving our beers on draught. Full keg range, weekly delivery, and branded tap hardware included.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> Full keg range (20L &amp; 50L)</li>
+          <li><i class="fa fa-check"></i> Branded tap badges &amp; fonts</li>
+          <li><i class="fa fa-check"></i> Weekly chilled delivery</li>
+          <li><i class="fa fa-check"></i> Staff training session</li>
+          <li><i class="fa fa-check"></i> Net 30 payment terms</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-primary" style="width:100%;justify-content:center">Apply for Draught</a>
+      </div>
+      <div class="pc reveal">
+        <div class="pc-icon"><i class="fa fa-building"></i></div>
+        <div class="pc-name">Premier</div>
+        <div class="pc-title">High-Volume Partners</div>
+        <div class="pc-price"><span class="amount">POA</span><span class="period">Custom terms</span></div>
+        <div class="pc-desc">Our highest tier for hotels, groups, and multi-site venues — bespoke commercial terms, exclusive lines, and co-branding options.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> Full draught &amp; packaged range</li>
+          <li><i class="fa fa-check"></i> Exclusive lines available</li>
+          <li><i class="fa fa-check"></i> Co-branded tap takeover events</li>
+          <li><i class="fa fa-check"></i> Custom commercial terms</li>
+          <li><i class="fa fa-check"></i> Dedicated account director</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-ghost" style="width:100%;justify-content:center">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section sd-process">
+  <div class="container">
+    <div class="process-header reveal"><span class="section-tag">Onboarding</span><h2>Getting Your Account <em>Set Up</em></h2><p>Opening a trade account takes less than a week from initial enquiry to first delivery.</p></div>
+    <div class="steps-grid">
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-envelope"></i></div><div class="step-num">Day 1</div><div class="step-name">Submit Enquiry</div><div class="step-desc">Complete the trade enquiry form. We'll reply within 24 hours with an introductory pack.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-file-signature"></i></div><div class="step-num">Day 2–3</div><div class="step-name">Account Approval</div><div class="step-desc">Quick credit check and account setup. Net 30 terms confirmed at this stage.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-shopping-cart"></i></div><div class="step-num">Day 4</div><div class="step-name">Place First Order</div><div class="step-desc">Your account manager will walk you through the full range and help select your opening order.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-truck"></i></div><div class="step-num">Day 5–7</div><div class="step-name">First Delivery</div><div class="step-desc">Chilled delivery arrives at your venue, complete with POS materials and tap installation if required.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal"><span class="section-tag">Trade Partners</span><h2>What Our <em>Partners Say</em></h2></div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">We added Heart & Wine to our tap list 18 months ago and it's now consistently our #2 seller. The account management is exceptional — they feel like part of the team.</p><div class="testi-author"><div class="testi-avatar">GH</div><div><div class="testi-name">Gareth Hughes</div><div class="testi-role">The Anchor Bar, SF</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">As a bottle shop focused on independents, Heart & Wine is exactly what we look for. The canned range rotates beautifully and their new release notifications are spot on.</p><div class="testi-author"><div class="testi-avatar">YT</div><div><div class="testi-name">Yuki Tanaka</div><div class="testi-role">Ferment Bottle Shop, Oakland</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">Delivery is always on time, always cold, and the driver always brings a new seasonal sample to try. That attention to the relationship is rare with larger suppliers.</p><div class="testi-author"><div class="testi-avatar">FC</div><div><div class="testi-name">Fiona Carroll</div><div class="testi-role">The Hop & Vine, Sacramento</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-faq">
+  <div class="container">
+    <div class="faq-wrap">
+      <div class="faq-side reveal"><span class="section-tag">Trade FAQ</span><h2>Trade Account <em>Questions</em></h2><p>Common questions from prospective wholesale partners.</p></div>
+      <div class="faq-list reveal">
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="wfq1"><span>What areas do you deliver to?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="wfq1" hidden><p>We currently deliver to all major California metro areas including the Bay Area, LA, Sacramento, San Diego, and Fresno. Enquire for delivery schedules to your specific postcode.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="wfq2"><span>Is there a minimum order quantity?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="wfq2" hidden><p>For packaged (canned) lines, the minimum is 1 case (24 units). For keg accounts, a minimum of 1 keg per delivery applies. Volume thresholds for Premier tier accounts are discussed during account setup.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="wfq3"><span>Do you offer sale or return?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="wfq3" hidden><p>We offer sale or return on seasonal specials for established accounts only. Standard range orders are firm sale. Out-of-condition product is always replaced at our cost.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="wfq4"><span>Can you do exclusive lines for our venue?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="wfq4" hidden><p>Yes — exclusive venue lines (brewed in our tanks, sold only at your venue) are available under Premier tier accounts. This is effectively a custom brewing partnership combined with a wholesale agreement.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sd-cta"><div class="container"><span class="section-tag reveal">Open a Trade Account</span><h2 class="reveal"><span class="heading-main">Your Customers </span><em>Deserve</em><span class="heading-main"> Better Beer</span></h2><p class="reveal">Join our network of independent trade partners and give your guests something genuinely worth talking about.</p><div class="cta-btns reveal"><a href="../contact/contact.html#contact-form" class="btn btn-primary"><i class="fa fa-truck"></i> Apply for Trade Account</a><a href="../services/services.html" class="btn btn-ghost"><i class="fa fa-arrow-left"></i> All Services</a></div></div></section>
+
+<section class="section sd-related"><div class="container"><div class="related-header reveal"><h2>You Might Also <em>Enjoy</em></h2></div><div class="related-grid"><a href="custom-brewing.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-4.webp" alt="Custom Brewing" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Bespoke</div><div class="rc-title">Custom Batch Brewing</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a><a href="beer-club.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-3.jpg" alt="Beer Club" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Membership</div><div class="rc-title">Beer Club Membership</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a><a href="private-events.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-2.jpg" alt="Private Events" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Private Hire</div><div class="rc-title">Private Events &amp; Hire</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a></div></div></section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer><script src="sd.js"></script>
+</body></html>

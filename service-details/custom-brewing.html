@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Commission a custom batch brew at Heart & Wine — collaborate with our head brewer on recipe, label design, and a minimum 20L batch that's entirely yours." />
+  <title>Custom Batch Brewing — Heart &amp; Wine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="sd.css" />
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div id="foamCursor" aria-hidden="true"></div>
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link ">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link active">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html" class="nav-link active">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<section class="sd-hero">
+
+  <!-- LEFT CONTENT -->
+
+  <div class="container sd-left">
+
+
+<nav class="sd-breadcrumb reveal">
+  <a href="../home-1/home.html">Home</a>
+  <span>·</span>
+  <a href="../services/services.html">Services</a>
+  <span>·</span>
+  <span>Custom Brewing</span>
+</nav>
+
+<p class="sd-eyebrow reveal">
+  <span class="eyebrow-line"></span>Bespoke
+</p>
+
+<h1 class="sd-hero-title reveal">
+  <span class="ht-gold">CUSTOM</span><br>
+  <span>BATCH</span><br>
+  <span class="ht-outline">BREW</span><br>
+  <span>ING</span>
+</h1>
+
+<p class="sd-hero-sub reveal">
+  Work with our head brewer to design, brew, and bottle a beer that's entirely your own — perfect for weddings, launches, and milestone occasions.
+</p>
+
+<div class="sd-hero-stats reveal">
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">20L</span>
+    <span class="sd-hstat-l">Minimum</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">8</span>
+    <span class="sd-hstat-l">Weeks Lead</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">Full</span>
+    <span class="sd-hstat-l">Label Design</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">Any</span>
+    <span class="sd-hstat-l">Style</span>
+  </div>
+</div>
+
+<div class="sd-hero-actions reveal">
+  <a href="../contact/contact.html#contact-form" class="btn btn-primary">
+    <i class="fa fa-flask"></i> Start Your Brew
+  </a>
+
+  <a href="#overview" class="btn btn-ghost">
+    <i class="fa fa-info-circle"></i> Learn More
+  </a>
+</div>
+
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div class="sd-right">
+    <div class="sd-hero-bg" style="background-image:url('hero-4.jpg'); filter:brightness(60%);"></div>
+    <div class="sd-hero-overlay"></div>
+  </div>
+
+</section>
+
+
+<section class="section sd-overview" id="overview">
+  <div class="container">
+    <div class="sd-overview-grid">
+      <div class="ov-text reveal">
+        <span class="section-tag">The Process</span>
+        <h2>A Beer That's <em>Entirely Yours</em></h2>
+        <p>You don't need to know anything about brewing — that's what we're here for. In an initial consultation, our head brewer will guide you through style, flavour profile, ABV, and naming. We handle every step of the production process.</p>
+        <p>From there, we'll send a <strong>pilot taste sample</strong> for your approval before the full batch is brewed. You sign off, we brew, and you receive your beer in custom-labelled bottles or a personal keg.</p>
+        <div class="ov-features">
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-pencil-alt"></i></div><div class="ov-feat-body"><strong>Recipe Collaboration</strong><p>Style, malt profile, hops, adjuncts, and yeast strain — you have creative input at every stage.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-palette"></i></div><div class="ov-feat-body"><strong>Custom Label Design</strong><p>Our in-house designer creates a label to your brief — your name, logo, artwork, or theme.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-vial"></i></div><div class="ov-feat-body"><strong>Pilot Batch Sign-Off</strong><p>We brew a small pilot batch first. You taste and approve before we commit to the full production run.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-truck"></i></div><div class="ov-feat-body"><strong>Bottled or Kegged</strong><p>Receive your beer in 330ml or 500ml custom bottles, or in a personal keg for events and home bars.</p></div></div>
+        </div>
+        <a href="../contact/contact.html#contact-form" class="btn btn-primary">Commission Your Brew</a>
+      </div>
+      <div class="ov-images reveal">
+        <div class="ov-img-main"><img src="sd4-1.jpg" alt="Head brewer checking recipe" loading="lazy" /></div>
+        <div class="ov-img-row">
+          <div class="ov-img-sm"><img src="sd4-2.webp" alt="Custom label bottles" loading="lazy" /></div>
+          <div class="ov-img-sm"><img src="sd4-3.jpg" alt="Pilot batch tasting" loading="lazy" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-pricing">
+  <div class="container">
+    <div class="sd-pricing-header reveal"><span class="section-tag">Packages</span><h2>Your Budget, <em>Your Beer</em></h2><p>Three packages depending on batch size, complexity, and how much creative involvement you'd like.</p></div>
+    <div class="pricing-cards">
+      <div class="pc reveal">
+        <div class="pc-icon"><i class="fa fa-flask"></i></div>
+        <div class="pc-name">Starter</div>
+        <div class="pc-title">Small Batch</div>
+        <div class="pc-price"><span class="amount">₹64,000</span><span class="period">flat (20L)</span></div>
+        <div class="pc-desc">Our entry-level custom brew — 20 litres in a single style with a standard label template personalised to your occasion.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> 20L (approx. 56 x 330ml bottles)</li>
+          <li><i class="fa fa-check"></i> 1-hour recipe consultation</li>
+          <li><i class="fa fa-check"></i> Personalised label (template)</li>
+          <li><i class="fa fa-check"></i> Bottled &amp; ready to collect</li>
+          <li class="no"><i class="fa fa-times"></i> Pilot batch tasting</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-ghost" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+      <div class="pc featured reveal">
+        <div class="pc-ribbon">Most Popular</div>
+        <div class="pc-icon"><i class="fa fa-award"></i></div>
+        <div class="pc-name">Signature</div>
+        <div class="pc-title">Medium Batch</div>
+        <div class="pc-price"><span class="amount">₹12,000</span><span class="period">flat (50L)</span></div>
+        <div class="pc-desc">The full experience — a completely original recipe, pilot batch sign-off, bespoke label design, and your choice of format.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> 50L (approx. 140 x 330ml bottles)</li>
+          <li><i class="fa fa-check"></i> 2-session recipe collaboration</li>
+          <li><i class="fa fa-check"></i> Pilot batch tasting included</li>
+          <li><i class="fa fa-check"></i> Full bespoke label design</li>
+          <li><i class="fa fa-check"></i> Bottles or keg — your choice</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-primary" style="width:100%;justify-content:center">Enquire Now</a>
+      </div>
+      <div class="pc reveal">
+        <div class="pc-icon"><i class="fa fa-industry"></i></div>
+        <div class="pc-name">Grand</div>
+        <div class="pc-title">Large Batch</div>
+        <div class="pc-price"><span class="amount">POA</span><span class="period">100L+</span></div>
+        <div class="pc-desc">For events, corporate gifting, and retail launches requiring larger volumes and a fully bespoke branding package.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> 100L+ (custom volume)</li>
+          <li><i class="fa fa-check"></i> Full recipe R&amp;D sessions</li>
+          <li><i class="fa fa-check"></i> Multiple pilot batches</li>
+          <li><i class="fa fa-check"></i> Full brand identity design</li>
+          <li><i class="fa fa-check"></i> Retail-ready packaging option</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-ghost" style="width:100%;justify-content:center">Request Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section sd-process">
+  <div class="container">
+    <div class="process-header reveal"><span class="section-tag">Timeline</span><h2>From Brief to <em>Bottle</em></h2><p>The full custom brewing journey typically takes 8–12 weeks from initial consultation to delivery.</p></div>
+    <div class="steps-grid">
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-comments"></i></div><div class="step-num">Week 1–2</div><div class="step-name">Consultation</div><div class="step-desc">Recipe brief, style selection, naming, and label concept discussions with your brewer.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-vial"></i></div><div class="step-num">Week 3–5</div><div class="step-name">Pilot Batch</div><div class="step-desc">We brew a small pilot. You taste, give feedback, and approve before production begins.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-industry"></i></div><div class="step-num">Week 6–9</div><div class="step-name">Full Production</div><div class="step-desc">The full batch is brewed, conditioned, and quality-checked against your approved pilot.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-box-open"></i></div><div class="step-num">Week 10–12</div><div class="step-name">Bottling &amp; Delivery</div><div class="step-desc">Your beer is bottled with custom labels and ready for collection or delivery.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal"><span class="section-tag">Client Stories</span><h2>Brewed with <em>Meaning</em></h2></div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">We commissioned a smoked porter for our product launch event. The label matched our brand perfectly. Clients asked where they could buy it commercially — best compliment possible.</p><div class="testi-author"><div class="testi-avatar">NK</div><div><div class="testi-name">Nathan K.</div><div class="testi-role">Brand Director</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">Our wedding signature brew — a honey wheat ale named after our rescue dog. Guests went mad for it. We still have 6 bottles in the cellar and couldn't be happier.</p><div class="testi-author"><div class="testi-avatar">RP</div><div><div class="testi-name">Rachel &amp; Pete</div><div class="testi-role">Wedding Clients</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">The pilot batch process was so reassuring — I had no idea what I was doing and the brewer walked me through everything. The result was far better than I imagined.</p><div class="testi-author"><div class="testi-avatar">OB</div><div><div class="testi-name">Oliver B.</div><div class="testi-role">Birthday Commission</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-faq">
+  <div class="container">
+    <div class="faq-wrap">
+      <div class="faq-side reveal"><span class="section-tag">FAQ</span><h2>Custom Brew <em>Questions</em></h2><p>Everything you need to know before commissioning your first batch.</p></div>
+      <div class="faq-list reveal">
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="bfq1"><span>Do I need to know anything about brewing?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="bfq1" hidden><p>Not at all. Our head brewer guides you through every decision in plain language. You make the creative choices; we handle the technical brewing side entirely.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="bfq2"><span>How early should I get in touch?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="bfq2" hidden><p>We recommend at least 8 weeks before you need the beer, ideally 12. This gives us time for a proper pilot batch and sign-off without rushing the conditioning period.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="bfq3"><span>Can I have my beer canned instead of bottled?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="bfq3" hidden><p>Yes — canning is available for the Signature and Grand packages on batches of 100L or more. The minimum canning run requires approximately 280 cans due to setup costs.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="bfq4"><span>Can I sell my commissioned beer commercially?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="bfq4" hidden><p>Our standard commissions are for private use only. Commercial licensing and contract brewing for retail sale is a separate service — please contact us for details and pricing.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sd-cta"><div class="container"><span class="section-tag reveal">Let's Create Something</span><h2 class="reveal"><span class="heading-main">Commission Your </span><em>Signature Brew</em></h2><p class="reveal">Tell us the occasion, the size, and the style — and we'll take it from there. 8 weeks is all it takes.</p><div class="cta-btns reveal"><a href="../contact/contact.html#contact-form" class="btn btn-primary"><i class="fa fa-flask"></i> Start the Conversation</a><a href="../services/services.html" class="btn btn-ghost"><i class="fa fa-arrow-left"></i> All Services</a></div></div></section>
+
+<section class="section sd-related"><div class="container"><div class="related-header reveal"><h2>You Might Also <em>Enjoy</em></h2></div><div class="related-grid"><a href="private-events.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-2.jpg" alt="Private Events" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Private Hire</div><div class="rc-title">Private Events &amp; Hire</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a><a href="taproom-tours.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-1.webp" alt="Taproom Tours" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Guided</div><div class="rc-title">Taproom &amp; Cellar Tours</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a><a href="wholesale.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-5.avif" alt="Wholesale" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Trade</div><div class="rc-title">Wholesale &amp; Distribution</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a></div></div></section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer><script src="sd.js"></script>
+</body></html>

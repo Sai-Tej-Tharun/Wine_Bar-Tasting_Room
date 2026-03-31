@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover everything Heart & Wine offers — taproom tours, private events, Beer Club membership, custom brewing, wholesale, and tasting masterclasses." />
+  <title>Our Services — Heart &amp; Wine Craft Brewery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<style>
+:root{
+  --bg:#0c0800;--bg2:#160e02;--bg3:#1f1504;--card:#231804;
+  --gold:#F2C14E;--gold-d:#D4A030;--gold-l:#FFD970;--amber:#E8921A;
+  --txt:#FFF8E7;--txt2:#CFA96E;--txt3:#8A6A3A;
+  --border:rgba(196,130,30,0.22);--border-h:rgba(242,193,78,0.4);
+  --shadow-gold:0 0 40px rgba(242,193,78,0.2);
+  --grad-btn:linear-gradient(135deg,#D4A030,#F2C14E,#D4A030);
+  --font-d:'Bebas Neue',sans-serif;--font-h:'Playfair Display',serif;
+  --font-b:'Crimson Text',serif;--font-u:'DM Sans',sans-serif;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+}
+[data-theme="light"]{--bg:#FFF8E7;--bg2:#FDF3D8;--bg3:#FAE8C0;--card:#FFFBF0;--txt:#1a1005;--txt2:#5a3a10;--txt3:#8A6A3A;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--font-b);font-size:1.05rem;line-height:1.75;overflow-x:hidden;transition:background .3s,color .3s}
+img{max-width:100%;display:block;object-fit:cover}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* GRAIN */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.4;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");}
+.scroll-progress{position:fixed;top:0;left:0;width:0;height:3px;background:var(--grad-btn);z-index:9999;border-radius:0 2px 2px 0;}
+#foamCursor{position:fixed;width:20px;height:20px;border-radius:50%;background:radial-gradient(circle,rgba(255,248,231,.85) 0%,rgba(255,248,231,0) 70%);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;mix-blend-mode:screen;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:2;}
+.section{padding:96px 0;position:relative;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 32px;transition:background .4s,box-shadow .4s;}
+.navbar.scrolled{
+  background:var(--bg);
+  backdrop-filter:blur(16px);
+  box-shadow:0 2px 30px rgba(0,0,0,.15);
+  border-bottom:1px solid var(--border);
+}.nav-container{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.logo-text{font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;}
+.logo-text em{color:var(--gold);font-style:normal;}
+.nav-links{display:flex;align-items:center;gap:4px;}
+.nav-link{font-family:var(--font-u);font-size:.86rem;font-weight:500;color:var(--txt2);padding:8px 14px;border-radius:4px;transition:color .3s;position:relative;}
+.nav-link::after{content:'';position:absolute;bottom:4px;left:14px;right:14px;height:1.5px;background:var(--gold);transform:scaleX(0);transition:transform .3s var(--ease);}
+.nav-link:hover,.nav-link.active{color:var(--txt);}
+.nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);}
+.nav-cta{background:var(--grad-btn);color:#0c0800!important;font-weight:700;padding:8px 20px;border-radius:4px;}
+.nav-cta::after{display:none;}
+.nav-actions{display:flex;align-items:center;gap:12px;}
+.theme-toggle{background:none;border:1px solid var(--border);color:var(--txt2);width:38px;height:38px;border-radius:50%;cursor:pointer;transition:border-color .3s,color .3s;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.theme-toggle:hover{border-color:var(--gold);color:var(--gold);}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.nav-burger span{display:block;width:24px;height:2px;background:var(--txt);border-radius:2px;transition:all .3s;}
+.mobile-menu{display:none;flex-direction:column;background:rgba(12,8,0,.98);padding:16px 32px 24px;border-bottom:1px solid var(--border);}
+.mobile-menu.open{display:flex;}
+.mob-link{font-family:var(--font-u);font-size:1rem;color:var(--txt2);padding:12px 0;border-bottom:1px solid var(--border);transition:color .3s;}
+.mob-link:hover,.mob-cta{color:var(--gold);}
+.dropdown a,
+.dropdown a:visited,
+.dropdown a:active,
+.dropdown a:focus{
+  display:block;
+  padding:10px 16px;
+  color:#ffffff !important;
+  text-decoration:none;
+}
+
+.dropdown a:hover{
+  background:#8A5A1F;
+  color:#ffffff !important;
+}
+/* HERO */
+.services-hero{
+  min-height:100vh;display:flex;align-items:flex-end;
+  position:relative;overflow:hidden;padding-top:72px;
+}
+.sh-bg{
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1559818989-c6cf2a17faa3?w=1400&q=80');
+  background-size:cover;background-position:center;
+  transition:transform 12s ease;
+}
+.services-hero:hover .sh-bg{transform:scale(1.03);}
+.sh-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(12,8,0,.3) 0%,rgba(12,8,0,.55) 40%,rgba(12,8,0,.97) 100%);
+}
+.sh-content{
+  position:relative;z-index:2;
+  padding:80px 0 100px;width:100%;
+}
+.sh-tag{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--font-u);font-size:.72rem;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+  background:rgba(242,193,78,.08);border:1px solid rgba(242,193,78,.2);
+  padding:4px 14px;border-radius:999px;margin-bottom:24px;
+}
+.sh-title{
+  font-family:var(--font-d);
+  font-size:clamp(4rem,10vw,10rem);
+  line-height:.88;letter-spacing:.02em;
+  margin-bottom:28px;
+}
+.sh-title .t-gold{color:var(--gold);}
+.sh-title .t-outline{-webkit-text-stroke:2px var(--gold-d);color:transparent;}
+.sh-sub{
+  font-family:var(--font-h);font-style:italic;
+  font-size:1.15rem;color:var(--txt2);
+  max-width:520px;line-height:1.75;margin-bottom:40px;
+}
+.sh-scroll{
+  display:flex;align-items:center;gap:12px;
+  font-family:var(--font-u);font-size:.78rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);
+}
+.scroll-mouse{
+  width:24px;height:38px;border:1.5px solid var(--txt3);border-radius:12px;
+  position:relative;
+}
+.scroll-mouse::after{
+  content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);
+  width:3px;height:8px;background:var(--gold);border-radius:99px;
+  animation:scrollDot 2s ease-in-out infinite;
+}
+@keyframes scrollDot{0%,100%{top:6px;opacity:1}70%{top:18px;opacity:0}}
+
+/* STATS BAND */
+.stats-band{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 0;}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.stat-item{
+  text-align:center;padding:0 24px;
+  border-right:1px solid var(--border);
+}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-family:var(--font-d);font-size:3rem;color:var(--gold);line-height:1;}
+.stat-lbl{font-family:var(--font-u);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--txt3);margin-top:4px;}
+
+/* SECTION TAG + HEADER */
+.section-tag{
+  font-family:var(--font-u);font-size:.72rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+  background:rgba(242,193,78,.08);border:1px solid rgba(242,193,78,.2);
+  padding:4px 14px;border-radius:999px;display:inline-block;margin-bottom:16px;
+}
+.section-header{text-align:center;max-width:640px;margin:0 auto 72px;display:flex;flex-direction:column;align-items:center;}
+.section-header h2{font-family:var(--font-h);font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;margin-bottom:12px;}
+.section-header h2 em{font-style:italic;color:var(--gold);}
+.section-header p{color:var(--txt2);font-size:1rem;}
+
+/* SERVICES GRID */
+.services-section{background:var(--bg);}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+}
+
+/* SERVICE CARD */
+.service-card{
+  position:relative;overflow:hidden;
+  background:var(--card);
+  min-height:520px;
+  display:flex;flex-direction:column;
+  border:1px solid var(--border);
+  cursor:pointer;
+  transition:border-color .4s var(--ease),transform .4s var(--ease);
+}
+.service-card:hover{
+  border-color:var(--border-h);
+  z-index:2;
+}
+
+/* Card image */
+.sc-img{
+  position:absolute;inset:0;
+  transition:transform .8s var(--ease);
+}
+.sc-img img{width:100%;height:100%;object-fit:cover;opacity:.35;transition:opacity .5s;}
+.service-card:hover .sc-img{transform:scale(1.07);}
+.service-card:hover .sc-img img{opacity:.55;}
+
+/* Gradient overlay */
+.sc-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(12,8,0,.1) 0%,rgba(12,8,0,.65) 50%,rgba(12,8,0,.97) 100%);
+  transition:background .5s;
+}
+.service-card:hover .sc-overlay{
+  background:linear-gradient(180deg,rgba(12,8,0,.05) 0%,rgba(12,8,0,.5) 40%,rgba(12,8,0,.97) 100%);
+}
+
+/* Card body */
+.sc-body{
+  position:relative;z-index:2;
+  margin-top:auto;
+  padding:36px 32px 32px;
+}
+.heading-main{
+color:#ffffff !important;
+}
+.sc-number{
+  font-family:var(--font-d);font-size:4.5rem;
+  color:rgba(242,193,78,.08);line-height:1;
+  position:absolute;top:24px;right:24px;
+  transition:color .4s;
+  pointer-events:none;
+}
+.service-card:hover .sc-number{color:rgba(242,193,78,.14);}
+
+.sc-icon{
+  width:52px;height:52px;border-radius:12px;
+  background:linear-gradient(135deg,var(--bg3),var(--bg2));
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;color:var(--gold);
+  margin-bottom:18px;
+  transition:background .4s,border-color .4s,box-shadow .4s;
+}
+.service-card:hover .sc-icon{
+  background:linear-gradient(135deg,#2a1804,#3d2206);
+  border-color:var(--gold-d);
+  box-shadow:0 0 20px rgba(242,193,78,.25);
+}
+
+.sc-tag{
+  font-family:var(--font-u);font-size:.68rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:8px;
+}
+.sc-title{
+  font-family:var(--font-h);font-size:1.35rem;font-weight:700;
+  line-height:1.2;margin-bottom:12px;
+  transition:color .3s;
+}
+.service-card:hover .sc-title{color:var(--gold-l);}
+
+.sc-excerpt{
+  font-size:.92rem;color:var(--txt2);line-height:1.7;
+  margin-bottom:20px;
+  max-height:0;overflow:hidden;
+  transition:max-height .5s var(--ease),opacity .4s;
+  opacity:0;
+}
+.service-card:hover .sc-excerpt{max-height:120px;opacity:1;}
+
+.sc-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-u);font-size:.8rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--gold);
+  transition:gap .3s;
+}
+.service-card:hover .sc-link{gap:14px;}
+.sc-link i{font-size:.75rem;transition:transform .3s;}
+.service-card:hover .sc-link i{transform:translateX(4px);}
+
+/* PROCESS BAND */
+.process{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.process-steps{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  position:relative;
+  gap:0;
+}
+.process-steps::before{
+  content:'';
+  position:absolute;top:36px;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--border),var(--gold-d),var(--border),transparent);
+  z-index:0;
+}
+.ps{
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;padding:48px 24px;
+  position:relative;z-index:1;
+}
+.ps-dot{
+  width:72px;height:72px;border-radius:50%;
+  background:var(--card);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;color:var(--gold);
+  margin-bottom:18px;
+  transition:border-color .3s,box-shadow .3s,background .3s;
+}
+.ps:hover .ps-dot{
+  border-color:var(--gold-d);
+  box-shadow:0 0 24px rgba(242,193,78,.3);
+  background:linear-gradient(135deg,#2a1804,#1f1504);
+}
+.ps-num{
+  font-family:var(--font-d);font-size:.85rem;color:var(--txt3);
+  letter-spacing:.14em;margin-bottom:6px;
+}
+.ps-name{font-family:var(--font-h);font-size:.95rem;font-weight:700;color:var(--txt);margin-bottom:6px;}
+.ps-desc{font-size:.82rem;color:var(--txt3);line-height:1.6;}
+
+/* CTA BAND */
+.cta-band{
+  background:linear-gradient(135deg,#160e02,#2a1804);
+  border-top:1px solid var(--border);padding:80px 0;text-align:center;
+}
+.cta-band h2{font-family:var(--font-h);font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:12px;}
+.cta-band h2 em{color:var(--gold);font-style:italic;}
+.cta-band p{color:var(--txt2);font-size:1rem;max-width:480px;margin:0 auto 32px;}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;}
+
+/* BUTTONS */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 32px;border-radius:4px;
+  font-family:var(--font-u);font-weight:600;font-size:.88rem;
+  letter-spacing:.05em;text-transform:uppercase;
+  cursor:pointer;border:none;position:relative;overflow:hidden;
+  transition:transform .3s var(--ease),box-shadow .3s;
+}
+.btn-primary{background:var(--grad-btn);color:#0c0800;box-shadow:0 4px 20px rgba(212,160,48,.4);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(242,193,78,.5);}
+.btn-ghost{background:transparent;color:var(--gold);border:1.5px solid rgba(242,193,78,.45);padding:13px 32px;}
+.btn-ghost:hover{background:rgba(242,193,78,.06);}
+.mob-dropdown {
+  border-top: 1px solid var(--border);
+}
+
+.mob-drop-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--txt);
+  font-size: 1rem;
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mob-drop-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.mob-drop-menu a {
+  padding: 10px 0;
+  font-size: .9rem;
+  color: var(--txt2);
+}
+
+.mob-dropdown.active .mob-drop-menu {
+  max-height: 500px;
+}
+
+.mob-dropdown.active i {
+  transform: rotate(180deg);
+}
+
+.mob-drop-toggle i {
+  transition: transform .3s;
+}
+/* ================= FOOTER ================= */
+
+.footer{
+  background:var(--bg);
+  border-top:1px solid var(--border);
+  position:relative;
+  overflow:hidden;
+  padding-top:64px;
+}
+
+.footer-foam{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    var(--amber),
+    var(--gold),
+    transparent
+  );
+  opacity:.5;
+}
+
+/* Layout */
+
+.footer-inner{
+  display:grid;
+  grid-template-columns:repeat(5, auto);
+  justify-content:space-between;
+  gap:60px;
+  padding-bottom:48px;
+}
+
+/* Logo */
+
+.footer-logo{
+  font-family:var(--font-d);
+  font-size:1.6rem;
+  letter-spacing:.08em;
+  color:var(--txt);
+  margin-bottom:12px;
+}
+
+/* Brand text */
+
+.footer-brand p{
+  font-size:.88rem;
+  color:var(--txt3);
+  margin-bottom:20px;
+  max-width:220px;
+  line-height:1.7;
+}
+
+/* Social icons */
+
+.footer-social{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.footer-social a{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--txt3);
+  font-size:.88rem;
+  transition:border-color .3s,color .3s,background .3s;
+}
+
+.footer-social a:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+  background:rgba(242,193,78,.08);
+}
+
+/* Footer columns */
+
+.footer-col h4{
+  font-family:var(--font-u);
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:16px;
+}
+
+.footer-col a,
+.footer-col p{
+  display:block;
+  font-size:.88rem;
+  color:var(--txt3);
+  margin-bottom:8px;
+  transition:color .3s;
+  line-height:1.5;
+}
+
+.footer-col a:hover{
+  color:var(--txt);
+}
+
+/* Hours */
+
+.footer-hours{
+  color:var(--txt3) !important;
+}
+
+/* Address */
+
+.footer-addr{
+  color:var(--txt3) !important;
+  display:flex !important;
+  align-items:center;
+  gap:6px;
+}
+
+.footer-addr i{
+  color:var(--gold);
+}
+
+/* Bottom bar */
+
+.footer-bottom{
+  border-top:1px solid var(--border);
+  padding:20px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+  font-family:var(--font-u);
+  font-size:.8rem;
+  color:var(--txt3);
+}
+
+.footer-bottom a{
+  color:var(--txt3);
+  transition:color .3s;
+}
+
+.footer-bottom a:hover{
+  color:var(--gold);
+}
+
+/* ================= FOOTER RESPONSIVE ================= */
+
+@media (max-width:1024px){
+
+  .footer-inner{
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+
+@media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr);}.process-steps{grid-template-columns:repeat(3,1fr);}.stats-inner{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.nav-links{display:none;}.nav-burger{display:flex;}.services-grid{grid-template-columns:1fr;}.sc-excerpt{max-height:80px!important;opacity:1!important;}.process-steps{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.process-steps{grid-template-columns:1fr;}.stats-inner{grid-template-columns:1fr 1fr;}}
+.nav-links{
+display:flex;
+align-items:center;
+gap:24px;
+}
+
+.nav-item{
+position:relative;
+}
+
+.dropdown{
+position:absolute;
+top:100%;
+left:0;
+background:#1c1917;
+border-radius:10px;
+min-width:220px;
+padding:10px 0;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+transition:0.25s ease;
+}
+
+.dropdown a{
+display:block;
+padding:10px 18px;
+color:#fff;
+text-decoration:none;
+}
+
+.dropdown a:hover{
+background:#8A5A1F;
+}
+
+.nav-item:hover .dropdown{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+/* MOBILE */
+
+.nav-burger{
+display:none;
+flex-direction:column;
+gap:4px;
+}
+
+.nav-burger span{
+width:22px;
+height:2px;
+background:#fff;
+}
+
+.mobile-menu{
+display:none;
+flex-direction:column;
+background:#1c1917;
+padding:20px;
+}
+
+.mob-sub{
+display:none;
+flex-direction:column;
+padding-left:15px;
+}
+
+.mob-sub.open{
+display:flex;
+}
+
+.mobile-menu.open{
+display:flex;
+}
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+}
+
+.nav-burger{
+display:flex;
+}
+
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div id="foamCursor" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link active">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<!-- HERO -->
+<section class="services-hero">
+  <div class="sh-bg"></div>
+  <div class="sh-overlay"></div>
+  <div class="container sh-content">
+    <span class="sh-tag reveal"><i class="fa fa-award" aria-hidden="true"></i> What We Offer</span>
+    <h1 class="sh-title reveal">
+      <span class="t-gold">CRAFT</span><br>
+      <span>YOUR</span><br>
+      <span class="t-outline">PERFECT</span><br>
+      <span>EXPERIENCE</span>
+    </h1>
+    <p class="sh-sub reveal">From guided cellar tours to bespoke event brewing — every service shaped around your love of great beer.</p>
+    <div class="sh-scroll reveal">
+      <div class="scroll-mouse"></div>
+      Explore our services
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item reveal"><div class="stat-num" data-count="6">6</div><div class="stat-lbl">Service Offerings</div></div>
+      <div class="stat-item reveal"><div class="stat-num" data-count="8500">8.5K</div><div class="stat-lbl">Happy Members</div></div>
+      <div class="stat-item reveal"><div class="stat-num" data-count="47">47</div><div class="stat-lbl">Award Recipes</div></div>
+      <div class="stat-item reveal"><div class="stat-num" data-count="12">12</div><div class="stat-lbl">Industry Awards</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="section services-section" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Services</span>
+      <h2>Six Ways to <em>Experience</em> the Craft</h2>
+      <p>Every offering is designed to deepen your connection with the art of brewing — whether you're a curious newcomer or a seasoned hop-head.</p>
+    </div>
+  </div>
+
+  <div class="services-grid">
+
+    <!-- 1. Taproom Tours -->
+    <div class="service-card reveal">
+      <div class="sc-img">
+        <img src="service-detials-1.jpg" alt="Taproom tour" loading="lazy" />
+      </div>
+      <div class="sc-overlay"></div>
+      <div class="sc-number">01</div>
+      <div class="sc-body">
+        <div class="sc-icon"><i class="fa fa-map-marked-alt" aria-hidden="true"></i></div>
+        <div class="sc-tag">Guided Experience</div>
+        <h2 class="sc-title">Taproom & Cellar Tours</h2>
+        <p class="sc-excerpt">Step behind the bar and into our working cellars for a 90-minute guided journey through the full brewing process — from grain to glass. Includes a 6-pour tasting flight, insider brewer commentary, and exclusive access to barrel rooms not open to the public.</p>
+        <a href="../service-details/taproom-tours.html" class="sc-link">
+          Discover More <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- 2. Private Events -->
+    <div class="service-card reveal">
+      <div class="sc-img">
+        <img src="service-detials-2.jpg" alt="Private event" loading="lazy" />
+      </div>
+      <div class="sc-overlay"></div>
+      <div class="sc-number">02</div>
+      <div class="sc-body">
+        <div class="sc-icon"><i class="fa fa-glass-cheers" aria-hidden="true"></i></div>
+        <div class="sc-tag">Private Hire</div>
+        <h2 class="sc-title">Private Events & Hire</h2>
+        <p class="sc-excerpt">Transform our taproom or private dining room into the backdrop for your next unforgettable occasion. Birthdays, corporate dinners, weddings, and team events — all supported by bespoke catering, custom beer menus, and a dedicated events coordinator.</p>
+        <a href="../service-details/private-events.html" class="sc-link">
+          Discover More <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- 3. Beer Club -->
+    <div class="service-card reveal">
+      <div class="sc-img">
+        <img src="service-detials-3.jpg" alt="Beer club" loading="lazy" />
+      </div>
+      <div class="sc-overlay"></div>
+      <div class="sc-number">03</div>
+      <div class="sc-body">
+        <div class="sc-icon"><i class="fa fa-star" aria-hidden="true"></i></div>
+        <div class="sc-tag">Membership</div>
+        <h2 class="sc-title">Beer Club Membership</h2>
+        <p class="sc-excerpt">Join over 8,500 members who receive monthly allocations of seasonal and limited-release brews, first access to new recipes, 15% off taproom purchases, invite-only tasting events, and a loyalty points system that rewards every visit and order.</p>
+        <a href="../service-details/beer-club.html" class="sc-link">
+          Discover More <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- 4. Custom Brewing -->
+    <div class="service-card reveal">
+      <div class="sc-img">
+        <img src="service-detials-4.webp" alt="Custom brewing" loading="lazy" />
+      </div>
+      <div class="sc-overlay"></div>
+      <div class="sc-number">04</div>
+      <div class="sc-body">
+        <div class="sc-icon"><i class="fa fa-flask" aria-hidden="true"></i></div>
+        <div class="sc-tag">Bespoke</div>
+        <h2 class="sc-title">Custom Batch Brewing</h2>
+        <p class="sc-excerpt">Collaborate with our head brewer to create an entirely original beer for your wedding, corporate launch, or special occasion. Work together on style, flavour profile, ABV, and a custom label design — producing a minimum 20L batch that's truly yours.</p>
+        <a href="../service-details/custom-brewing.html" class="sc-link">
+          Discover More <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- 5. Wholesale -->
+    <div class="service-card reveal">
+      <div class="sc-img">
+        <img src="service-detials-5.avif" alt="Wholesale kegs" loading="lazy" />
+      </div>
+      <div class="sc-overlay"></div>
+      <div class="sc-number">05</div>
+      <div class="sc-body">
+        <div class="sc-icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
+        <div class="sc-tag">Trade</div>
+        <h2 class="sc-title">Wholesale & Distribution</h2>
+        <p class="sc-excerpt">Supply your restaurant, bar, or bottle shop with our award-winning craft range. We work with a select network of independent venues across California, offering keg and canned lines, flexible MOQs, chilled delivery, and dedicated trade account management.</p>
+        <a href="../service-details/wholesale.html" class="sc-link">
+          Discover More <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- 6. Tasting Masterclasses -->
+    <div class="service-card reveal">
+      <div class="sc-img">
+        <img src="service-detials-6.jpeg" alt="Tasting masterclass" loading="lazy" />
+      </div>
+      <div class="sc-overlay"></div>
+      <div class="sc-number">06</div>
+      <div class="sc-body">
+        <div class="sc-icon"><i class="fa fa-chalkboard-teacher" aria-hidden="true"></i></div>
+        <div class="sc-tag">Education</div>
+        <h2 class="sc-title">Tasting Masterclasses</h2>
+        <p class="sc-excerpt">Learn the language of craft beer in an intimate 2-hour session led by our certified Cicerone. Explore aroma, mouthfeel, bitterness balance, and food pairing across a curated 8-pour flight — perfect for enthusiasts, corporate teams, and gifting occasions.</p>
+        <a href="../service-details/tasting-masterclasses.html" class="sc-link">
+          Discover More <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+</section>
+
+<!-- PROCESS -->
+<section class="section process">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">How It Works</span>
+      <h2>From <em>Enquiry</em> to Experience</h2>
+    </div>
+    <div class="process-steps">
+      <div class="ps reveal">
+        <div class="ps-dot"><i class="fa fa-search" aria-hidden="true"></i></div>
+        <div class="ps-num">Step 01</div>
+        <div class="ps-name">Choose a Service</div>
+        <div class="ps-desc">Browse our six offerings and find the one that fits your occasion.</div>
+      </div>
+      <div class="ps reveal">
+        <div class="ps-dot"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+        <div class="ps-num">Step 02</div>
+        <div class="ps-name">Get in Touch</div>
+        <div class="ps-desc">Send us a message or complete the enquiry form — we respond within 24 hours.</div>
+      </div>
+      <div class="ps reveal">
+        <div class="ps-dot"><i class="fa fa-comments" aria-hidden="true"></i></div>
+        <div class="ps-num">Step 03</div>
+        <div class="ps-name">We Plan Together</div>
+        <div class="ps-desc">We'll tailor every detail to your needs — menu, timing, guests, and budget.</div>
+      </div>
+      <div class="ps reveal">
+        <div class="ps-dot"><i class="fa fa-calendar-check" aria-hidden="true"></i></div>
+        <div class="ps-num">Step 04</div>
+        <div class="ps-name">Confirm &amp; Book</div>
+        <div class="ps-desc">A simple deposit secures your date and triggers our preparation process.</div>
+      </div>
+      <div class="ps reveal">
+        <div class="ps-dot"><i class="fa fa-beer" aria-hidden="true"></i></div>
+        <div class="ps-num">Step 05</div>
+        <div class="ps-name">Enjoy!</div>
+        <div class="ps-desc">Arrive, relax, and let our team take it from here. Cheers!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <span class="section-tag reveal">Ready to Begin?</span>
+    <h2 class="reveal"><span class="heading-main">Find the Right </span><em>Experience</em><span class="heading-main"> for You</span></h2>
+    <p class="reveal">Our team is on hand to help you choose, plan, and book the perfect service — from a quick phone call to a fully bespoke consultation.</p>
+    <div class="cta-btns reveal">
+      <a href="../contact/contact.html" class="btn btn-primary"><i class="fa fa-envelope" aria-hidden="true"></i> Contact Us</a>
+      <a href="../home-1/home.html#book" class="btn btn-ghost"><i class="fa fa-calendar" aria-hidden="true"></i> Book a Table</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer>
+
+<script>
+'use strict';
+// Theme
+const html=document.documentElement,themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon');
+const saved=localStorage.getItem('mashaletheme')||(window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');
+html.setAttribute('data-theme',saved);if(themeIcon)themeIcon.className=saved==='dark'?'fa fa-moon':'fa fa-sun';
+themeToggle?.addEventListener('click',()=>{const t=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',t);themeIcon.className=t==='dark'?'fa fa-moon':'fa fa-sun';localStorage.setItem('mashaletheme',t);});
+// Scroll progress
+const sp=document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{if(sp)sp.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';},{passive:true});
+// Navbar scroll
+const nb=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nb?.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+// Mobile menu
+const burger=document.getElementById('navBurger'),mm=document.getElementById('mobileMenu');
+burger?.addEventListener('click',()=>{const o=mm.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+// Reveal
+const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);obs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Foam cursor
+const fc=document.getElementById('foamCursor');
+if(fc){let mx=0,my=0,cx=0,cy=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;fc.style.opacity='1';});document.addEventListener('mouseleave',()=>{fc.style.opacity='0';});(function loop(){cx+=(mx-cx)*.12;cy+=(my-cy)*.12;fc.style.left=cx+'px';fc.style.top=cy+'px';requestAnimationFrame(loop);})();}
+// Count up
+document.querySelectorAll('.stat-num[data-count]').forEach(el=>{const target=parseFloat(el.dataset.count),isK=target>=1000;const obs2=new IntersectionObserver(([e])=>{if(!e.isIntersecting)return;let s=0;const dur=1800,step=1000/60;const t=setInterval(()=>{s+=step;const p=Math.min(s/dur,1);const v=target*p;el.textContent=isK?(v/1000).toFixed(1)+'K':Math.round(v);if(s>=dur){el.textContent=isK?(target/1000).toFixed(1)+'K':target;clearInterval(t);}},step);obs2.unobserve(el);},{threshold:.5});obs2.observe(el);});
+// Ripple
+const rs=document.createElement('style');rs.textContent='@keyframes rpl{to{width:60px;height:60px;opacity:0}}';document.head.appendChild(rs);
+document.addEventListener('click',e=>{const d=document.createElement('div');d.style.cssText=`position:fixed;left:${e.clientX}px;top:${e.clientY}px;width:0;height:0;border-radius:50%;border:2px solid rgba(242,193,78,.4);transform:translate(-50%,-50%);animation:rpl .65s ease-out forwards;pointer-events:none;z-index:9997;`;document.body.appendChild(d);setTimeout(()=>d.remove(),700);});
+</script>
+<script>
+  document.querySelectorAll(".mob-drop-toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const parent = btn.parentElement;
+    parent.classList.toggle("active");
+  });
+});
+</script>
+</body>
+</html>

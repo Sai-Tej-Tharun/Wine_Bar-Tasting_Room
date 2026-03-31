@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn the language of craft beer in an intimate 2-hour tasting masterclass led by our certified Cicerone — 8-pour flight, food pairing, and brewing theory." />
+  <title>Tasting Masterclasses — Heart &amp; Wine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="sd.css" />
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div id="foamCursor" aria-hidden="true"></div>
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link ">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link active">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html" class="nav-link active">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<section class="sd-hero">
+
+  <!-- LEFT CONTENT -->
+
+  <div class="container sd-left">
+
+
+<nav class="sd-breadcrumb reveal">
+  <a href="../home-1/home.html">Home</a>
+  <span>·</span>
+  <a href="../services/services.html">Services</a>
+  <span>·</span>
+  <span>Masterclasses</span>
+</nav>
+
+<p class="sd-eyebrow reveal">
+  <span class="eyebrow-line"></span>Education
+</p>
+
+<h1 class="sd-hero-title reveal">
+  <span class="ht-gold">TASTING</span><br>
+  <span>MASTER</span><br>
+  <span class="ht-outline">CLASS</span><br>
+  <span>ES</span>
+</h1>
+
+<p class="sd-hero-sub reveal">
+  Two hours with a certified Cicerone — exploring aroma, mouthfeel, bitterness, and food pairing across a curated 8-pour flight. You'll never drink beer the same way again.
+</p>
+
+<div class="sd-hero-stats reveal">
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">2</span>
+    <span class="sd-hstat-l">Hours</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n" data-count="8">8</span>
+    <span class="sd-hstat-l">Pour Flight</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n" data-count="12">12</span>
+    <span class="sd-hstat-l">Max Guests</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">₹300</span>
+    <span class="sd-hstat-l">Per Person</span>
+  </div>
+</div>
+
+<div class="sd-hero-actions reveal">
+  <a href="../contact/contact.html#contact-form" class="btn btn-primary">
+    <i class="fa fa-chalkboard-teacher"></i> Book a Class
+  </a>
+
+  <a href="#overview" class="btn btn-ghost">
+    <i class="fa fa-info-circle"></i> Learn More
+  </a>
+</div>
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div class="sd-right">
+    <div class="sd-hero-bg" style="background-image:url('hero-6.webp'); filter:brightness(60%);"></div>
+    <div class="sd-hero-overlay"></div>
+  </div>
+
+</section>
+
+
+<section class="section sd-overview" id="overview">
+  <div class="container">
+    <div class="sd-overview-grid">
+      <div class="ov-text reveal">
+        <span class="section-tag">What You'll Learn</span>
+        <h2>Become a More <em>Confident</em> Beer Drinker</h2>
+        <p>Led by our resident Cicerone (the beer equivalent of a sommelier), the masterclass covers the full sensory vocabulary of craft beer — from identifying hop varieties by aroma to understanding how malt profiles affect mouthfeel and bitterness balance.</p>
+        <p>Classes are capped at <strong>12 guests</strong> to ensure an intimate, interactive experience. You'll leave with a printed tasting journal, food pairing guide, and a dramatically better palate.</p>
+        <div class="ov-features">
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-beer"></i></div><div class="ov-feat-body"><strong>Aroma Identification</strong><p>Learn to identify hop varieties, malts, esters, and fermentation aromas using our custom scent kit.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-balance-scale"></i></div><div class="ov-feat-body"><strong>Bitterness &amp; Balance</strong><p>Understand IBU, how hop varieties affect bitterness character, and how malt sweetness creates balance.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-utensils"></i></div><div class="ov-feat-body"><strong>Food Pairing Principles</strong><p>Contrast, complement, and cut — the three pillars of great beer and food pairing, demonstrated with a tasting plate.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-book-open"></i></div><div class="ov-feat-body"><strong>Tasting Journal &amp; Guide</strong><p>Every guest leaves with a printed tasting journal, a food pairing guide, and a glossary of craft beer terminology.</p></div></div>
+        </div>
+        <a href="../contact/contact.html#contact-form" class="btn btn-primary">Reserve Your Seat</a>
+      </div>
+      <div class="ov-images reveal">
+        <div class="ov-img-main"><img src="sd6-1.jpg" alt="Masterclass tasting flight" loading="lazy" /></div>
+        <div class="ov-img-row">
+          <div class="ov-img-sm"><img src="sd6-2.jpg" alt="Sensory aroma kit" loading="lazy" /></div>
+          <div class="ov-img-sm"><img src="sd6-3.jpg1604967752" alt="Cicerone guiding class" loading="lazy" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-pricing">
+  <div class="container">
+    <div class="sd-pricing-header reveal"><span class="section-tag">Class Formats</span><h2>A Format for <em>Every Occasion</em></h2><p>Whether you're a complete beginner or an experienced enthusiast, we have a class pitched perfectly for you.</p></div>
+    <div class="pricing-cards">
+      <div class="pc reveal">
+        <div class="pc-icon"><i class="fa fa-seedling"></i></div>
+        <div class="pc-name">Foundations</div>
+        <div class="pc-title">Beginner Class</div>
+        <div class="pc-price"><span class="amount">₹3600</span><span class="period">/ person</span></div>
+        <div class="pc-desc">For complete beginners — a warm, accessible introduction to craft beer styles, ingredients, and tasting technique.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> 2-hour session</li>
+          <li><i class="fa fa-check"></i> 6-pour tasting flight</li>
+          <li><i class="fa fa-check"></i> Beer styles overview</li>
+          <li><i class="fa fa-check"></i> Tasting journal included</li>
+          <li class="no"><i class="fa fa-times"></i> Food pairing plate</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-ghost" style="width:100%;justify-content:center">Book Class</a>
+      </div>
+      <div class="pc featured reveal">
+        <div class="pc-ribbon">Most Popular</div>
+        <div class="pc-icon"><i class="fa fa-chalkboard-teacher"></i></div>
+        <div class="pc-name">Connoisseur</div>
+        <div class="pc-title">Intermediate Class</div>
+        <div class="pc-price"><span class="amount">₹5000</span><span class="period">/ person</span></div>
+        <div class="pc-desc">The complete masterclass experience — 8 pours, sensory kit, food pairing, brewing science, and a Q&amp;A with the Cicerone.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> 2.5-hour deep-dive session</li>
+          <li><i class="fa fa-check"></i> 8-pour tasting flight</li>
+          <li><i class="fa fa-check"></i> Custom sensory aroma kit</li>
+          <li><i class="fa fa-check"></i> Food &amp; beer pairing plate</li>
+          <li><i class="fa fa-check"></i> Cicerone Q&amp;A + tasting journal</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-primary" style="width:100%;justify-content:center">Book Connoisseur</a>
+      </div>
+      <div class="pc reveal">
+        <div class="pc-icon"><i class="fa fa-users"></i></div>
+        <div class="pc-name">Private Group</div>
+        <div class="pc-title">Corporate &amp; Gifting</div>
+        <div class="pc-price"><span class="amount">₹3600</span><span class="period">/ person (min 6)</span></div>
+        <div class="pc-desc">A private class for your group — customisable content, exclusive session, and ideal for team days, hen parties, and gifts.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> Fully private session</li>
+          <li><i class="fa fa-check"></i> Custom flight curation</li>
+          <li><i class="fa fa-check"></i> Flexible date &amp; time</li>
+          <li><i class="fa fa-check"></i> Certificate of completion</li>
+          <li><i class="fa fa-check"></i> Take-home bottle gift</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-ghost" style="width:100%;justify-content:center">Book Private</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section sd-process">
+  <div class="container">
+    <div class="process-header reveal"><span class="section-tag">Session Structure</span><h2>How the <em>Class Unfolds</em></h2><p>A carefully paced 2.5-hour journey designed to inform, challenge, and delight.</p></div>
+    <div class="steps-grid">
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-book"></i></div><div class="step-num">0:00–0:20</div><div class="step-name">The Foundations</div><div class="step-desc">Brewing ingredients, fermentation science, and the major beer style families — explained clearly and without jargon.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-beer"></i></div><div class="step-num">0:20–0:50</div><div class="step-name">Sensory Training</div><div class="step-desc">Aroma identification using the kit — hops, malts, esters, and off-flavours. Learning the vocabulary of beer.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-wine-glass-alt"></i></div><div class="step-num">0:50–1:50</div><div class="step-name">The Tasting Flight</div><div class="step-desc">8 pours spanning lager to imperial stout — guided analysis of each with discussion and note-taking.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-utensils"></i></div><div class="step-num">1:50–2:30</div><div class="step-name">Food Pairing &amp; Q&amp;A</div><div class="step-desc">Pairing demonstrations with a tasting plate, followed by an open Q&amp;A with the Cicerone.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal"><span class="section-tag">Guest Feedback</span><h2>Education Through <em>Enjoyment</em></h2></div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">I thought I knew craft beer. The masterclass showed me I'd only scratched the surface. The aroma kit exercise was genuinely mind-blowing — I can identify Citra hops blind now.</p><div class="testi-author"><div class="testi-avatar">KS</div><div><div class="testi-name">Kieran S.</div><div class="testi-role">Corporate Team Day</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">Booked the private class for a hen party — none of us knew much about craft beer going in. We left as total converts. The Cicerone was hilarious and incredibly knowledgeable.</p><div class="testi-author"><div class="testi-avatar">PG</div><div><div class="testi-name">Priya G.</div><div class="testi-role">Hen Party Group</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">The food pairing section was revelatory. The way a sharp cheddar transforms a West Coast IPA — I'd never even thought to try it before. Changed how I approach every dinner table.</p><div class="testi-author"><div class="testi-avatar">HF</div><div><div class="testi-name">Hannah F.</div><div class="testi-role">Connoisseur Class Graduate</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-faq">
+  <div class="container">
+    <div class="faq-wrap">
+      <div class="faq-side reveal"><span class="section-tag">FAQ</span><h2>Masterclass <em>Questions</em></h2><p>Everything you need to know before booking your seat.</p></div>
+      <div class="faq-list reveal">
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="mfq1"><span>Do I need any knowledge to attend?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="mfq1" hidden><p>Not at all — our Foundations class is designed specifically for people with no prior beer knowledge. Even if you only drink lager, you'll find it accessible, relevant, and genuinely eye-opening.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="mfq2"><span>Can I buy a masterclass as a gift?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="mfq2" hidden><p>Yes — gift experiences are available for all three class formats. We'll send a beautifully printed gift card and experience voucher by post or email. Valid for 12 months from purchase.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="mfq3"><span>When do classes run?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="mfq3" hidden><p>Public Foundations and Connoisseur classes run the second Saturday of each month at 11am and 3pm. Private group classes are available any day by arrangement, subject to Cicerone availability.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="mfq4"><span>Is this suitable as a corporate activity?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="mfq4" hidden><p>Absolutely — private group classes are one of our most-booked corporate activities. We can tailor content to suit mixed ability levels and customise the pairing menu for your team's preferences.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sd-cta"><div class="container"><span class="section-tag reveal">Reserve Your Seat</span><h2 class="reveal"><span class="heading-main">You'll Never Drink Beer </span><em>the Same Way Again</em></h2><p class="reveal">Classes run the second Saturday of each month. Seats fill fast — book early to avoid missing out.</p><div class="cta-btns reveal"><a href="../contact/contact.html#contact-form" class="btn btn-primary"><i class="fa fa-chalkboard-teacher"></i> Book a Class</a><a href="../services/services.html" class="btn btn-ghost"><i class="fa fa-arrow-left"></i> All Services</a></div></div></section>
+
+<section class="section sd-related"><div class="container"><div class="related-header reveal"><h2>You Might Also <em>Enjoy</em></h2></div><div class="related-grid"><a href="taproom-tours.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-1.webp" alt="Taproom Tours" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Guided</div><div class="rc-title">Taproom &amp; Cellar Tours</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a><a href="beer-club.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-3.jpg" alt="Beer Club" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Membership</div><div class="rc-title">Beer Club Membership</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a><a href="private-events.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-2.jpg" alt="Private Events" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Private Hire</div><div class="rc-title">Private Events &amp; Hire</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a></div></div></section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer><script src="sd.js"></script>
+</body></html>

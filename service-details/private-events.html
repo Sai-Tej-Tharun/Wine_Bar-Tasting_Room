@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Host your next private event at Heart & Wine — birthdays, corporate dinners, weddings, and team celebrations with bespoke beer menus." />
+  <title>Private Events & Hire — Heart &amp; Wine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="sd.css" />
+   <!---Navbar head-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div id="foamCursor" aria-hidden="true"></div>
+
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="../home-1/home.html" class="nav-link ">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link active"class="nav-link">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html" class="nav-link active">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html" >Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="../home-1/home.html#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<section class="sd-hero">
+
+  <!-- LEFT CONTENT -->
+
+  <div class="container sd-left">
+
+
+<nav class="sd-breadcrumb reveal">
+  <a href="../home-1/home.html">Home</a>
+  <span>·</span>
+  <a href="../services/services.html">Services</a>
+  <span>·</span>
+  <span>Private Events</span>
+</nav>
+
+<p class="sd-eyebrow reveal">
+  <span class="eyebrow-line"></span>Private Hire
+</p>
+
+<h1 class="sd-hero-title reveal">
+  <span class="ht-gold">PRIVATE</span><br>
+  <span>EVENTS</span><br>
+  <span class="ht-outline">&amp;</span><br>
+  <span>HIRE</span>
+</h1>
+
+<p class="sd-hero-sub reveal">
+  Transform our taproom or private dining room into the backdrop for your next unforgettable occasion — supported by bespoke catering and a dedicated events coordinator.
+</p>
+
+<div class="sd-hero-stats reveal">
+  <div class="sd-hstat">
+    <span class="sd-hstat-n" data-count="80">80</span>
+    <span class="sd-hstat-l">Max Guests</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n" data-count="5">5</span>
+    <span class="sd-hstat-l">Venue Spaces</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">Full</span>
+    <span class="sd-hstat-l">Catering</span>
+  </div>
+
+  <div class="sd-hstat">
+    <span class="sd-hstat-n">Custom</span>
+    <span class="sd-hstat-l">Beer Menu</span>
+  </div>
+</div>
+
+<div class="sd-hero-actions reveal">
+  <a href="../contact/contact.html#contact-form" class="btn btn-primary">
+    <i class="fa fa-glass-cheers"></i> Plan Your Event
+  </a>
+
+  <a href="#overview" class="btn btn-ghost">
+    <i class="fa fa-info-circle"></i> Learn More
+  </a>
+</div>
+
+
+  </div>
+
+  <!-- RIGHT IMAGE -->
+
+  <div class="sd-right">
+    <div class="sd-hero-bg" style="background-image:url('hero-2.jpg'); filter:brightness(60%);"></div>
+    <div class="sd-hero-overlay"></div>
+  </div>
+
+</section>
+
+
+<section class="section sd-overview" id="overview">
+  <div class="container">
+    <div class="sd-overview-grid">
+      <div class="ov-text reveal">
+        <span class="section-tag">Venue & Services</span>
+        <h2>Every Event <em>Deserves</em> Great Beer</h2>
+        <p>From an intimate birthday dinner to a 80-guest corporate reception, our event team handles every detail — so you can focus on enjoying the evening. Choose from five distinct venue spaces, each with its own character and capacity.</p>
+        <p>Our bespoke event packages include <strong>custom draught menus</strong>, artisan food boards, full AV support, and an on-site coordinator throughout your event.</p>
+        <div class="ov-features">
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-map-marker-alt"></i></div><div class="ov-feat-body"><strong>5 Distinct Spaces</strong><p>Taproom, Private Dining Room, Barrel Hall, Beer Garden, and our rooftop Hop Terrace.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-utensils"></i></div><div class="ov-feat-body"><strong>Full Catering In-House</strong><p>Artisan boards, sit-down menus, and canape packages — all prepared by our kitchen team.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-beer"></i></div><div class="ov-feat-body"><strong>Custom Draught Menus</strong><p>Curate your own tap list from our full range, including exclusive event-only pours.</p></div></div>
+          <div class="ov-feat"><div class="ov-feat-icon"><i class="fa fa-headset"></i></div><div class="ov-feat-body"><strong>Dedicated Coordinator</strong><p>Your personal events coordinator manages every detail from first enquiry to final pour.</p></div></div>
+        </div>
+        <a href="../contact/contact.html#contact-form" class="btn btn-primary">Start Planning</a>
+      </div>
+      <div class="ov-images reveal">
+        <div class="ov-img-main"><img src="sd2-1.jpeg" alt="Private dining room set for event" loading="lazy" /></div>
+        <div class="ov-img-row">
+          <div class="ov-img-sm"><img src="sd2-2.jpg" alt="Taproom event setup" loading="lazy" /></div>
+          <div class="ov-img-sm"><img src="sd2-3.webp" alt="Event catering boards" loading="lazy" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-pricing">
+  <div class="container">
+    <div class="sd-pricing-header reveal">
+      <span class="section-tag">Event Packages</span>
+      <h2>Built Around <em>Your Occasion</em></h2>
+      <p>Three core packages to start with — every detail is customisable and our events team will tailor a bespoke quote for your specific needs.</p>
+    </div>
+    <div class="pricing-cards">
+      <div class="pc reveal">
+        <div class="pc-icon"><i class="fa fa-birthday-cake"></i></div>
+        <div class="pc-name">Celebration</div>
+        <div class="pc-title">Social Occasions</div>
+        <div class="pc-price"><span class="amount">₹3600</span><span class="period">/ head (min 20)</span></div>
+        <div class="pc-desc">Perfect for birthdays, engagements, and family gatherings. Includes the taproom and a classic catering spread.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> Taproom exclusive hire (3 hrs)</li>
+          <li><i class="fa fa-check"></i> Welcome drinks on arrival</li>
+          <li><i class="fa fa-check"></i> Artisan food boards</li>
+          <li><i class="fa fa-check"></i> Custom tap selection</li>
+          <li class="no"><i class="fa fa-times"></i> AV / presentation setup</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-ghost" style="width:100%;justify-content:center">Enquire</a>
+      </div>
+      <div class="pc featured reveal">
+        <div class="pc-ribbon">Most Booked</div>
+        <div class="pc-icon"><i class="fa fa-briefcase"></i></div>
+        <div class="pc-name">Corporate</div>
+        <div class="pc-title">Business Events</div>
+        <div class="pc-price"><span class="amount">₹5000</span><span class="period">/ head (min 30)</span></div>
+        <div class="pc-desc">Launches, client entertaining, team events, and awards evenings. Full AV support and branding options included.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> Private Dining Room or Barrel Hall</li>
+          <li><i class="fa fa-check"></i> 4-hour exclusive hire</li>
+          <li><i class="fa fa-check"></i> Sit-down 3-course menu</li>
+          <li><i class="fa fa-check"></i> Full AV &amp; presentation kit</li>
+          <li><i class="fa fa-check"></i> Custom branded tap badges</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-primary" style="width:100%;justify-content:center">Book Corporate</a>
+      </div>
+      <div class="pc reveal">
+        <div class="pc-icon"><i class="fa fa-users"></i></div>
+        <div class="pc-name">Wedding</div>
+        <div class="pc-title">Wedding Receptions</div>
+        <div class="pc-price"><span class="amount">₹3600</span><span class="period">/ head (min 40)</span></div>
+        <div class="pc-desc">Full-venue wedding reception packages including the ceremony space, custom brewed signature ale, and full décor coordination.</div>
+        <ul class="pc-list">
+          <li><i class="fa fa-check"></i> Full venue exclusive hire (8 hrs)</li>
+          <li><i class="fa fa-check"></i> Custom signature brew for the day</li>
+          <li><i class="fa fa-check"></i> 3-course sit-down wedding dinner</li>
+          <li><i class="fa fa-check"></i> Décor &amp; floral coordination</li>
+          <li><i class="fa fa-check"></i> Dedicated wedding coordinator</li>
+        </ul>
+        <a href="../contact/contact.html#contact-form" class="btn btn-ghost" style="width:100%;justify-content:center">Plan Wedding</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section sd-process">
+  <div class="container">
+    <div class="process-header reveal">
+      <span class="section-tag">How It Works</span>
+      <h2>From <em>Enquiry</em> to Evening</h2>
+      <p>Our events team makes the whole process effortless from start to finish.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-envelope"></i></div><div class="step-num">Step 01</div><div class="step-name">Send an Enquiry</div><div class="step-desc">Tell us the occasion, date, and rough guest count via our contact form.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-comments"></i></div><div class="step-num">Step 02</div><div class="step-name">Consultation Call</div><div class="step-desc">Your coordinator calls within 48 hours to discuss every detail and answer questions.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-file-signature"></i></div><div class="step-num">Step 03</div><div class="step-name">Bespoke Quote</div><div class="step-desc">We send a fully itemised quote with no hidden costs — and revise until it's perfect.</div></div>
+      <div class="step reveal"><div class="step-dot"><i class="fa fa-glass-cheers"></i></div><div class="step-num">Step 04</div><div class="step-name">Enjoy Your Night</div><div class="step-desc">Arrive and let the team handle everything. You're the guest of honour tonight.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-testimonials">
+  <div class="container">
+    <div class="testimonials-header reveal"><span class="section-tag">Client Stories</span><h2>Occasions to <em>Remember</em></h2></div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">We held our company's 10th anniversary dinner in the Barrel Hall. The atmosphere, the beer, the food — our clients were blown away. The coordinator thought of everything.</p><div class="testi-author"><div class="testi-avatar">LK</div><div><div class="testi-name">Lena Kirchner</div><div class="testi-role">Marketing Director</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">They brewed a custom pale ale named after my husband for our wedding reception. Guests are still talking about it months later. Truly unforgettable.</p><div class="testi-author"><div class="testi-avatar">AM</div><div><div class="testi-name">Anna Mitchell</div><div class="testi-role">Wedding Client</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-quote">The 30th birthday package was brilliant. Private taproom, amazing boards, and the staff looked after everyone impeccably. Already planning my 40th here.</p><div class="testi-author"><div class="testi-avatar">DP</div><div><div class="testi-name">David Park</div><div class="testi-role">Birthday Guest</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-faq">
+  <div class="container">
+    <div class="faq-wrap">
+      <div class="faq-side reveal"><span class="section-tag">FAQ</span><h2>Event <em>Questions</em></h2><p>We answer the most common questions here — for everything else, just get in touch.</p></div>
+      <div class="faq-list reveal">
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="pfq1"><span>How far in advance should I book?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="pfq1" hidden><p>We recommend booking 6–8 weeks ahead for weekends, and 2–3 weeks for weekday events. Popular dates (especially December and August) can book out 3–4 months in advance.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="pfq2"><span>Can we bring our own cake or decorations?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="pfq2" hidden><p>Yes — outside cakes are welcome at no extra charge. For decorations, we ask you to use our approved list of vendors for anything involving fixtures, to protect the space. Freestanding décor like balloons and table flowers are always fine.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="pfq3"><span>Is there a minimum spend?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="pfq3" hidden><p>Yes — minimum spends vary by space and day of week. Our events team will communicate these clearly in your quote. There are no surprise charges on the night.</p></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="pfq4"><span>Do you accommodate dietary requirements?</span><i class="fa fa-plus faq-icon"></i></button><div class="faq-body" id="pfq4" hidden><p>Absolutely. We cater for all dietary needs including vegan, gluten-free, and allergen-specific requirements. Please inform us at least 5 days before the event so our kitchen can prepare.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sd-cta">
+  <div class="container">
+    <span class="section-tag reveal">Get the Ball Rolling</span>
+    <h2 class="reveal"><span class="heading-main">Let's Plan Your </span><em>Perfect Evening</em></h2>
+    <p class="reveal">Whether it's 20 people or 200, our events team will craft an occasion your guests won't forget.</p>
+    <div class="cta-btns reveal">
+      <a href="../contact/contact.html#contact-form" class="btn btn-primary"><i class="fa fa-glass-cheers"></i> Start Planning</a>
+      <a href="../services/services.html" class="btn btn-ghost"><i class="fa fa-arrow-left"></i> All Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="section sd-related">
+  <div class="container">
+    <div class="related-header reveal"><h2>You Might Also <em>Enjoy</em></h2></div>
+    <div class="related-grid">
+      <a href="custom-brewing.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-4.webp" alt="Custom Brewing" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Bespoke</div><div class="rc-title">Custom Batch Brewing</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a>
+      <a href="taproom-tours.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-1.webp" alt="Taproom Tours" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Guided</div><div class="rc-title">Taproom &amp; Cellar Tours</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a>
+      <a href="tasting-masterclasses.html" class="related-card reveal"><div class="rc-img"><img src="service-detials-6.jpeg" alt="Tasting Masterclasses" loading="lazy" /></div><div class="rc-body"><div class="rc-tag">Education</div><div class="rc-title">Tasting Masterclasses</div><div class="rc-link">Learn More <i class="fa fa-arrow-right"></i></div></div></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer><script src="sd.js"></script>
+</body></html>

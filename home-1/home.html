@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mash & Ale – Craft brewery & taproom. Award-winning golden ales, IPAs, and stouts brewed with passion. Join our beer club today." />
+  <meta property="og:title" content="Mash & Ale Craft Brewery" />
+  <meta property="og:description" content="Handcrafted golden ales and community-driven taproom experiences." />
+  <meta property="og:type" content="website" />
+  <title>Heart &amp; Wine — Craft Brewery &amp; Taproom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+<!-- ===== BEER BUBBLE CANVAS ===== -->
+<canvas id="beerCanvas" aria-hidden="true"></canvas>
+
+<!-- ===== FOAM CURSOR ===== -->
+<div id="foamCursor" aria-hidden="true"></div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar" role="banner">
+  <div class="nav-container">
+
+    <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main navigation">
+
+      <!-- HOME -->
+      <div class="nav-item">
+        <a href="home.html" class="nav-link active">Home</a>
+
+        <div class="dropdown">
+          <a href="../home-1/home.html" class="nav-link active">Home Brewery</a>
+          <a href="../home-2/home.html">Taproom Experience</a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="nav-item">
+        <a href="../services/services.html" class="nav-link">Services</a>
+
+        <div class="dropdown">
+          <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+          <a href="../service-details/private-events.html">Private Events</a>
+          <a href="../service-details/beer-club.html">Wine Club</a>
+          <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+          <a href="../service-details/wholesale.html">Wholesale</a>
+          <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+        </div>
+      </div>
+
+      <a href="../about/about.html" class="nav-link">About</a>
+
+      <!-- BLOG -->
+      <div class="nav-item">
+        <a href="../blogs/blogs.html" class="nav-link">Blog</a>
+
+        <div class="dropdown">
+          <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+          <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+          <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+          <a href="../blog-details/food-pairing.html">Food Pairing</a>
+          <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+          <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+        </div>
+      </div>
+
+      <a href="../contact/contact.html" class="nav-link">Contact</a>
+
+      <a href="#book" class="nav-link nav-cta">Book Now</a>
+
+      <a href="../login/login.html" class="nav-link nav-login">
+        <i class="fa fa-user"></i> Login
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+
+      <button class="nav-burger" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+  <a href="../home-1/home.html" class="mob-link">Home</a>
+
+  <!-- HOME DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Home Pages <i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../home-1/home.html">Home Brewery</a>
+      <a href="../home-2/home.html">Taproom Experience</a>
+    </div>
+  </div>
+
+    <a href="../services/services.html" class="mob-link">Services</a>
+  <!-- SERVICES DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Service details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+      <a href="../service-details/private-events.html">Private Events</a>
+      <a href="../service-details/beer-club.html">Wine Club</a>
+      <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+      <a href="../service-details/wholesale.html">Wholesale</a>
+      <a href="../service-details/tasting-masterclasses.html">Tasting Classes</a>
+    </div>
+  </div>
+
+  <a href="../about/about.html" class="mob-link">About</a>
+
+    <a href="../blogs/blogs.html" class="mob-link">Blogs</a>
+  <!-- BLOG DROPDOWN -->
+  <div class="mob-dropdown">
+    <button class="mob-drop-toggle">Blog details<i class="fa fa-chevron-down"></i></button>
+    <div class="mob-drop-menu">
+      <a href="../blog-details/flagship-ipa.html">Flagship IPA</a>
+      <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+      <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+      <a href="../blog-details/food-pairing.html">Food Pairing</a>
+      <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+      <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+    </div>
+  </div>
+
+  <a href="../contact/contact.html" class="mob-link">Contact</a>
+
+  <a href="../home-1/home.html#book" class="mob-link mob-cta">Book Now</a>
+
+  <a href="../login/login.html" class="mob-link">Login</a>
+
+</div>
+</header>
+
+<main id="main-content">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="heroHeading">
+    <div class="hero-bg-grain"></div>
+    <div class="hero-liquid" id="heroLiquid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Est. 2012 · Small Batch · Big Flavor</p>
+      <h1 class="hero-title reveal" id="heroHeading">
+        <span class="line">CRAFTED</span>
+        <span class="line gold-line">RUBY</span>
+        <span class="line">PERFECTION</span>
+      </h1>
+      <p class="hero-sub reveal">Hand-brewed ales aged in oak, poured fresh at our taproom every single day. No shortcuts. Just passion, grain, and time.</p>
+      <div class="hero-ctas reveal">
+        <a href="#featured" class="btn btn-primary"><i class="fa fa-beer"></i> Explore Our Brews</a>
+        <a href="#book" class="btn btn-ghost">Reserve a Table</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num" data-count="47">0</span><span class="stat-label">Craft Recipes</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="12">0</span><span class="stat-label">Awards Won</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="8500">0</span><span class="stat-label">Members</span></div>
+      </div>
+    </div>
+<div class="hero-glass reveal">
+  <div class="glass-wrap">
+
+    <div class="glass-glow"></div>
+
+    <svg class="wine-svg" id="wineSVG" viewBox="0 0 220 480" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="bowlClip">
+          <path d="M 28 20 Q 6 90 8 165 Q 10 230 44 268 Q 68 292 110 295 Q 152 292 176 268 Q 210 230 212 165 Q 214 90 192 20 Z"/>
+        </clipPath>
+        <linearGradient id="wineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#d43055" stop-opacity="0.92"/>
+          <stop offset="50%"  stop-color="#9a1530" stop-opacity="0.97"/>
+          <stop offset="100%" stop-color="#5c0416" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="glassBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="rgba(255,255,255,0.30)"/>
+          <stop offset="15%"  stop-color="rgba(255,255,255,0.58)"/>
+          <stop offset="50%"  stop-color="rgba(200,215,255,0.07)"/>
+          <stop offset="85%"  stop-color="rgba(255,255,255,0.22)"/>
+          <stop offset="100%" stop-color="rgba(255,255,255,0.32)"/>
+        </linearGradient>
+        <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="rgba(255,255,255,0.22)"/>
+          <stop offset="45%"  stop-color="rgba(255,255,255,0.52)"/>
+          <stop offset="100%" stop-color="rgba(255,255,255,0.14)"/>
+        </linearGradient>
+        <linearGradient id="baseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%"   stop-color="rgba(255,255,255,0.40)"/>
+          <stop offset="100%" stop-color="rgba(255,255,255,0.10)"/>
+        </linearGradient>
+        <linearGradient id="sheenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="rgba(255,140,165,0)"/>
+          <stop offset="35%"  stop-color="rgba(255,190,205,0.65)"/>
+          <stop offset="55%"  stop-color="rgba(255,228,235,0.90)"/>
+          <stop offset="75%"  stop-color="rgba(255,160,180,0.50)"/>
+          <stop offset="100%" stop-color="rgba(255,140,165,0)"/>
+        </linearGradient>
+      </defs>
+
+      <!-- ambient glow behind glass -->
+      <ellipse id="svgGlow" cx="110" cy="200" rx="85" ry="140"
+               fill="rgba(180,20,50,0.06)"/>
+
+      <!-- wine fill (clipped inside bowl) -->
+      <g clip-path="url(#bowlClip)">
+        <rect id="wineFill" x="8" y="296" width="204" height="0" fill="url(#wineGrad)"/>
+        <!-- meniscus -->
+        <ellipse id="wineMeniscus" cx="110" cy="296" rx="100" ry="8"
+                 fill="rgba(215,55,82,0.55)" opacity="0"/>
+        <!-- surface sheen bar -->
+        <rect id="wineSheen" x="-30" y="290" width="100" height="12"
+              fill="url(#sheenGrad)" rx="6" opacity="0"/>
+      </g>
+
+      <!-- bowl glass face -->
+      <path d="M 28 20 Q 6 90 8 165 Q 10 230 44 268 Q 68 292 110 295 Q 152 292 176 268 Q 210 230 212 165 Q 214 90 192 20 Z"
+            fill="url(#glassBodyGrad)"
+            stroke="rgba(255,255,255,0.54)" stroke-width="1.5"/>
+
+      <!-- inner refraction lines -->
+      <path d="M 40 25 Q 20 92 22 162 Q 24 220 54 256 Q 76 278 110 282"
+            fill="none" stroke="rgba(255,255,255,0.17)" stroke-width="1.0"/>
+      <path d="M 180 25 Q 200 92 198 162 Q 196 220 166 256 Q 144 278 110 282"
+            fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="0.8"/>
+
+      <!-- primary left highlight -->
+      <path id="shine1" d="M 42 30 Q 28 100 32 175 Q 34 215 46 248"
+            fill="none" stroke="rgba(255,255,255,0.72)" stroke-width="3.2"
+            stroke-linecap="round"/>
+      <!-- secondary streak -->
+      <path id="shine2" d="M 58 24 Q 48 85 50 148"
+            fill="none" stroke="rgba(255,255,255,0.34)" stroke-width="1.5"
+            stroke-linecap="round"/>
+      <!-- right faint edge -->
+      <path d="M 182 34 Q 194 98 190 168"
+            fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="1.0"
+            stroke-linecap="round"/>
+      <!-- rim highlight -->
+      <path d="M 30 22 Q 110 8 190 22"
+            fill="none" stroke="rgba(255,255,255,0.68)" stroke-width="2.0"
+            stroke-linecap="round"/>
+
+      <!-- stem -->
+      <path d="M 96 295 Q 98 338 100 370 L 120 370 Q 122 338 124 295 Z"
+            fill="url(#stemGrad)" stroke="rgba(255,255,255,0.30)" stroke-width="1.0"/>
+      <!-- stem centre highlight -->
+      <path d="M 109 298 Q 110 340 110 368"
+            fill="none" stroke="rgba(255,255,255,0.48)" stroke-width="1.3"
+            stroke-linecap="round"/>
+
+      <!-- base -->
+      <ellipse cx="110" cy="376" rx="62" ry="10"
+               fill="url(#baseGrad)" stroke="rgba(255,255,255,0.40)" stroke-width="1.0"/>
+      <ellipse cx="110" cy="376" rx="42" ry="5.5" fill="rgba(255,255,255,0.13)"/>
+
+      <!-- table caustic reflections -->
+      <ellipse cx="78"  cy="393" rx="11" ry="3.5" fill="rgba(200,30,60,0.10)"/>
+      <ellipse cx="144" cy="393" rx="8"  ry="3"   fill="rgba(200,30,60,0.07)"/>
+      <ellipse cx="110" cy="396" rx="18" ry="5"   fill="rgba(200,30,60,0.06)"/>
+    </svg>
+
+    <!-- canvas for particle system -->
+    <canvas id="wineParticleCanvas"></canvas>
+
+  </div>
+</div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE BAND ===== -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track">
+      <span>🍺 Golden Ale</span><span>·</span>
+      <span>🌾 Craft Lager</span><span>·</span>
+      <span>🍂 Amber IPA</span><span>·</span>
+      <span>⚫ Dark Stout</span><span>·</span>
+      <span>🍋 Citrus Wheat</span><span>·</span>
+      <span>🌿 Pale Ale</span><span>·</span>
+      <span>🍺 Golden Ale</span><span>·</span>
+      <span>🌾 Craft Lager</span><span>·</span>
+      <span>🍂 Amber IPA</span><span>·</span>
+      <span>⚫ Dark Stout</span><span>·</span>
+      <span>🍋 Citrus Wheat</span><span>·</span>
+      <span>🌿 Pale Ale</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ===== FEATURED BREWS ===== -->
+<section class="section featured" id="featured" aria-labelledby="featuredHeading">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-tag">On Tap Now</span>
+      <h2 id="featuredHeading">Our Signature <em>Brews</em></h2>
+      <p>Discover our most loved craft beers.</p>
+    </div>
+
+    <div class="brew-grid">
+
+      <article class="brew-card">
+        <img src="pint-1.webp">
+        <h3>Golden Harvest Ale</h3>
+        <span class="brew-abv">5.2% ABV</span>
+        <p>Warm caramel malt with toasted grain and a smooth finish.</p>
+      </article>
+
+      <article class="brew-card">
+        <img src="pint-2.jpg">
+        <h3>Sunset IPA</h3>
+        <span class="brew-abv">6.8% ABV</span>
+        <p>Citrus-forward IPA brewed with bold Pacific hops.</p>
+      </article>
+
+      <article class="brew-card">
+        <img src="pint-3.webp" alt="Midnight Stout">
+        <h3>Midnight Stout</h3>
+        <span class="brew-abv">7.4% ABV</span>
+        <p>Dark stout with notes of roasted coffee and chocolate.</p>
+      </article>
+
+      <article class="brew-card">
+        <img src="pint-4.webp" alt="Summer Wheat">
+        <h3>Summer Wheat</h3>
+        <span class="brew-abv">4.5% ABV</span>
+        <p>Light wheat beer with lemon zest and coriander.</p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ===== TAPROOM EXPERIENCE ===== -->
+  <section class="section taproom" aria-labelledby="taproomHeading">
+    <div class="taproom-bg"></div>
+    <div class="container taproom-inner">
+      <div class="taproom-text reveal">
+        <span class="section-tag">The Taproom</span>
+        <h2 id="taproomHeading">Where Every Pour<br><em>Tells a Story</em></h2>
+        <p>Our taproom is more than a bar — it's a gathering place. Open beams, warm amber light, and the smell of fresh hops fill the air from noon 'til last call.</p>
+        <ul class="taproom-list">
+          <li><i class="fa fa-check-circle"></i> 24 rotating taps with fresh seasonal brews</li>
+          <li><i class="fa fa-check-circle"></i> Live music every Friday &amp; Saturday night</li>
+          <li><i class="fa fa-check-circle"></i> Guided brewery tours at 2pm &amp; 5pm daily</li>
+          <li><i class="fa fa-check-circle"></i> Private event bookings for up to 120 guests</li>
+        </ul>
+        <a href="#book" class="btn btn-primary">Reserve Your Spot</a>
+      </div>
+      <div class="taproom-visual reveal">
+        <div class="taproom-imgs">
+          <img src="hero-1.avif" alt="Inside the Heart and WineMash and Ale taproom" loading="lazy" class="tap-img-main" />
+          <img src="hero-2.webp" alt="Beer poured fresh from tap" loading="lazy" class="tap-img-float" />
+        </div>
+        <div class="taproom-badge-wrap">
+          <div class="taproom-badge">
+            <div class="badge-num">24</div>
+            <div class="badge-txt">Taps<br>On Rotation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING ===== -->
+  <section class="section booking" id="book" aria-labelledby="bookingHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Reserve a Seat</span>
+        <h2 id="bookingHeading">Book Your <em>Taproom</em> Visit</h2>
+        <p>Secure your spot at the bar or reserve a table for your group.</p>
+      </div>
+      <form class="booking-form reveal" id="bookingForm" novalidate aria-label="Taproom reservation form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookName">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="bookName" name="name" placeholder="Full Name" required aria-required="true" />
+            <span class="form-error" id="bookNameError" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="bookEmail">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="bookEmail" name="email" placeholder="you@example.com" required aria-required="true" />
+            <span class="form-error" id="bookEmailError" role="alert"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookDate">Preferred Date <span aria-hidden="true">*</span></label>
+            <input type="date" id="bookDate" name="date" required aria-required="true" />
+            <span class="form-error" id="bookDateError" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="bookGuests">Number of Guests</label>
+            <select id="bookGuests" name="guests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3-4">3–4 Guests</option>
+              <option value="5-8">5–8 Guests</option>
+              <option value="9+">9+ Guests (Private)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bookNotes">Special Requests</label>
+          <textarea id="bookNotes" name="notes" rows="3" placeholder="Allergies, accessibility needs, birthday celebration…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <i class="fa fa-calendar-check"></i> Confirm Reservation
+        </button>
+        <div class="form-success" id="formSuccess" aria-live="polite">
+          🍺 Reservation received! We'll confirm by email within the hour.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== MEMBERSHIP / BEER CLUB ===== -->
+  <section class="section membership" aria-labelledby="memberHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Beer Club</span>
+        <h2 id="memberHeading">Join the <em>Inner Circle</em></h2>
+        <p>Exclusive perks, early access, and a community of craft beer lovers.</p>
+      </div>
+      <div class="membership-cards">
+        <article class="mem-card reveal" tabindex="0">
+          <div class="mem-icon">🌾</div>
+          <h3>Grain Member</h3>
+          <div class="mem-price">₹999<span>/mo</span></div>
+          <ul class="mem-perks">
+            <li><i class="fa fa-check"></i> 10% off all taproom orders</li>
+            <li><i class="fa fa-check"></i> Monthly newsletter &amp; recipes</li>
+            <li><i class="fa fa-check"></i> Member loyalty points</li>
+            <li class="inactive"><i class="fa fa-times"></i> Early release access</li>
+            <li class="inactive"><i class="fa fa-times"></i> Private events</li>
+          </ul>
+          <a href="../login/login.html" class="btn btn-outline btn-full">Get Started</a>
+        </article>
+        <article class="mem-card mem-featured reveal" tabindex="0">
+          <div class="mem-ribbon">Most Popular</div>
+          <div class="mem-icon">🍺</div>
+          <h3>Hop Master</h3>
+          <div class="mem-price">₹2400<span>/mo</span></div>
+          <ul class="mem-perks">
+            <li><i class="fa fa-check"></i> 20% off all orders</li>
+            <li><i class="fa fa-check"></i> 2 free pints/month</li>
+            <li><i class="fa fa-check"></i> Early limited releases</li>
+            <li><i class="fa fa-check"></i> Member loyalty points</li>
+            <li class="inactive"><i class="fa fa-times"></i> Private events</li>
+          </ul>
+          <a href="../login/login.html" class="btn btn-primary btn-full">Join Now</a>
+        </article>
+        <article class="mem-card reveal" tabindex="0">
+          <div class="mem-icon">🥇</div>
+          <h3>Brewmaster</h3>
+          <div class="mem-price">₹4800<span>/mo</span></div>
+          <ul class="mem-perks">
+            <li><i class="fa fa-check"></i> 30% off + free growler fills</li>
+            <li><i class="fa fa-check"></i> VIP private event access</li>
+            <li><i class="fa fa-check"></i> Personalized brew sessions</li>
+            <li><i class="fa fa-check"></i> Early release + gift box</li>
+            <li><i class="fa fa-check"></i> Double loyalty points</li>
+          </ul>
+          <a href="../login/login.html" class="btn btn-outline btn-full">Go Premium</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTS ===== -->
+  <section class="section events" aria-labelledby="eventsHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Upcoming Events</span>
+        <h2 id="eventsHeading">What's <em>Brewing</em> This Month</h2>
+      </div>
+      <div class="events-list">
+        <article class="event-row reveal" tabindex="0">
+          <div class="event-date"><span class="ev-day">14</span><span class="ev-mon">JUN</span></div>
+          <div class="event-info">
+            <h3>Summer Wheat Release Party</h3>
+            <p>Be the first to taste our brand new Summer Wheat. Live acoustic set by The Fermenters.</p>
+            <div class="event-meta"><i class="fa fa-clock"></i> 6pm – 10pm &nbsp;·&nbsp; <i class="fa fa-map-marker-alt"></i> Main Taproom</div>
+          </div>
+          <a href="#book" class="btn btn-sm btn-outline">BOOK</a>
+        </article>
+        <article class="event-row reveal" tabindex="0">
+          <div class="event-date"><span class="ev-day">21</span><span class="ev-mon">JUN</span></div>
+          <div class="event-info">
+            <h3>Brew &amp; Paired Dinner</h3>
+            <p>Five-course tasting menu perfectly paired with our signature ales. Chef Marcus Holloway.</p>
+            <div class="event-meta"><i class="fa fa-clock"></i> 7pm – 11pm &nbsp;·&nbsp; <i class="fa fa-map-marker-alt"></i> Private Dining Room</div>
+          </div>
+          <a href="#book" class="btn btn-sm btn-outline">BOOK</a>
+        </article>
+        <article class="event-row reveal" tabindex="0">
+          <div class="event-date"><span class="ev-day">28</span><span class="ev-mon">JUN</span></div>
+          <div class="event-info">
+            <h3>Homebrewer's Meetup</h3>
+            <p>Share your craft, swap recipes, and meet our head brewer. Open to all skill levels.</p>
+            <div class="event-meta"><i class="fa fa-clock"></i> 3pm – 7pm &nbsp;·&nbsp; <i class="fa fa-map-marker-alt"></i> Brewery Floor</div>
+          </div>
+          <a href="#book" class="btn btn-sm btn-outline">BOOK</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials" aria-labelledby="testimonialsHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What Members Say</span>
+        <h2 id="testimonialsHeading">Straight from the <em>Tap</em></h2>
+      </div>
+      <div class="testimonial-slider">
+      <div class="testimonial-track" id="testTrack">
+        <blockquote class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p>"The Golden Harvest Ale is the best beer I've had in years. The taproom atmosphere is electric — like a second home."</p>
+          <footer><cite>— Mohan A., Hop Master Member</cite></footer>
+        </blockquote>
+        <blockquote class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p>"Joined the beer club on a whim and now I can't imagine life without those monthly early-release bottles. Worth every rupee."</p>
+          <footer><cite>— Keerthi R., Brewmaster Member</cite></footer>
+        </blockquote>
+        <blockquote class="test-card">
+          <div class="test-stars">★★★★★</div>
+          <p>"Hosted my wedding reception here. The staff were incredible and the custom brew they made for us was out of this world."</p>
+          <footer><cite>— Komala &amp; Vimala., Private Event</cite></footer>
+        </blockquote>
+      
+      </div>
+      </div>
+      <div class="test-dots" id="testDots" aria-label="Testimonial navigation"></div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="section newsletter" aria-labelledby="newsletterHeading">
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <div class="nl-text">
+          <h2 id="newsletterHeading">Never Miss a <em>Drop</em></h2>
+          <p>Get first access to limited releases, event invites, and brewing stories delivered straight to your inbox.</p>
+        </div>
+        <form class="nl-form" id="nlForm" novalidate>
+          <input type="email" id="nlEmail" placeholder="Your email address" required aria-label="Email for newsletter" />
+          <button type="submit" class="btn btn-primary">Subscribe <i class="fa fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-foam" aria-hidden="true"></div>
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" aria-label="Mash & Ale Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+  
+  <img src="../images/keg-2.png" alt="Heart & Wine Logo" style="height:40px;width:auto;object-fit:contain;">
+  
+  <span class="logo-text" style="font-family:var(--font-d);font-size:1.5rem;letter-spacing:.08em;">
+    HEART <em style="color:var(--gold);font-style:normal;">&amp;</em> WINE
+  </span>
+
+</a>
+      <p>Small batch. Big heart.<br>Every pour made with obsession and barley.</p>
+      <div class="footer-social" role="list" aria-label="Social links">
+        <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+  <h4>Explore</h4>
+  <a href="../home-1/home.html">Home</a>
+  <a href="../home-2/home.html">Home 2</a>
+  <a href="../services/services.html">Our Brews</a>
+  <a href="../service-details/beer-club.html">Wine Club</a>
+  <a href="../service-details/custom-brewing.html">Custom Brewing</a>
+  <a href="../service-details/private-events.html">Private Events</a>
+  <a href="../service-details/taproom-tours.html">Taproom Tours</a>
+  <a href="../service-details/tasting-masterclasses.html">Limited Releases</a>
+  <a href="../service-details/wholesale.html">Wholesale</a>
+  <a href="../about/about.html">About Us</a>
+</div>
+
+<div class="footer-col">
+  <h4>Visit Us</h4>
+  <a href="../contact/contact.html">Contact</a>
+  <a href="../blog-details/barrel-aging.html">Barrel Aging</a>
+  <a href="../blog-details/beer-calendar-2025.html">Wine Calendar</a>
+  <a href="../blog-details/flagship-ipa.html">Flagship</a>
+  <a href="../blog-details/food-pairing.html">Food Pairing</a>
+  <a href="../blog-details/hop-varieties.html">Hop Varieties</a>
+  <a href="../blog-details/water-chemistry.html">Water Chemistry</a>
+  <a href="../home-1/home.html#book">Book a Table</a>
+</div>
+
+<div class="footer-col">
+  <h4>Members</h4>
+  <a href="../login/login.html">Sign In</a>
+  <a href="../login/login.html#register">Join Beer Club</a>
+  <a href="../admin/dashboard.html">Admin Dashboard</a>
+  <a href="../admin/404.html">FAQ</a>
+  <a href="../admin/coming-soon.html">New Features</a>
+  
+</div>
+
+    <div class="footer-col">
+      <h4>Open Hours</h4>
+      <p class="footer-hours">Mon – Thu: 3pm – 11pm</p>
+      <p class="footer-hours">Fri – Sat: 12pm – 1am</p>
+      <p class="footer-hours">Sunday: 12pm – 9pm</p>
+      <p class="footer-addr"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Telangana, India</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <div style="display:flex; justify-content:space-between; width:100%; padding:0 20px;">
+  <span>🔒 Secure & Confidential</span>
+  <span>⏱ 24/7 Support Available</span>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Heart &amp; Wine Brewery. All rights reserved. Drink responsibly.</p>
+    <p><a href="../admin/404.html">404</a> · <a href="../admin/coming-soon.html">Privacy</a> · <a href="../admin/coming-soon.html">Terms</a></p>
+  </div>
+
+  
+</footer>
+
+<script src="home.js"></script>
+
+</body>
+</html>
